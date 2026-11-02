@@ -4,9 +4,11 @@
 
 **Blocked by:** None (can start immediately)
 
-**Status:** ready-for-agent
+**Status:** done
 
-- [ ] Projet Vite + React + TypeScript initialisé, lint/format/test configurés
-- [ ] Dépôt GitHub public créé, premier commit (inclut `.scratch/`, `GLOSSARY.md`, `docs/adr/`)
-- [ ] Workflow GitHub Actions : build + déploiement Pages sur push `main`
-- [ ] La page publiée affiche le titre de l'atlas
+- [x] Projet Vite + React + TypeScript initialisé, lint/format/test configurés
+- [x] Dépôt GitHub public créé, premier commit (inclut `.scratch/`, `GLOSSARY.md`, `docs/adr/`)
+- [x] Workflow GitHub Actions : build + déploiement Pages sur push `main`
+- [x] La page publiée affiche le titre de l'atlas
+
+Site : https://a-n-o-d-e-r.github.io/world-history-atlas/ · Dépôt : https://github.com/A-N-O-D-E-R/world-history-atlas
