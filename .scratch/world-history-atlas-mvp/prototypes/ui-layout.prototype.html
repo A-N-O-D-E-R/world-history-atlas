@@ -1,0 +1,435 @@
+<!doctype html>
+<!--
+  PROTOTYPE — jetable. Ticket : issues/08-prototype-ui.md
+  Question : à quoi ressemble / comment se comporte l'interface (layout, frise jour/mois/an, av. J.-C. sans an 0, desktop + mobile) ?
+  3 variantes, switch via ?variant=A|B|C (barre flottante, ou touches ← →).
+  Données : pays MODERNES Natural Earth 110m (domaine public) + textes FACTICES. Aucune donnée historique.
+  Lancer : ouvrir ce fichier dans un navigateur (besoin d'internet pour MapLibre + GeoJSON).
+  Mobile : outils dev du navigateur → mode responsive (~390px).
+-->
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PROTOTYPE — World History Atlas UI</title>
+<link href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" rel="stylesheet">
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{--parch:#efe4cc;--parch2:#e6d6b5;--ink:#3b2a1a;--ink2:#6b5440;--gold:#b08a3e;--panel:rgba(246,238,220,.88);--line:rgba(59,42,26,.18)}
+  *{box-sizing:border-box}
+  html,body{margin:0;height:100%;background:var(--parch);color:var(--ink);font:14px/1.4 Inter,system-ui,sans-serif;overflow:hidden}
+  h1,h2,h3,.serif{font-family:"Cormorant Garamond",Georgia,serif;font-weight:700;margin:0}
+  button{font:inherit;color:inherit;background:none;border:1px solid var(--line);border-radius:6px;padding:4px 10px;cursor:pointer}
+  button:hover{background:rgba(176,138,62,.15)} button.on{background:var(--ink);color:var(--parch);border-color:var(--ink)}
+  input[type=range]{accent-color:var(--gold)}
+  select{font:inherit;background:transparent;border:1px solid var(--line);border-radius:6px;padding:3px}
+  #map{position:absolute;inset:0}
+  .maplibregl-canvas{filter:sepia(.15)}
+  .demo{display:inline-block;font-size:10px;letter-spacing:.08em;background:#a33;color:#fff;border-radius:3px;padding:1px 5px;vertical-align:middle}
+  .muted{color:var(--ink2)} .small{font-size:12px}
+  .field{margin:6px 0} .field b{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink2)}
+  .rel{display:inline-block;padding:1px 6px;border-radius:10px;font-size:11px;background:#d9c08a}
+  /* prototype switcher — NOT part of the design */
+  #proto{position:fixed;left:50%;transform:translateX(-50%);top:8px;z-index:999;display:flex;gap:8px;align-items:center;background:#111;color:#fff;border-radius:999px;padding:4px 10px;font:12px Inter;box-shadow:0 2px 10px rgba(0,0,0,.4)}
+  #proto button{color:#fff;border-color:#555;padding:0 8px}
+  /* state readout */
+  #state{position:fixed;right:8px;top:8px;z-index:998;background:#111;color:#9f9;font:11px monospace;padding:4px 8px;border-radius:6px;white-space:pre;opacity:.85}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<div id="proto"><button id="pv">←</button><span id="plabel"></span><button id="pn">→</button></div>
+<div id="state"></div>
+
+<script>
+// ---------- shared state + date logic (prototype; no persistence) ----------
+const VARIANTS = {A:'Atlas classique (3 panneaux)', B:'Carte plein écran + dock', C:'Page d\'atlas (récit + carte)', D:'B + panneaux A à onglets'};
+const keys = Object.keys(VARIANTS);
+const variant = keys.includes(new URLSearchParams(location.search).get('variant')) ? new URLSearchParams(location.search).get('variant') : 'A';
+
+const MIN_ASTRO = -2999, MAX_ASTRO = 2026; // -3000 historique → année astronomique -2999
+const MOIS = ['janv.','févr.','mars','avr.','mai','juin','juil.','août','sept.','oct.','nov.','déc.'];
+const ERAS = [['Antiquité',-3000,476],['Moyen Âge',476,1492],['Temps modernes',1492,1789],['Contemporaine',1789,2026]];
+const S = {date: mkDate(987,6,1), step:'year', playing:false, speed:1, selected:null, left:innerWidth>700&&variant!=='D', right:innerWidth>700&&variant!=='D'}; // mobile: sheets start closed
+
+// internal: JS Date in UTC, astronomical year (0 = 1 av. J.-C.) — display never shows 0
+function histToAstro(y){return y<0?y+1:y} function astroToHist(a){return a<=0?a-1:a}
+function mkDate(histYear,m,d){const t=new Date(Date.UTC(2000,m-1,d));t.setUTCFullYear(histToAstro(histYear));return t}
+function histYear(t){return astroToHist(t.getUTCFullYear())}
+function fmtYear(y){return y<0?`${-y} av. J.-C.`:`${y}`}
+function fmtDate(t){const y=fmtYear(histYear(t));
+  if(S.step==='day') return `${t.getUTCDate()} ${MOIS[t.getUTCMonth()]} ${y}`;
+  if(S.step==='month') return `${MOIS[t.getUTCMonth()]} ${y}`; return y}
+function stepDate(dir){const t=new Date(S.date.getTime());
+  if(S.step==='year') t.setUTCFullYear(t.getUTCFullYear()+dir);
+  if(S.step==='month') t.setUTCMonth(t.getUTCMonth()+dir);
+  if(S.step==='day') t.setUTCDate(t.getUTCDate()+dir);
+  const a=t.getUTCFullYear(); if(a<MIN_ASTRO||a>MAX_ASTRO) return false; S.date=t; return true}
+function setYear(hist){const t=new Date(S.date.getTime());t.setUTCFullYear(histToAstro(hist));S.date=t}
+let timer=null;
+function togglePlay(){S.playing=!S.playing;clearInterval(timer);
+  if(S.playing) timer=setInterval(()=>{if(!stepDate(1)){S.playing=false;clearInterval(timer)} render()}, 600/S.speed); render()}
+function setSpeed(v){S.speed=+v; if(S.playing){S.playing=false;togglePlay()} else render()}
+
+// ---------- reusable fragments (UI copy is fake, marked DÉMO) ----------
+function timelineControls(compact){
+  const a=S.date.getUTCFullYear();
+  return `
+  <div class="tl-row">
+    <button data-act="prev" aria-label="Précédent">◀</button>
+    <button data-act="play" aria-label="Lecture">${S.playing?'❚❚':'▶'}</button>
+    <button data-act="next" aria-label="Suivant">▶▶</button>
+    <span class="serif tl-date">${fmtDate(S.date)}</span>
+    <span class="tl-step">${['day','month','year'].map(s=>`<button data-step="${s}" class="${S.step===s?'on':''}">${{day:'jour',month:'mois',year:'an'}[s]}</button>`).join('')}</span>
+    <label class="small muted">vitesse <select data-act="speed">${[0.5,1,2,4,8].map(v=>`<option ${v===S.speed?'selected':''} value="${v}">×${v}</option>`).join('')}</select></label>
+  </div>
+  <input type="range" data-act="slider" min="${MIN_ASTRO}" max="${MAX_ASTRO}" value="${a}" style="width:100%">
+  ${variant==='D'?eraBar():''}
+  ${compact?'':`<div class="tl-eras">${ERAS.map(([n,s,e])=>`<button data-era="${s}" style="flex:${e-s}">${n}</button>`).join('')}</div>
+  <div class="small muted tl-ticks"><span>3000 av. J.-C.</span><span>1 av. J.-C. | 1</span><span>2026</span></div>`}`;
+}
+const ERA_COLORS=['#b07a4f','#7f8f52','#4f7f8f','#8f5a7f'];
+function eraBar(){const span=MAX_ASTRO-MIN_ASTRO, cur=histYear(S.date);
+  return `<div class="D-eras">${ERAS.map(([n,s,e],i)=>{const on=cur>=s&&cur<e||(i===ERAS.length-1&&cur>=s);
+    return `<button data-era="${s}" class="${on?'on':''}" title="${n} (${fmtYear(s)} → ${fmtYear(e)})" style="flex:${histToAstro(e)-histToAstro(s)};--c:${ERA_COLORS[i]}"><span>${n}</span></button>`}).join('')}</div>`}
+function entityCard(){
+  if(!S.selected) return `<p class="muted">Cliquez un territoire sur la carte.</p>`;
+  return `<h2>${S.selected} <span class="demo">DÉMO</span></h2>
+  <div class="small muted">Pays actuel (Natural Earth) — aucune Entité politique chargée</div>
+  <div class="field"><b>Période</b>— factice —</div>
+  <div class="field"><b>Capitale</b>— factice —</div>
+  <div class="field"><b>Dirigeant à ${fmtDate(S.date)}</b>— factice — <button class="small">fiche ›</button></div>
+  <div class="field"><b>Snapshot affiché</b>daté — factice — <span class="small muted">(pas de snapshot exact pour ${fmtYear(histYear(S.date))} → snapshot le plus proche)</span></div>
+  <div class="field"><b>Fiabilité de la frontière</b><span class="rel">reconstitution approximative</span></div>
+  <div class="field"><b>Sources</b><a href="#" class="small">Natural Earth (domaine public)</a></div>
+  <button data-act="edit" style="margin-top:8px">✎ Proposer une correction</button>`;
+}
+function navList(){return `<div class="field"><b>Explorer</b></div>
+  <input placeholder="Rechercher pays, entité, ville…" style="width:100%;padding:6px;border:1px solid var(--line);border-radius:6px;background:transparent">
+  ${['Pays actuels','Empires & royaumes','Dynasties','Civilisations','Lieux sauvegardés'].map(x=>`<div style="padding:7px 0;border-bottom:1px solid var(--line)">${x} <span class="muted">›</span></div>`).join('')}
+  <div class="field" style="margin-top:12px"><b>Couches</b></div>
+  ${['Frontières historiques','Frontières modernes','Villes','Événements','Fleuves & reliefs','Routes'].map((x,i)=>`<label style="display:block"><input type="checkbox" ${i<3?'checked':''}> ${x}</label>`).join('')}`}
+
+// ---------- variants: structurally different layouts ----------
+const LAYOUTS = {
+A: () => `
+<style>
+  .A-head{position:absolute;top:0;left:0;right:0;height:48px;display:flex;align-items:center;gap:16px;padding:0 16px;background:var(--panel);border-bottom:1px solid var(--line);z-index:5;backdrop-filter:blur(4px)}
+  .A-head nav button{border:none}
+  .A-left,.A-right{position:absolute;top:56px;bottom:132px;width:270px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px;overflow:auto;z-index:4;backdrop-filter:blur(4px);transition:transform .25s}
+  .A-left{left:8px} .A-right{right:8px}
+  .A-left.off{transform:translateX(-290px)} .A-right.off{transform:translateX(290px)}
+  .A-bottom{position:absolute;left:0;right:0;bottom:0;height:124px;background:var(--panel);border-top:1px solid var(--line);padding:8px 16px;z-index:5;backdrop-filter:blur(4px)}
+  .tl-row{display:flex;gap:6px;align-items:center;flex-wrap:wrap} .tl-date{font-size:22px;min-width:180px;text-align:center}
+  .tl-eras{display:flex;gap:2px;margin-top:2px}.tl-eras button{border-radius:2px;font-size:11px;padding:2px}
+  .tl-ticks{display:flex;justify-content:space-between}
+  .A-mnav{display:none}
+  @media (max-width:700px){
+    .A-head nav{display:none} .A-head h1{font-size:15px!important} .A-left,.A-right{top:auto;bottom:56px;left:0;right:0;width:auto;max-height:55%;border-radius:14px 14px 0 0}
+    .A-left.off,.A-right.off{transform:translateY(120%)}
+    .A-bottom{bottom:56px;height:auto;padding:6px 8px} .tl-eras,.tl-ticks,.tl-step label{display:none} .tl-date{font-size:17px;min-width:0}
+    .A-mnav{display:flex;position:absolute;bottom:0;left:0;right:0;height:56px;background:var(--parch2);z-index:6;justify-content:space-around;align-items:center;border-top:1px solid var(--line)}
+    .A-mnav button{border:none}
+  }
+</style>
+<header class="A-head"><h1 style="font-size:20px">WORLD HISTORY ATLAS</h1>
+  <nav><button>Monde</button><button>Pays</button><button>Empires</button><button>Périodes</button></nav>
+  <span style="flex:1"></span><button data-act="toggleL">☰ Navigation</button><button data-act="toggleR">ⓘ Fiche</button><select><option>FR</option><option>EN</option></select></header>
+<aside class="A-left ${S.left?'':'off'}">${navList()}</aside>
+<aside class="A-right ${S.right?'':'off'}">${entityCard()}</aside>
+<footer class="A-bottom">${timelineControls(false)}</footer>
+<nav class="A-mnav"><button data-act="toggleL">Explorer</button><button data-act="toggleR">Fiche</button><button>Comparer</button><button>Recherche</button></nav>`,
+
+B: () => `
+<style>
+  .B-top{position:absolute;top:44px;left:50%;transform:translateX(-50%);width:min(520px,92vw);z-index:5;display:flex;gap:6px}
+  .B-top input{flex:1;padding:10px 14px;border-radius:999px;border:1px solid var(--line);background:var(--panel);font:inherit;backdrop-filter:blur(4px)}
+  .B-brand{position:absolute;top:48px;left:14px;z-index:5;font-size:15px} @media(max-width:900px){.B-brand{display:none}}
+  .B-date{position:absolute;bottom:96px;left:50%;transform:translateX(-50%);font-size:44px;z-index:5;text-shadow:0 0 12px var(--parch),0 0 3px var(--parch);pointer-events:none;white-space:nowrap}
+  .B-dock{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);width:min(760px,96vw);background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:8px 12px;z-index:5;backdrop-filter:blur(6px);box-shadow:0 4px 20px rgba(59,42,26,.15)}
+  .B-dock .tl-date,.B-dock .tl-eras,.B-dock .tl-ticks{display:none} .tl-row{display:flex;gap:6px;align-items:center;justify-content:center;flex-wrap:wrap}
+  .B-card{position:absolute;right:14px;top:96px;width:300px;max-height:calc(100% - 230px);overflow:auto;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px;z-index:5;backdrop-filter:blur(6px);box-shadow:0 4px 20px rgba(59,42,26,.15)}
+  .B-fab{position:absolute;left:14px;bottom:14px;z-index:5;display:flex;flex-direction:column;gap:6px}
+  .B-fab button{background:var(--panel);width:42px;height:42px;border-radius:50%}
+  @media (max-width:700px){.B-card{left:0;right:0;top:auto;bottom:0;width:auto;max-height:50%;border-radius:16px 16px 0 0;z-index:7}.B-date{font-size:30px;bottom:110px}.B-fab{bottom:120px}.B-dock{bottom:8px}}
+</style>
+<div class="B-brand serif">WORLD HISTORY ATLAS</div>
+<div class="B-top"><input placeholder="⌕  Pays, empire, dynastie, ville, année (ex. 987, -500)…"><button style="background:var(--panel);border-radius:999px">FR</button></div>
+<div class="B-date serif">${fmtDate(S.date)}</div>
+<div class="B-dock">${timelineControls(true)}</div>
+${S.selected?`<div class="B-card"><button data-act="close" style="float:right;border:none">✕</button>${entityCard()}</div>`:''}
+<div class="B-fab"><button title="Couches">◫</button><button title="Comparer">⇆</button><button title="Monde (désélectionner)" data-act="close">◎</button></div>`,
+
+// D = B + A's hideable sidebars, opened via edge tabs (user feedback on B)
+D: () => `
+${LAYOUTS.B()}
+<style>
+  .D-eras{display:flex;gap:2px;margin:2px 0 0;height:22px} .D-eras button{min-width:84px} .B-date{bottom:118px!important}
+  .D-eras button{flex-shrink:1;border:none;border-radius:4px;padding:0 4px;background:color-mix(in srgb,var(--c) 35%,transparent);color:var(--ink);font-size:11px;overflow:hidden;white-space:nowrap;transition:background .2s,transform .15s}
+  .D-eras button:hover{background:color-mix(in srgb,var(--c) 60%,transparent);transform:translateY(-1px)}
+  .D-eras button.on{background:var(--c);color:#fff;font-weight:600}
+  .D-side{opacity:1;transition:transform .35s cubic-bezier(.2,.8,.2,1),opacity .25s}
+  .D-side.off{opacity:0;pointer-events:none}
+  .D-side>*{transition:opacity .3s .1s,transform .3s .1s} .D-side.off>*{opacity:0;transform:translateY(6px)}
+  .D-tabs{transition:left .35s cubic-bezier(.2,.8,.2,1),right .35s cubic-bezier(.2,.8,.2,1)}
+  .D-tabs button{transition:background .2s,padding .2s} .D-tabs button:hover{padding-inline:8px}
+  .B-date{transition:opacity .2s}
+  .B-card{display:none} .B-fab button[title=Couches]{display:none}
+  .D-side{position:absolute;top:96px;bottom:150px;width:280px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:12px;overflow:auto;z-index:6;backdrop-filter:blur(6px);box-shadow:0 4px 20px rgba(59,42,26,.15);transition:transform .25s}
+  .D-left{left:14px} .D-right{right:14px}
+  .D-left.off{transform:translateX(-320px)} .D-right.off{transform:translateX(320px)}
+  .D-tabs{position:absolute;top:110px;z-index:7;display:flex;flex-direction:column;gap:4px}
+  .D-tabs.l{left:0} .D-tabs.r{right:0}
+  .D-tabs button{writing-mode:vertical-rl;background:var(--panel);padding:10px 5px;font-size:12px;letter-spacing:.05em}
+  .D-tabs.l button{border-radius:0 8px 8px 0;border-left:none;transform:rotate(180deg)} .D-tabs.r button{border-radius:8px 0 0 8px;border-right:none}
+  .D-tabs button.on{background:var(--ink);color:var(--parch)}
+  .D-left:not(.off) ~ .D-tabs.l{left:294px} .D-right:not(.off) ~ .D-tabs.r{right:294px}
+  @media (max-width:700px){.D-side{top:auto;bottom:0;left:0;right:0;width:auto;max-height:55%;border-radius:16px 16px 0 0;z-index:8}
+    .D-left.off,.D-right.off{transform:translateY(120%)} .D-tabs{top:auto;bottom:240px} .D-left:not(.off) ~ .D-tabs.l{left:0} .D-right:not(.off) ~ .D-tabs.r{right:0}}
+</style>
+<aside class="D-side D-left ${S.left?'':'off'}">${S.tab==='layers'?navList().split('<div class="field" style="margin-top:12px">')[1].replace(/^/,'<div class="field">'):navList().split('<div class="field" style="margin-top:12px">')[0]}</aside>
+<aside class="D-side D-right ${S.right?'':'off'}"><button data-act="toggleR" style="float:right;border:none">✕</button>${entityCard()}</aside>
+<div class="D-tabs l">
+  <button data-tab="explore" class="${S.left&&S.tab!=='layers'?'on':''}">Explorer</button>
+  <button data-tab="layers" class="${S.left&&S.tab==='layers'?'on':''}">Couches</button>
+</div>
+<div class="D-tabs r"><button data-act="toggleR" class="${S.right?'on':''}">Fiche</button></div>`,
+
+C: () => `
+<style>
+  .C-wrap{position:absolute;inset:40px 0 0 0;display:grid;grid-template-columns:110px 380px 1fr}
+  .C-chrono{overflow:auto;border-right:1px solid var(--line);background:var(--parch2);padding:8px 0}
+  .C-chrono div{padding:6px 10px;cursor:pointer;font-size:13px} .C-chrono div.on{background:var(--ink);color:var(--parch)}
+  .C-page{overflow:auto;padding:22px 26px;background:linear-gradient(90deg,var(--parch) 92%,var(--parch2));border-right:2px solid var(--gold)}
+  .C-page h1{font-size:30px;line-height:1.1}
+  .C-mapcell{position:relative}
+  .C-mapcell #map{position:absolute;inset:0}
+  .C-steps{position:absolute;top:10px;left:10px;z-index:5;background:var(--panel);border-radius:10px;padding:6px 8px;border:1px solid var(--line)}
+  .tl-row{display:flex;gap:6px;align-items:center;flex-wrap:wrap} .tl-date{font-size:18px} .C-steps input,.C-steps .tl-eras,.C-steps .tl-ticks{display:none}
+  @media (max-width:800px){.C-wrap{grid-template-columns:1fr;grid-template-rows:44px 45% 1fr}
+    .C-chrono{display:flex;overflow-x:auto;padding:0;border:none}.C-chrono div{white-space:nowrap;padding:12px}
+    .C-mapcell{grid-row:2}.C-page{grid-row:3;border:none;padding:14px}}
+</style>
+<div class="C-wrap">
+  <div class="C-chrono">${chronoColumn()}</div>
+  <article class="C-page">
+    <div class="small muted">ATLAS — planche du siècle</div>
+    <h1>${centuryLabel(histYear(S.date))}</h1>
+    <p class="muted serif" style="font-size:18px">${fmtDate(S.date)}</p>
+    <p><span class="demo">DÉMO</span> Texte d'introduction de la période : faits structurés (Wikidata) + lien Wikipédia, jamais de prose inventée.</p>
+    <hr style="border:none;border-top:1px solid var(--line)">
+    ${entityCard()}
+    <div class="field"><b>Événements du siècle</b><span class="muted">— factices —</span></div>
+  </article>
+  <div class="C-mapcell"><div class="C-steps">${timelineControls(true)}</div></div>
+</div>
+<header style="position:absolute;top:0;left:0;right:0;height:40px;display:flex;align-items:center;padding:0 14px;gap:12px;border-bottom:1px solid var(--line);background:var(--parch)"><h1 style="font-size:17px">WORLD HISTORY ATLAS</h1><span style="flex:1"></span><input placeholder="Rechercher…" style="padding:4px 8px;border:1px solid var(--line);border-radius:6px;background:transparent"><select><option>FR</option><option>EN</option></select></header>`
+};
+function centuryLabel(y){const c=y>0?Math.ceil(y/100):Math.ceil(-y/100);const r=toRoman(c);return y>0?`${r}ᵉ siècle`:`${r}ᵉ siècle av. J.-C.`}
+function toRoman(n){const m=[[1000,'M'],[900,'CM'],[500,'D'],[400,'CD'],[100,'C'],[90,'XC'],[50,'L'],[40,'XL'],[10,'X'],[9,'IX'],[5,'V'],[4,'IV'],[1,'I']];let s='';for(const[v,k]of m)while(n>=v){s+=k;n-=v}return s}
+function chronoColumn(){const cur=histYear(S.date);let h='';for(let c=-30;c<=21;c++){if(c===0)continue;const start=c<0?c*100:(c-1)*100+1;const end=c<0?c*100+99:c*100;
+  const on=cur>=start&&cur<=end; h+=`<div class="${on?'on':''}" data-year="${start}">${c<0?toRoman(-c)+' av.':toRoman(c)}</div>`}return h}
+
+// ---------- render: layout HTML rebuilt, map element persistent ----------
+const app=document.getElementById('app');
+const mapEl=document.createElement('div'); mapEl.id='map';
+function render(){
+  const scroll=document.querySelector('.C-chrono')?.scrollTop;
+  const cur={left:S.left,right:S.right}; if(variant==='D'&&render.prev){S.left=render.prev.left;S.right=render.prev.right}
+  app.innerHTML=LAYOUTS[variant]();
+  S.left=cur.left;S.right=cur.right;render.prev=cur;
+  if(variant==='D') requestAnimationFrame(()=>requestAnimationFrame(()=>{
+    document.querySelector('.D-left')?.classList.toggle('off',!S.left);document.querySelector('.D-right')?.classList.toggle('off',!S.right);
+    document.querySelectorAll('[data-tab]').forEach(t=>t.classList.toggle('on',S.left&&(t.dataset.tab==='layers')===(S.tab==='layers')));
+    document.querySelector('.D-tabs.r button')?.classList.toggle('on',S.right)}));
+  (document.querySelector('.C-mapcell')||app).prepend(mapEl);
+  if(scroll!=null&&document.querySelector('.C-chrono')) document.querySelector('.C-chrono').scrollTop=scroll;
+  if(window.map instanceof maplibregl.Map) map.resize(); // window.map = #map div until Map exists
+  document.getElementById('state').textContent=JSON.stringify({variant,date:fmtDate(S.date),astroYear:S.date.getUTCFullYear(),step:S.step,playing:S.playing,speed:S.speed,selected:S.selected},null,1);
+}
+app.addEventListener('click',e=>{const b=e.target.closest('[data-act],[data-step],[data-era],[data-year],[data-tab]');if(!b)return;
+  const a=b.dataset.act;
+  if(a==='prev')stepDate(-1); if(a==='next')stepDate(1); if(a==='play')return togglePlay();
+  if(a==='toggleL')S.left=!S.left; if(a==='toggleR')S.right=!S.right; if(a==='close'){S.selected=null;highlight()}
+  if(b.dataset.tab){if(S.left&&S.tab===b.dataset.tab)S.left=false;else{S.left=true;S.tab=b.dataset.tab}}
+  if(b.dataset.step)S.step=b.dataset.step; if(b.dataset.era)setYear(+b.dataset.era); if(b.dataset.year)setYear(+b.dataset.year);
+  render()});
+app.addEventListener('input',e=>{if(e.target.dataset.act==='slider'){const t=new Date(S.date.getTime());t.setUTCFullYear(+e.target.value);S.date=t;
+  document.querySelectorAll('.tl-date,.B-date').forEach(n=>n.textContent=fmtDate(S.date))}}); // no full render mid-drag
+app.addEventListener('change',e=>{if(e.target.dataset.act==='slider')render()});
+app.addEventListener('change',e=>{if(e.target.dataset.act==='speed')setSpeed(e.target.value)});
+
+// ---------- map ----------
+render();
+window.map=new maplibregl.Map({container:mapEl,center:[10,40],zoom:2.3,attributionControl:{compact:true},
+  style:{version:8,glyphs:'https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf',sources:{},layers:[{id:'bg',type:'background',paint:{'background-color':'#dfe6df'}}]}});
+const PAL=['#d9b98c','#c9a57a','#bfae86','#d4c08f','#c7b07d','#ccb592','#b9a07c'];
+map.on('load',()=>{
+  map.addSource('c',{type:'geojson',data:'https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_110m_admin_0_countries.geojson',generateId:true});
+  map.addLayer({id:'fill',type:'fill',source:'c',paint:{'fill-color':['match',['%',['get','MAPCOLOR7'],7],0,PAL[0],1,PAL[1],2,PAL[2],3,PAL[3],4,PAL[4],5,PAL[5],PAL[6]],
+    'fill-opacity':['case',['boolean',['feature-state','sel'],false],1,['boolean',['feature-state','hover'],false],.9,.75]}});
+  map.addLayer({id:'line',type:'line',source:'c',paint:{'line-color':'#6b4a2b','line-width':['case',['boolean',['feature-state','sel'],false],2.5,.7],'line-dasharray':[3,1]}});
+  map.addLayer({id:'lbl',type:'symbol',source:'c',layout:{'text-field':['get','NAME_FR'],'text-font':['Open Sans Semibold'],'text-size':11},paint:{'text-color':'#4a3522','text-halo-color':'#efe4cc','text-halo-width':1}});
+  let hov=null;
+  map.on('mousemove','fill',e=>{if(hov!=null)map.setFeatureState({source:'c',id:hov},{hover:false});hov=e.features[0].id;map.setFeatureState({source:'c',id:hov},{hover:true});map.getCanvas().style.cursor='pointer'});
+  map.on('mouseleave','fill',()=>{if(hov!=null)map.setFeatureState({source:'c',id:hov},{hover:false});hov=null;map.getCanvas().style.cursor=''});
+  map.on('click','fill',e=>{const f=e.features[0];selId=f.id;S.selected=f.properties.NAME_FR||f.properties.NAME;S.right=true;highlight();render()});
+});
+let selId=null,prevSel=null;
+function highlight(){if(prevSel!=null)map.setFeatureState({source:'c',id:prevSel},{sel:false});if(S.selected&&selId!=null){map.setFeatureState({source:'c',id:selId},{sel:true});prevSel=selId}else prevSel=null}
+
+// =====================================================================
+// EDITOR PROTOTYPE (ticket 14-ux-editeur) — host: variant D. ?editor=A|B|C
+// Lives in its own #editor node so render() never wipes typed values.
+// =====================================================================
+const EVARIANTS={A:'Fiche éditable (panneau)',B:'Assistant pas à pas',C:'Comparaison côte à côte'};
+const ekeys=Object.keys(EVARIANTS);
+const ev=ekeys.includes(new URLSearchParams(location.search).get('editor'))?new URLSearchParams(location.search).get('editor'):'A';
+const LICENCES=['CC0','CC BY 4.0','ODbL','Domaine public','GPL-3.0'];
+const TYPES=['royaume','empire','république','duché','comté','principauté','cité-État','colonie','protectorat','confédération','autre'];
+const NE_URL='https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_110m_admin_0_countries.geojson';
+let NE=null; const neData=()=>NE||(NE=fetch(NE_URL).then(r=>r.json()));
+const edEl=document.createElement('div');edEl.id='editor';document.body.appendChild(edEl);
+let ED=null; // editor state
+const mkDateV=(v)=>({v,cal:'grégorien',prec:'année',interval:false,v2:'',prec2:'année'});
+function openEditor(name){
+  const id='wha:demo-'+name.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'');
+  const cur={'names.fr':name,'names.en':'','type':'royaume','start':mkDateV(''),'end':mkDateV(''),'capital':''};
+  ED={id,name,mode:'public',step:0,cur:structuredClone(cur),val:structuredClone(cur),source:{title:'',url:'',licence:''},note:'',author:'',geo:null,geoName:''};
+  renderEditor();
+}
+const FIELDS=[['names.fr','Nom (fr)','text'],['names.en','Nom (en)','text'],['type','Type','type'],['start','Début','date'],['end','Fin','date'],['capital','Capitale (id ou nom)','text']];
+const same=(a,b)=>JSON.stringify(a)===JSON.stringify(b);
+function changes(){return FIELDS.filter(([k])=>!same(ED.cur[k],ED.val[k])).map(([k])=>({field:k,old:ED.cur[k],new:ED.val[k]}))}
+// date validation: no year 0, format must match precision
+function dateErr(d){if(!d.v)return '';const chk=(v,p)=>{const m=/^(-?\d{1,4})(?:-(\d{2}))?(?:-(\d{2}))?$/.exec(v.trim());if(!m)return 'format attendu : AAAA, AAAA-MM ou AAAA-MM-JJ (négatif = av. J.-C.)';
+  if(+m[1]===0)return "l'année 0 n'existe pas (-1 = 1 av. J.-C., 1 = 1 apr. J.-C.)";
+  const need={jour:3,mois:2,année:1,siècle:1}[p],got=m[3]?3:m[2]?2:1;if(got!==need)return `précision « ${p} » mais valeur ${['','à l\'année','au mois','au jour'][got]}`;return ''};
+  return chk(d.v,d.prec)||(d.interval&&d.v2?chk(d.v2,d.prec2):'')||(d.interval&&!d.v2?'borne « au plus tard » manquante':'')}
+function fmtDV(d){if(!d||!d.v)return '—';const one=(v,p)=>{const y=+v.split(/(?<=\d)-/)[0];return p==='siècle'?centuryLabel(y):`${v.startsWith('-')?v.slice(1)+' av. J.-C.':v}`};
+  return (d.interval?`entre ${one(d.v,d.prec)} et ${one(d.v2,d.prec2)}`:one(d.v,d.prec))+` · ${d.prec}, ${d.cal}`}
+function errors(){const e=[];if(!changes().length&&!ED.geo)e.push('Aucune modification.');
+  for(const k of ['start','end']){const m=dateErr(ED.val[k]);if(m)e.push(`${k==='start'?'Début':'Fin'} : ${m}`)}
+  if(!ED.source.title.trim())e.push('Source obligatoire : titre.');if(!LICENCES.includes(ED.source.licence))e.push('Source obligatoire : licence (liste autorisée).');
+  if(ED.mode==='public'&&!ED.author.trim())e.push('Pseudo GitHub requis en mode public.');return e}
+function override(){return {id:ED.id,changes:changes(),geometry:ED.geo?`(fichier joint : ${ED.geoName})`:undefined,source:ED.source,author:ED.author||'(local)',date:new Date().toISOString().slice(0,10),note:ED.note||undefined}}
+function issueBody(){return `### Correction proposée : ${ED.name}\n\n\`\`\`json\n${JSON.stringify(override(),null,1)}\n\`\`\`\n${ED.geo?`\n> ⚠ Géométrie : glissez-déposez **${ED.geoName}** (renommé en .json) dans cette issue.\n`:''}`}
+const bytes=s=>new TextEncoder().encode(s).length;
+function issueURL(){const p=new URLSearchParams({template:'correction.yml',title:`Correction : ${ED.name}`,labels:'correction',body:issueBody()});return `https://github.com/OWNER/world-history-atlas/issues/new?${p}`}
+
+// ---- shared field widgets ----
+function input(path,val,type){
+  if(type==='type')return `<select data-f="${path}">${TYPES.map(t=>`<option ${t===val?'selected':''}>${t}</option>`).join('')}</select>`;
+  if(type==='date'){const d=val;return `<div class="E-date">
+    <input data-f="${path}.v" value="${d.v}" placeholder="ex. 987, 1180-05, -52" size="11">
+    <select data-f="${path}.prec">${['jour','mois','année','siècle'].map(p=>`<option ${p===d.prec?'selected':''}>${p}</option>`).join('')}</select>
+    <select data-f="${path}.cal">${['grégorien','julien'].map(p=>`<option ${p===d.cal?'selected':''}>${p}</option>`).join('')}</select>
+    <label class="small"><input type="checkbox" data-f="${path}.interval" ${d.interval?'checked':''}> intervalle</label>
+    ${d.interval?`<span class="small">au plus tard</span><input data-f="${path}.v2" value="${d.v2}" size="9"><select data-f="${path}.prec2">${['jour','mois','année','siècle'].map(p=>`<option ${p===d.prec2?'selected':''}>${p}</option>`).join('')}</select>`:''}
+    <div class="small ${dateErr(d)?'E-err':'muted'}">${dateErr(d)||fmtDV(d)}</div></div>`}
+  return `<input data-f="${path}" value="${val}">`}
+const sourceBlock=()=>`<fieldset class="E-src"><legend>Source <span class="E-req">obligatoire</span></legend>
+  <input data-f="source.title" placeholder="Titre (ex. Traité de Turin, 1860)" value="${ED.source.title}">
+  <input data-f="source.url" placeholder="URL" value="${ED.source.url}">
+  <select data-f="source.licence"><option value="">— licence —</option>${LICENCES.map(l=>`<option ${l===ED.source.licence?'selected':''}>${l}</option>`).join('')}</select>
+  <textarea data-f="note" placeholder="Note (facultatif)">${ED.note}</textarea></fieldset>`;
+const geoBlock=()=>`<fieldset><legend>Géométrie</legend>
+  <button data-e="dl">⬇ Télécharger la frontière actuelle (.geojson)</button>
+  <span class="small muted">→ modifiez-la dans QGIS →</span>
+  <label class="E-up">⬆ Importer le fichier modifié<input type="file" accept=".geojson,.json" data-e="up" hidden></label>
+  <div class="small ${ED.geoErr?'E-err':'muted'}">${ED.geoErr||(ED.geo?`✓ ${ED.geoName} — ${(ED.geoSize/1024).toFixed(0)} Ko, ${ED.geo.features.length} polygone(s), affiché en rouge sur la carte`:'Aucun fichier importé.')}</div></fieldset>`;
+const modeBlock=()=>`<div class="E-mode"><button data-e="mode" data-v="public" class="${ED.mode==='public'?'on':''}">Public → issue GitHub</button><button data-e="mode" data-v="local" class="${ED.mode==='local'?'on':''}">Local → fichier</button>
+  ${ED.mode==='public'?`<input data-f="author" placeholder="Pseudo GitHub" value="${ED.author}" style="width:140px">`:''}</div>`;
+function outputBlock(){const er=errors();
+  if(ED.mode==='local')return `<div class="E-out"><div class="small muted">Écrira <b>data-src/overrides/${ED.id}.json</b> (prototype : rien n'est écrit)</div><pre>${JSON.stringify(override(),null,1)}</pre>
+    ${er.length?`<ul class="E-err">${er.map(x=>`<li>${x}</li>`).join('')}</ul>`:''}<button class="on" ${er.length?'disabled':''}>Écrire le fichier</button></div>`;
+  const b=bytes(issueURL()),pct=Math.min(100,b/6000*100);
+  return `<div class="E-out"><div class="small">Taille de l'URL : ${b} / ~6000 octets <span class="E-meter"><i style="width:${pct}%;background:${b>6000?'#a33':'var(--gold)'}"></i></span>${b>6000?' <b class="E-err">trop long : sera tronqué, réduisez la note</b>':''}</div>
+    <pre>${issueBody().replace(/</g,'&lt;')}</pre>
+    ${er.length?`<ul class="E-err">${er.map(x=>`<li>${x}</li>`).join('')}</ul>`:''}
+    <a class="E-send ${er.length?'dis':''}" href="${er.length?'#':issueURL()}" target="_blank" rel="noopener">Ouvrir l'issue pré-remplie sur GitHub ↗</a>
+    <div class="small muted">Le mainteneur pose un label → une action GitHub crée la PR, la CI valide.</div></div>`}
+
+// ---- 3 structurally different editors ----
+const EDITORS={
+A:()=>`<aside class="E-A"><header><b class="serif">✎ ${ED.name}</b><span class="demo">DÉMO</span><button data-e="close">✕</button></header>
+  ${FIELDS.map(([k,l,t])=>`<div class="E-row ${same(ED.cur[k],ED.val[k])?'':'chg'}"><b>${l}</b>${input(k,ED.val[k],t)}</div>`).join('')}
+  ${geoBlock()}${sourceBlock()}${modeBlock()}${outputBlock()}</aside>`,
+B:()=>{const steps=['Champs','Dates','Géométrie','Source','Envoi'];const s=ED.step;
+  const body=[()=>FIELDS.filter(f=>f[2]!=='date').map(([k,l,t])=>`<div class="E-row ${same(ED.cur[k],ED.val[k])?'':'chg'}"><b>${l}</b>${input(k,ED.val[k],t)}</div>`).join(''),
+    ()=>FIELDS.filter(f=>f[2]==='date').map(([k,l,t])=>`<div class="E-row ${same(ED.cur[k],ED.val[k])?'':'chg'}"><b>${l}</b>${input(k,ED.val[k],t)}</div>`).join('')+`<p class="small muted">Saisie dans le calendrier de la source ; l'affichage sera converti en grégorien.</p>`,
+    geoBlock,sourceBlock,()=>modeBlock()+outputBlock()][s]();
+  return `<div class="E-B-back"><div class="E-B"><header><b class="serif">Proposer une correction — ${ED.name}</b><span class="demo">DÉMO</span><button data-e="close">✕</button></header>
+  <ol class="E-steps">${steps.map((n,i)=>`<li class="${i===s?'on':i<s?'done':''}" data-e="go" data-v="${i}">${i+1}. ${n}</li>`).join('')}</ol>
+  <div class="E-B-body">${body}</div>
+  <footer><button data-e="go" data-v="${s-1}" ${s===0?'disabled':''}>◀ Précédent</button><span style="flex:1"></span>${s<4?`<button class="on" data-e="go" data-v="${s+1}">Suivant ▶</button>`:''}</footer></div></div>`},
+C:()=>`<section class="E-C"><header><b class="serif">Comparer & corriger — ${ED.name}</b><span class="demo">DÉMO</span><span class="small muted">${changes().length} champ(s) modifié(s)</span><button data-e="close">✕</button></header>
+  <div class="E-C-grid"><div><table><tr><th></th><th>Actuel</th><th>Proposé</th></tr>
+  ${FIELDS.map(([k,l,t])=>`<tr class="${same(ED.cur[k],ED.val[k])?'':'chg'}"><th>${l}</th><td>${t==='date'?fmtDV(ED.cur[k]):(ED.cur[k]||'—')}</td><td>${input(k,ED.val[k],t)}</td></tr>`).join('')}
+  <tr><th>Géométrie</th><td>Natural Earth (actuel)</td><td>${geoBlock()}</td></tr></table></div>
+  <div>${sourceBlock()}${modeBlock()}${outputBlock()}</div></div></section>`};
+function renderEditor(){
+  if(!ED){edEl.innerHTML='';return}
+  const f=document.activeElement?.dataset?.f,pos=document.activeElement?.selectionStart;
+  edEl.innerHTML=`<style>
+  #editor{font:13px/1.35 Inter,system-ui,sans-serif;color:var(--ink)} #editor input,#editor select,#editor textarea{font:inherit;border:1px solid var(--line);border-radius:5px;padding:3px 6px;background:#fffaf0}
+  #editor fieldset{border:1px solid var(--line);border-radius:8px;margin:8px 0;padding:6px 8px;display:flex;flex-direction:column;gap:5px} #editor legend{font-weight:600;font-size:12px}
+  .E-req{background:#a33;color:#fff;border-radius:3px;font-size:10px;padding:0 4px} .E-err{color:#a33} ul.E-err{margin:4px 0;padding-left:18px}
+  .E-row{display:grid;grid-template-columns:110px 1fr;gap:6px;align-items:start;padding:4px;border-radius:6px} .E-row.chg,tr.chg{background:rgba(127,143,82,.18)}
+  .E-row b{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink2);padding-top:5px}
+  .E-date{display:flex;flex-wrap:wrap;gap:4px;align-items:center} .E-date>div{flex-basis:100%}
+  .E-up{display:inline-block;border:1px dashed var(--ink2);border-radius:6px;padding:4px 8px;cursor:pointer}
+  .E-mode{display:flex;gap:6px;align-items:center;margin:6px 0;flex-wrap:wrap}
+  .E-out pre{background:#2b2118;color:#f3e7cc;font-size:11px;padding:8px;border-radius:6px;max-height:160px;overflow:auto;white-space:pre-wrap}
+  .E-meter{display:inline-block;width:120px;height:6px;background:var(--line);border-radius:3px;vertical-align:middle} .E-meter i{display:block;height:100%;border-radius:3px}
+  .E-send{display:inline-block;background:var(--ink);color:var(--parch);padding:6px 12px;border-radius:6px;text-decoration:none;margin:4px 0} .E-send.dis{opacity:.35;pointer-events:none}
+  #editor header{display:flex;gap:8px;align-items:center;margin-bottom:6px} #editor header button{margin-left:auto;border:none}
+  .E-A{position:fixed;right:14px;top:96px;bottom:110px;width:400px;overflow:auto;background:var(--panel);border:2px solid var(--gold);border-radius:14px;padding:12px;z-index:50;backdrop-filter:blur(6px);box-shadow:0 6px 30px rgba(59,42,26,.25);animation:Ein .3s}
+  .E-B-back{position:fixed;inset:0;background:rgba(43,33,24,.35);z-index:50;display:grid;place-items:center;animation:Efade .25s}
+  .E-B{width:min(640px,94vw);max-height:86vh;overflow:auto;background:var(--parch);border-radius:16px;padding:16px;box-shadow:0 10px 40px rgba(0,0,0,.3)}
+  .E-steps{display:flex;gap:4px;list-style:none;padding:0;margin:0 0 10px} .E-steps li{flex:1;text-align:center;padding:5px;border-radius:6px;background:var(--line);cursor:pointer;font-size:12px}
+  .E-steps li.on{background:var(--ink);color:var(--parch)} .E-steps li.done{background:rgba(127,143,82,.4)}
+  .E-B footer{display:flex;margin-top:10px}
+  .E-C{position:fixed;left:0;right:0;bottom:0;height:52vh;overflow:auto;background:var(--parch);border-top:2px solid var(--gold);z-index:50;padding:12px 18px;box-shadow:0 -6px 30px rgba(59,42,26,.2);animation:Eup .3s}
+  .E-C-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:18px} .E-C table{width:100%;border-collapse:collapse} .E-C th,.E-C td{text-align:left;padding:5px;border-bottom:1px solid var(--line);vertical-align:top} .E-C td:nth-child(2){color:var(--ink2);width:28%}
+  @keyframes Ein{from{transform:translateX(30px);opacity:0}} @keyframes Efade{from{opacity:0}} @keyframes Eup{from{transform:translateY(40px);opacity:0}}
+  @media(max-width:700px){.E-A{left:0;right:0;top:auto;bottom:0;width:auto;max-height:80vh;border-radius:16px 16px 0 0}.E-C-grid{grid-template-columns:1fr}.E-C{height:80vh}.E-row{grid-template-columns:1fr}}
+  </style>${EDITORS[ev]()}`;
+  if(f){const n=edEl.querySelector(`[data-f="${f}"]`);if(n){n.focus();try{n.setSelectionRange(pos,pos)}catch{}}}
+  document.getElementById('state').textContent=JSON.stringify({editor:ev,mode:ED.mode,changes:changes().length,geo:!!ED.geo,errors:errors().length},null,1);
+}
+function setPath(o,p,v){const k=p.split('.');let t=o;if(k[0]==='source'||k[0]==='note'||k[0]==='author'){t=ED}else t=ED.val;
+  if(t===ED.val&&k[0]==='names'){t[p]=v;return} // flat keys 'names.fr'
+  for(let i=0;i<k.length-1;i++)t=t[k[i]];t[k.at(-1)]=v}
+edEl.addEventListener('input',e=>{const p=e.target.dataset.f;if(!p)return;setPath(ED,p,e.target.type==='checkbox'?e.target.checked:e.target.value);renderEditor()});
+edEl.addEventListener('click',async e=>{const b=e.target.closest('[data-e]');if(!b)return;const a=b.dataset.e;
+  if(a==='close'){ED=null;if(map.getLayer('prop')){map.removeLayer('prop');map.removeLayer('prop-l');map.removeSource('prop')}}
+  if(a==='mode')ED.mode=b.dataset.v; if(a==='go')ED.step=Math.max(0,Math.min(4,+b.dataset.v));
+  if(a==='dl'){const d=await neData();const f=d.features.find(x=>x.properties.NAME_FR===ED.name||x.properties.NAME===ED.name);
+    const blob=new Blob([JSON.stringify({type:'FeatureCollection',features:[{type:'Feature',properties:{id:ED.id},geometry:f.geometry}]})],{type:'application/geo+json'});
+    const a2=document.createElement('a');a2.href=URL.createObjectURL(blob);a2.download=ED.id.replace(':','_')+'.geojson';a2.click();return}
+  renderEditor()});
+edEl.addEventListener('change',async e=>{if(e.target.dataset.e!=='up')return;const file=e.target.files[0];if(!file)return;
+  try{let g=JSON.parse(await file.text());if(g.type==='Feature')g={type:'FeatureCollection',features:[g]};
+    if(g.type!=='FeatureCollection'||!g.features.every(f=>/Polygon$/.test(f.geometry?.type)))throw new Error('il faut des Polygon / MultiPolygon');
+    ED.geo=g;ED.geoName=file.name.replace(/\.geojson$/,'.json');ED.geoSize=file.size;ED.geoErr='';
+    if(map.getSource('prop'))map.getSource('prop').setData(g);else{map.addSource('prop',{type:'geojson',data:g});
+      map.addLayer({id:'prop',type:'fill',source:'prop',paint:{'fill-color':'#a33','fill-opacity':.25}});map.addLayer({id:'prop-l',type:'line',source:'prop',paint:{'line-color':'#a33','line-width':2,'line-dasharray':[2,1]}})}
+  }catch(err){ED.geo=null;ED.geoErr='Fichier refusé : '+err.message}renderEditor()});
+// hook: "Proposer une correction" button in the entity card (all layouts)
+app.addEventListener('click',e=>{if(e.target.closest('[data-act=edit]')&&S.selected)openEditor(S.selected)});
+if(variant==='D'){const p2=document.createElement('div');p2.id='proto2';p2.style.cssText='position:fixed;left:14px;top:8px;z-index:999;background:#333;color:#fff;border-radius:999px;padding:2px 10px;font:11px Inter;display:flex;gap:6px;align-items:center';
+  const g2=d=>{const i=(ekeys.indexOf(ev)+d+ekeys.length)%ekeys.length;const p=new URLSearchParams(location.search);p.set('editor',ekeys[i]);location.search=p};
+  p2.innerHTML=`<button style="color:#fff;border-color:#666;padding:0 6px">‹</button><span>Éditeur ${ev} (${EVARIANTS[ev]})</span><button style="color:#fff;border-color:#666;padding:0 6px">›</button>`;
+  p2.querySelectorAll('button')[0].onclick=()=>g2(-1);p2.querySelectorAll('button')[1].onclick=()=>g2(1);document.body.appendChild(p2)}
+
+// ---------- prototype switcher (hidden if ever served from a real build) ----------
+const go=d=>{const i=(keys.indexOf(variant)+d+keys.length)%keys.length;const p=new URLSearchParams(location.search);p.set('variant',keys[i]);location.search=p};
+document.getElementById('plabel').textContent=`${variant} (${VARIANTS[variant]})`;
+document.getElementById('pv').onclick=()=>go(-1); document.getElementById('pn').onclick=()=>go(1);
+addEventListener('keydown',e=>{if(e.target.closest('input,textarea,select,[contenteditable]'))return;if(e.key==='ArrowLeft')go(-1);if(e.key==='ArrowRight')go(1)});
+render();
+</script>
+</body>
+</html>

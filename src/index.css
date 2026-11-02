@@ -1,0 +1,22 @@
+:root {
+  --parch: #efe4cc;
+  --ink: #3b2a1a;
+  font-family: Inter, system-ui, sans-serif;
+  color: var(--ink);
+  background: var(--parch);
+}
+html,
+body,
+#root {
+  margin: 0;
+  height: 100%;
+}
+.app {
+  display: grid;
+  place-items: center;
+  height: 100%;
+}
+h1 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  letter-spacing: 0.04em;
+}
