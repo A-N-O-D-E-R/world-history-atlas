@@ -356,3 +356,141 @@ describe('avertissements (non bloquants)', () => {
     expect(messages(run(), 'warnings')).toEqual([])
   })
 })
+
+describe('surcharges', () => {
+  const correction = (field: string, value: unknown, extra = {}) => ({
+    field,
+    value,
+    source: 'wha:ohm',
+    author: 'arthur',
+    date: '2026-11-03',
+    ...extra,
+  })
+
+  test('une surcharge remplace la valeur et garde l’ancienne', () => {
+    valid()
+    put('overrides/Q70972.json', {
+      id: 'Q70972',
+      changes: [
+        correction('end', year('1791')),
+        correction('names.en', 'Kingdom of the French', { note: '1791–1792' }),
+      ],
+    })
+    expect(run().errors).toEqual([])
+    const e = read('entities/Q70972.json')
+    expect(e.end).toMatchObject({ value: '1791' })
+    expect(e.names.en).toBe('Kingdom of the French')
+    expect(e.corrections).toEqual([
+      expect.objectContaining({
+        field: 'end',
+        previous: year('1792'),
+        source: 'wha:ohm',
+        author: 'arthur',
+      }),
+      expect.objectContaining({
+        field: 'names.en',
+        previous: 'Kingdom of France',
+        note: '1791–1792',
+      }),
+    ])
+  })
+
+  test('priorité : surcharge > liste curée > Wikidata', () => {
+    valid()
+    put('sources/wha_wikidata.json', {
+      id: 'wha:wikidata',
+      name: 'Wikidata',
+      licence: 'CC0-1.0',
+      reliability: 'medium',
+    })
+    put('curated/entities.json', [{ id: 'Q71084', type: 'empire' }])
+    put('raw/wikidata/Q71084.json', {
+      id: 'Q71084',
+      labels: { fr: { value: 'Premier Empire' } },
+      claims: {
+        P571: [
+          {
+            rank: 'normal',
+            mainsnak: {
+              snaktype: 'value',
+              datavalue: {
+                value: {
+                  time: '+1804-05-18T00:00:00Z',
+                  precision: 11,
+                  calendarmodel: 'http://www.wikidata.org/entity/Q1985727',
+                },
+              },
+            },
+          },
+        ],
+      },
+    })
+    put('overrides/Q71084.json', {
+      id: 'Q71084',
+      changes: [correction('type', 'other')],
+    })
+    const res = run()
+    expect(res.errors.map((e) => e.message)).toEqual([])
+    const e = read('entities/Q71084.json')
+    expect(e.type).toBe('other') // curated "empire" overridden
+    expect(e.names.fr).toBe('Premier Empire') // from Wikidata
+    expect(e.corrections[0]).toMatchObject({
+      field: 'type',
+      previous: 'empire',
+    })
+  })
+
+  test('une surcharge produisant une donnée invalide est refusée', () => {
+    valid()
+    put('overrides/Q70972.json', {
+      id: 'Q70972',
+      changes: [correction('start', year('0'))],
+    })
+    expect(messages(run()).join('\n')).toMatch(/année 0/)
+  })
+
+  test.each([
+    [
+      'objet inexistant',
+      { id: 'Q1', changes: [correction('type', 'x')] },
+      /objet inexistant/,
+    ],
+    [
+      'Source inexistante',
+      {
+        id: 'Q70972',
+        changes: [correction('type', 'x', { source: 'wha:nope' })],
+      },
+      /Source « wha:nope »/,
+    ],
+    [
+      'sans Source',
+      {
+        id: 'Q70972',
+        changes: [
+          { field: 'type', value: 'x', author: 'a', date: '2026-11-03' },
+        ],
+      },
+      /source/,
+    ],
+    [
+      'sans auteur',
+      {
+        id: 'Q70972',
+        changes: [
+          { field: 'type', value: 'x', source: 'wha:ohm', date: '2026-11-03' },
+        ],
+      },
+      /author/,
+    ],
+    [
+      'date invalide',
+      { id: 'Q70972', changes: [correction('type', 'x', { date: 'hier' })] },
+      /date/,
+    ],
+  ])('erreur : %s', (_n, override, expected) => {
+    valid()
+    put('overrides/x.json', override)
+    expect(messages(run()).join('\n')).toMatch(expected)
+  })
+})

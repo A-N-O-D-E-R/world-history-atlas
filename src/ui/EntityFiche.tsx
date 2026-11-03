@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { loadEntity, loadSnapshotProps, loadSource } from '../query/details.ts'
+import { formatValue } from '../query/corrections.ts'
 import { displayName } from '../query/names.ts'
 import type { Resolved } from '../query/resolve.ts'
 import { type Lang, formatDate } from '../shared/dates.ts'
@@ -126,6 +127,41 @@ export default function EntityFiche({
           </ul>
         </dd>
       </dl>
+      {entity.corrections?.length ? (
+        <section className="corrections" aria-label={t('fiche.corrections')}>
+          <h3>{t('fiche.corrections')}</h3>
+          <ul>
+            {entity.corrections.map((c, i) => (
+              <li key={i}>
+                <b>{t(`field.${c.field}`, { defaultValue: c.field })}</b> :{' '}
+                {formatValue(c.value, lang)}
+                <div className="muted small">
+                  {t('fiche.previous', {
+                    value: formatValue(c.previous, lang),
+                  })}{' '}
+                  · {t('fiche.correctedBy', { author: c.author, date: c.date })}
+                  {c.note && <> · {c.note}</>}
+                </div>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ) : null}
+      {/^Q\d+$/.test(entity.id) && (
+        <p className="small">
+          <a
+            href={`https://www.wikidata.org/wiki/${entity.id}`}
+            target="_blank"
+            rel="noreferrer"
+          >
+            {t(
+              entity.corrections?.length
+                ? 'fiche.fixOnWikidata'
+                : 'fiche.wikidata',
+            )}
+          </a>
+        </p>
+      )}
       {(entity.wikipedia?.[lang] ?? entity.wikipedia?.fr) && (
         <p>
           <a
