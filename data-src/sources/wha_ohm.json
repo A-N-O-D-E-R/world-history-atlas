@@ -1,0 +1,10 @@
+{
+  "id": "wha:ohm",
+  "name": "OpenHistoricalMap",
+  "url": "https://www.openhistoricalmap.org/copyright",
+  "licence": "CC0-1.0",
+  "attribution": "Map data courtesy of the OpenHistoricalMap project, in the public domain unless otherwise noted",
+  "author": "OpenHistoricalMap contributors",
+  "method": "Frontières administratives (admin_level=2) datées, tracées par les contributeurs d'après des cartes et traités",
+  "reliability": "medium"
+}

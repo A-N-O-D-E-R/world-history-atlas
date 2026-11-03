@@ -73,6 +73,7 @@ export const snapshotSrc = z.object({
   from: dateSrc,
   to: dateSrc.optional(),
   source: id.optional(), // presence checked as a rule
+  extraSources: z.array(id).default([]), // e.g. CC BY segments inside an OHM boundary
   reliability: z.enum(RELIABILITY).optional(),
   note: z.string().optional(),
 })
@@ -112,6 +113,7 @@ export interface PublishedEntity {
 export interface PublishedSnapshotProps extends SnapshotRef {
   entity: string
   source: string
+  extraSources: string[]
   note?: string
 }
 

@@ -39,5 +39,10 @@ export const en: Dict = {
       contemporary: 'Contemporary',
     },
   },
+  snapshot: {
+    nearest:
+      '{{name}}: border of {{from}} – {{to}} (no known border for this date)',
+    now: 'today',
+  },
   lang: { label: 'Language', fr: 'Français', en: 'English' },
 }

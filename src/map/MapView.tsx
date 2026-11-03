@@ -4,12 +4,15 @@ import workerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url'
 import { Protocol } from 'pmtiles'
 import { useEffect, useRef, useState } from 'react'
 import { type BasemapLayer, useAtlas } from '../state/atlasStore'
+import type { GeoJSONSource } from 'maplibre-gl'
+import type { Resolved } from '../query/resolve.ts'
 import { basemapStyle } from './basemapStyle'
+import { addPolityLayers, snapshotsCollection } from './polities.ts'
 
 maplibregl.setWorkerUrl(workerUrl)
 maplibregl.addProtocol('pmtiles', new Protocol().tile)
 
-export default function MapView() {
+export default function MapView({ resolved }: { resolved: Resolved[] }) {
   const container = useRef<HTMLDivElement>(null)
   const [map, setMap] = useState<maplibregl.Map | null>(null)
   const layers = useAtlas((s) => s.layers)
@@ -39,7 +42,10 @@ export default function MapView() {
       () => (m.getCanvas().style.cursor = 'pointer'),
     )
     m.on('mouseleave', 'countries', () => (m.getCanvas().style.cursor = ''))
-    m.on('load', () => setMap(m))
+    m.on('load', () => {
+      addPolityLayers(m)
+      setMap(m)
+    })
     return () => m.remove()
   }, [])
 
@@ -59,6 +65,21 @@ export default function MapView() {
       selected?.code ?? '',
     ])
   }, [map, selected])
+
+  // Year change: swap the source data only (no map reload); ignore stale loads.
+  useEffect(() => {
+    if (!map) return
+    let stale = false
+    snapshotsCollection(resolved).then(
+      (data) => {
+        if (!stale) map.getSource<GeoJSONSource>('polities')?.setData(data)
+      },
+      (e) => console.error(e),
+    )
+    return () => {
+      stale = true
+    }
+  }, [map, resolved])
 
   return <div ref={container} className="map" />
 }
