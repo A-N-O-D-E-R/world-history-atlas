@@ -26,10 +26,13 @@ interface AtlasState {
   rightOpen: boolean
   layers: Record<BasemapLayer, boolean>
   selectedCountry: SelectedCountry | null
+  selectedEntity: string | null // id of an Entité politique
   toggleLeft: (tab: LeftTab) => void
   toggleRight: () => void
   setLayer: (layer: BasemapLayer, visible: boolean) => void
   selectCountry: (country: SelectedCountry | null) => void
+  selectEntity: (id: string | null) => void
+  clearSelection: () => void
 }
 
 export const useAtlas = create<AtlasState>((set, get) => ({
@@ -58,6 +61,7 @@ export const useAtlas = create<AtlasState>((set, get) => ({
   rightOpen: false,
   layers: { coast: true, 'modern-borders': true },
   selectedCountry: null,
+  selectedEntity: null,
   toggleLeft: (tab) =>
     set((s) =>
       s.leftTab === tab
@@ -67,6 +71,15 @@ export const useAtlas = create<AtlasState>((set, get) => ({
   toggleRight: () => set((s) => ({ rightOpen: !s.rightOpen })),
   setLayer: (layer, visible) =>
     set((s) => ({ layers: { ...s.layers, [layer]: visible } })),
+  // Selection is exclusive: a Pays actuel or an Entité politique.
   selectCountry: (country) =>
-    set({ selectedCountry: country, rightOpen: country !== null }),
+    set({
+      selectedCountry: country,
+      selectedEntity: null,
+      rightOpen: country !== null,
+    }),
+  selectEntity: (id) =>
+    set({ selectedEntity: id, selectedCountry: null, rightOpen: id !== null }),
+  clearSelection: () =>
+    set({ selectedCountry: null, selectedEntity: null, rightOpen: false }),
 }))

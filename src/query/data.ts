@@ -4,7 +4,7 @@ import { fileOf } from '../shared/schema.ts'
 
 const url = (path: string) => new URL(`data/${path}`, document.baseURI).href
 
-async function getJson<T>(path: string): Promise<T> {
+export async function getJson<T>(path: string): Promise<T> {
   const res = await fetch(url(path))
   if (!res.ok) throw new Error(`${path}: HTTP ${res.status}`)
   return res.json() as Promise<T>

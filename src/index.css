@@ -325,3 +325,58 @@ body,
   border-radius: 999px;
   box-shadow: 0 2px 10px rgba(59, 42, 26, 0.2);
 }
+.fiche dl {
+  margin: 8px 0;
+}
+.fiche dt {
+  margin-top: 8px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6b5440;
+}
+.fiche dd {
+  margin: 2px 0 0;
+}
+.fiche .warn {
+  color: #8a5a1a;
+  font-size: 12px;
+}
+.reliability {
+  display: inline-block;
+  padding: 1px 8px;
+  border-radius: 10px;
+  font-size: 12px;
+  background: #e2cf9f;
+}
+.reliability.high {
+  background: #b9c79a;
+}
+.reliability.approximate {
+  background: #e6c0a8;
+}
+.sources {
+  margin: 0;
+  padding-left: 16px;
+}
+.fab {
+  position: absolute;
+  left: 14px;
+  bottom: 18px;
+  z-index: 8;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  font-size: 18px;
+  color: var(--ink);
+  background: var(--panel);
+  border: 1px solid var(--line);
+  box-shadow: 0 2px 10px rgba(59, 42, 26, 0.15);
+  cursor: pointer;
+}
+.fab:hover {
+  background: rgba(176, 138, 62, 0.25);
+}
+.side a {
+  color: #6b3d1a;
+}

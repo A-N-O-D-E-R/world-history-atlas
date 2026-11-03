@@ -1,5 +1,7 @@
 import { useTranslation } from 'react-i18next'
+import type { Resolved } from '../query/resolve.ts'
 import { type BasemapLayer, useAtlas } from '../state/atlasStore'
+import EntityFiche from './EntityFiche.tsx'
 
 const LAYERS: BasemapLayer[] = ['modern-borders', 'coast']
 
@@ -43,10 +45,20 @@ function LayersPanel() {
   )
 }
 
-function FichePanel() {
+function FichePanel({ resolved }: { resolved: Resolved[] }) {
   const { t, i18n } = useTranslation()
   const country = useAtlas((s) => s.selectedCountry)
+  const entity = useAtlas((s) => s.selectedEntity)
   const select = useAtlas((s) => s.selectCountry)
+  const clear = useAtlas((s) => s.clearSelection)
+  if (entity)
+    return (
+      <EntityFiche
+        id={entity}
+        resolved={resolved.find((r) => r.entity.id === entity)}
+        onClose={clear}
+      />
+    )
   if (!country) return <p className="muted">{t('fiche.empty')}</p>
   return (
     <section aria-label={t('tabs.fiche')}>
@@ -67,7 +79,7 @@ function FichePanel() {
   )
 }
 
-export default function Panels() {
+export default function Panels({ resolved }: { resolved: Resolved[] }) {
   const { t } = useTranslation()
   const { leftTab, lastLeftTab, rightOpen, toggleLeft, toggleRight } =
     useAtlas()
@@ -102,7 +114,7 @@ export default function Panels() {
         className={`side side-right ${rightOpen ? '' : 'off'}`}
         inert={!rightOpen}
       >
-        <FichePanel />
+        <FichePanel resolved={resolved} />
       </aside>
       <nav
         className={`tabs tabs-right ${rightOpen ? 'shifted' : ''}`}

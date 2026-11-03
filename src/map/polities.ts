@@ -1,5 +1,5 @@
 import type { Feature, FeatureCollection } from 'geojson'
-import type { Map as MapLibre } from 'maplibre-gl'
+import type { ExpressionSpecification, Map as MapLibre } from 'maplibre-gl'
 import { loadSnapshot } from '../query/data.ts'
 import type { Resolved } from '../query/resolve.ts'
 
@@ -20,17 +20,32 @@ export function colorOf(id: string): string {
   return COLORS[h % COLORS.length]
 }
 
+const hovered: ExpressionSpecification = [
+  'boolean',
+  ['feature-state', 'hover'],
+  false,
+]
+const selected: ExpressionSpecification = [
+  'boolean',
+  ['feature-state', 'selected'],
+  false,
+]
+
 export function addPolityLayers(map: MapLibre) {
   map.addSource('polities', {
     type: 'geojson',
     data: { type: 'FeatureCollection', features: [] },
+    promoteId: 'entity', // feature-state keyed by Entité id
   })
   map.addLayer(
     {
       id: 'polity-fill',
       type: 'fill',
       source: 'polities',
-      paint: { 'fill-color': ['get', 'color'], 'fill-opacity': 0.55 },
+      paint: {
+        'fill-color': ['get', 'color'],
+        'fill-opacity': ['case', selected, 0.8, hovered, 0.7, 0.55],
+      },
     },
     'coast',
   )
@@ -41,7 +56,15 @@ export function addPolityLayers(map: MapLibre) {
       source: 'polities',
       paint: {
         'line-color': '#5a3d22',
-        'line-width': ['interpolate', ['linear'], ['zoom'], 2, 0.8, 7, 2],
+        'line-width': [
+          'interpolate',
+          ['linear'],
+          ['zoom'],
+          2,
+          ['case', selected, 1.8, 0.8],
+          7,
+          ['case', selected, 4, 2],
+        ],
       },
     },
     'coast',
