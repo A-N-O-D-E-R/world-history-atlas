@@ -26,6 +26,11 @@ export const fr = {
     reliability: 'Fiabilité de la frontière',
     sources: 'Sources',
     wikipedia: 'Article Wikipédia',
+    wikidata: 'Voir sur Wikidata',
+    fixOnWikidata: 'Corriger aussi sur Wikidata',
+    corrections: 'Corrections',
+    previous: 'ancienne valeur : {{value}}',
+    correctedBy: 'par {{author}}, le {{date}}',
   },
   timeline: {
     label: 'Frise chronologique',
@@ -51,6 +56,13 @@ export const fr = {
     now: 'aujourd’hui',
   },
   world: { label: 'Monde — effacer la sélection' },
+  field: {
+    start: 'Début',
+    end: 'Fin',
+    type: 'Type',
+    point: 'Position',
+    names: { fr: 'Nom (fr)', en: 'Nom (en)' },
+  },
   reliability: {
     high: 'Haute fiabilité',
     medium: 'Fiabilité moyenne',

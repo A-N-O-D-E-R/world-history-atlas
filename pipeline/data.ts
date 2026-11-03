@@ -23,6 +23,8 @@ import {
 import { type WdEntity, toEntity } from './wikidata.ts'
 import {
   type BBox,
+  type Correction,
+  type CorrectionSrc,
   type DateSrc,
   type EntityIndexEntry,
   type EntitySrc,
@@ -33,6 +35,7 @@ import {
   type SourceSrc,
   entitySrc,
   fileOf,
+  overrideSrc,
   snapshotSrc,
   sourceSrc,
 } from '../src/shared/schema.ts'
@@ -73,7 +76,7 @@ export function buildData(srcDir: string, outDir: string): Report {
           error(file, `JSON invalide : ${(e as Error).message}`)
           return []
         }
-        const parsed = schema.safeParse(raw)
+        const parsed = schema.safeParse(applyOverrides(raw))
         if (!parsed.success) {
           for (const i of parsed.error.issues)
             error(file, `${i.path.join('.') || '(racine)'} : ${i.message}`)
@@ -83,10 +86,46 @@ export function buildData(srcDir: string, outDir: string): Report {
       })
   }
 
+  // ---- overrides (data-src/overrides/, one file per corrected object) ----
+  const overrides = new Map<
+    string,
+    { file: string; changes: CorrectionSrc[] }
+  >()
+  const corrections = new Map<string, Correction[]>()
+  for (const { file, data } of load<{ id: string; changes: CorrectionSrc[] }>(
+    'overrides',
+    overrideSrc,
+  )) {
+    if (overrides.has(data.id))
+      error(file, `plusieurs surcharges pour « ${data.id} »`)
+    overrides.set(data.id, { file, changes: data.changes })
+  }
+  /** Apply the corrections of an object (before validation), keeping previous values. */
+  function applyOverrides(raw: unknown): unknown {
+    const id = (raw as { id?: unknown })?.id
+    const o = typeof id === 'string' ? overrides.get(id) : undefined
+    if (!o) return raw
+    const target = structuredClone(raw) as Record<string, unknown>
+    corrections.set(
+      id as string,
+      o.changes.map((c) => {
+        const keys = c.field.split('.')
+        let node = target
+        for (const k of keys.slice(0, -1))
+          node = (node[k] ??= {}) as Record<string, unknown>
+        const last = keys.at(-1)!
+        const previous = node[last]
+        node[last] = c.value
+        return { ...c, ...(previous !== undefined && { previous }) }
+      }),
+    )
+    return target
+  }
+
   const sources = load<SourceSrc>('sources', sourceSrc)
   const entities = [
     ...load<EntitySrc>('entities', entitySrc),
-    ...loadWikidataEntities(srcDir, error, warn),
+    ...loadWikidataEntities(srcDir, error, warn, applyOverrides),
   ]
   const snapshots = load<SnapshotSrc>('snapshots', snapshotSrc)
 
@@ -99,6 +138,13 @@ export function buildData(srcDir: string, outDir: string): Report {
     else seen.set(data.id, file)
   }
   const sourceById = new Map(sources.map((s) => [s.data.id, s.data]))
+  for (const [id, o] of overrides) {
+    if (!seen.has(id))
+      error(o.file, `surcharge d'un objet inexistant « ${id} »`)
+    for (const c of o.changes)
+      if (!sourceById.has(c.source))
+        error(o.file, `référence inexistante : Source « ${c.source} »`)
+  }
   const entityIds = new Set(entities.map((e) => e.data.id))
 
   // ---- dates ----
@@ -270,6 +316,9 @@ export function buildData(srcDir: string, outDir: string): Report {
         to: optDate('capitals.to', c.to),
       })),
       snapshots: refs,
+      ...(corrections.has(data.id) && {
+        corrections: corrections.get(data.id),
+      }),
     })
   }
 
@@ -387,6 +436,7 @@ function loadWikidataEntities(
   srcDir: string,
   error: (f: string, m: string) => void,
   warn: (f: string, m: string) => void,
+  apply: (raw: unknown) => unknown,
 ): { file: string; data: EntitySrc }[] {
   const curatedPath = join(srcDir, 'curated/entities.json')
   if (!existsSync(curatedPath)) return []
@@ -416,7 +466,7 @@ function loadWikidataEntities(
     )
     issues.forEach((i) => warn(file, i))
     if (!entity.start) return []
-    const parsed = entitySrc.safeParse(entity)
+    const parsed = entitySrc.safeParse(apply(entity))
     if (!parsed.success) {
       for (const i of parsed.error.issues)
         error(file, `${i.path.join('.')} : ${i.message}`)

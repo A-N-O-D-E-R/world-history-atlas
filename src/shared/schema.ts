@@ -101,6 +101,26 @@ export const snapshotSrc = z.object({
 })
 export type SnapshotSrc = z.infer<typeof snapshotSrc>
 
+/** One correction of one field, always sourced (priority: override > curated > Wikidata). */
+export const correctionSrc = z.object({
+  field: z
+    .string()
+    .regex(
+      /^[A-Za-z]+(\.[A-Za-z]+)*$/,
+      'champ attendu : nom ou chemin pointé (ex. names.fr)',
+    ),
+  value: z.unknown(),
+  source: id,
+  author: z.string().min(1),
+  date: z.iso.date(),
+  note: z.string().optional(),
+})
+export const overrideSrc = z.object({
+  id,
+  changes: z.array(correctionSrc).min(1),
+})
+export type CorrectionSrc = z.infer<typeof correctionSrc>
+
 // ---------- published files (public/data/) ----------
 
 export type Names = z.infer<typeof names>
@@ -130,8 +150,14 @@ export interface Capital {
   to?: HistDate
 }
 
+/** Applied correction, with the value it replaced (traceability). */
+export interface Correction extends CorrectionSrc {
+  previous?: unknown
+}
+
 export interface PublishedEntity {
   id: string
+  corrections?: Correction[]
   names: Names
   aliases?: { fr?: string[]; en?: string[] }
   originalNames: DatedName[]

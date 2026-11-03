@@ -28,6 +28,11 @@ export const en: Dict = {
     reliability: 'Border reliability',
     sources: 'Sources',
     wikipedia: 'Wikipedia article',
+    wikidata: 'View on Wikidata',
+    fixOnWikidata: 'Also fix it on Wikidata',
+    corrections: 'Corrections',
+    previous: 'previous value: {{value}}',
+    correctedBy: 'by {{author}}, on {{date}}',
   },
   timeline: {
     label: 'Timeline',
@@ -53,6 +58,13 @@ export const en: Dict = {
     now: 'today',
   },
   world: { label: 'World — clear selection' },
+  field: {
+    start: 'Start',
+    end: 'End',
+    type: 'Type',
+    point: 'Position',
+    names: { fr: 'Name (fr)', en: 'Name (en)' },
+  },
   reliability: {
     high: 'High reliability',
     medium: 'Medium reliability',

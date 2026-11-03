@@ -4,9 +4,9 @@
 
 **Blocked by:** 11 (Extraction Wikidata des Entités)
 
-**Status:** ready-for-agent
+**Status:** done
 
-- [ ] Un fichier de surcharge par objet : champ, nouvelle valeur, Source, auteur, date
-- [ ] Priorité surcharge > liste curée > Wikidata
-- [ ] Ancienne valeur traçable ; lien « corriger aussi sur Wikidata » dans la Fiche
-- [ ] Tests de priorité (point de test 1)
+- [x] Un fichier de surcharge par objet : champ, nouvelle valeur, Source, auteur, date
+- [x] Priorité surcharge > liste curée > Wikidata
+- [x] Ancienne valeur traçable ; lien « corriger aussi sur Wikidata » dans la Fiche
+- [x] Tests de priorité (point de test 1)

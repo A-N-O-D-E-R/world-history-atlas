@@ -380,3 +380,14 @@ body,
 .side a {
   color: #6b3d1a;
 }
+.corrections h3 {
+  margin: 12px 0 4px;
+  font:
+    700 15px 'Cormorant Garamond',
+    Georgia,
+    serif;
+}
+.corrections ul {
+  margin: 0;
+  padding-left: 16px;
+}
