@@ -1,0 +1,25 @@
+import type { Dict } from './fr'
+
+export const en: Dict = {
+  brand: 'World History Atlas',
+  tabs: {
+    explore: 'Explore',
+    layers: 'Layers',
+    fiche: 'Details',
+    leftNav: 'Left panels',
+    rightNav: 'Right panel',
+  },
+  explore: {
+    intro:
+      'A historical atlas of the world. Historical data is added country by country, starting with France.',
+    contribute: 'Contribute on GitHub',
+  },
+  layers: { 'modern-borders': 'Modern borders', coast: 'Coastlines' },
+  fiche: {
+    empty: 'Click a territory on the map.',
+    close: 'Close details',
+    modernCountry: 'Present-day country',
+    noData: 'No historical data for this territory yet.',
+  },
+  lang: { label: 'Language', fr: 'Français', en: 'English' },
+}

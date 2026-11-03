@@ -16,7 +16,9 @@ test('recliquer l’onglet actif ferme le panneau', () => {
 })
 
 test('sélectionner un pays ouvre la Fiche, désélectionner la ferme', () => {
-  useAtlas.getState().selectCountry({ code: 'FRA', name: 'France' })
+  useAtlas
+    .getState()
+    .selectCountry({ code: 'FRA', names: { fr: 'France', en: 'France' } })
   expect(useAtlas.getState().rightOpen).toBe(true)
   useAtlas.getState().selectCountry(null)
   expect(useAtlas.getState().rightOpen).toBe(false)

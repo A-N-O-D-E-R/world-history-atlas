@@ -4,8 +4,8 @@
 
 **Blocked by:** 03 (Cadre de l'interface D)
 
-**Status:** ready-for-agent
+**Status:** done
 
-- [ ] i18next avec dictionnaires fr et en
-- [ ] Sélecteur de langue dans l'en-tête, choix mémorisé
-- [ ] Aucun texte d'interface codé en dur (vérifié par un test ou un lint)
+- [x] i18next avec dictionnaires fr et en
+- [x] Sélecteur de langue dans l'en-tête, choix mémorisé
+- [x] Aucun texte d'interface codé en dur (vérifié par un test ou un lint)
