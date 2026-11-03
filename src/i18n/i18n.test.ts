@@ -14,14 +14,17 @@ test('fr et en ont exactement les mêmes clés, toutes non vides', () => {
       expect(k.split('.').reduce((o: any, x) => o[x], d)).not.toBe('')
 })
 
-test('aucun texte d’interface codé en dur dans les composants', async () => {
-  const { readdirSync, readFileSync } = await import('node:fs')
-  const files = readdirSync('src', {
-    recursive: true,
-    encoding: 'utf8',
-  }).filter((f) => f.endsWith('.tsx') && !f.endsWith('.test.tsx'))
-  const offenders = files.flatMap((f) => {
-    const src = readFileSync(`src/${f}`, 'utf8')
+test('aucun texte d’interface codé en dur dans les composants', () => {
+  const sources = import.meta.glob<string>(
+    ['../**/*.tsx', '!../**/*.test.tsx'],
+    {
+      query: '?raw',
+      import: 'default',
+      eager: true,
+    },
+  )
+  expect(Object.keys(sources).length).toBeGreaterThan(3)
+  const offenders = Object.entries(sources).flatMap(([f, src]) => {
     const hits = [
       ...src.matchAll(/(?<!=)>\s*([A-Za-zÀ-ÿ][^<>{}]*[A-Za-zÀ-ÿ])\s*</g), // JSX text
       ...src.matchAll(/(?:aria-label|title|placeholder|alt)="([^"]+)"/g), // literal attributes
