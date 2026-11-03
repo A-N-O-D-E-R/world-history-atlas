@@ -1,0 +1,184 @@
+{
+  "id": "Q58326",
+  "labels": {
+    "fr": {
+      "language": "fr",
+      "value": "Deuxième République"
+    },
+    "en": {
+      "language": "en",
+      "value": "French Second Republic"
+    }
+  },
+  "aliases": {
+    "fr": [
+      {
+        "language": "fr",
+        "value": "IIe république"
+      },
+      {
+        "language": "fr",
+        "value": "deuxième république française"
+      },
+      {
+        "language": "fr",
+        "value": "deuxieme republique"
+      },
+      {
+        "language": "fr",
+        "value": "seconde république"
+      },
+      {
+        "language": "fr",
+        "value": "IIème république"
+      },
+      {
+        "language": "fr",
+        "value": "seconde république Française"
+      },
+      {
+        "language": "fr",
+        "value": "République de 1848"
+      }
+    ],
+    "en": [
+      {
+        "language": "en",
+        "value": "Second Republic"
+      },
+      {
+        "language": "en",
+        "value": "Second Republic of France"
+      }
+    ]
+  },
+  "sitelinks": {
+    "enwiki": {
+      "site": "enwiki",
+      "title": "French Second Republic",
+      "badges": []
+    },
+    "frwiki": {
+      "site": "frwiki",
+      "title": "Deuxième République (France)",
+      "badges": ["Q17437796"]
+    }
+  },
+  "claims": {
+    "P571": [
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "time": "+1848-02-24T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 11,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+            }
+          }
+        }
+      }
+    ],
+    "P576": [
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "time": "+1852-12-02T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 11,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+            }
+          }
+        }
+      }
+    ],
+    "P36": [
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 90,
+              "id": "Q90"
+            }
+          }
+        }
+      }
+    ],
+    "P1365": [
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 58202,
+              "id": "Q58202"
+            }
+          }
+        },
+        "qualifiers": {}
+      }
+    ],
+    "P1366": [
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 71092,
+              "id": "Q71092"
+            }
+          }
+        },
+        "qualifiers": {}
+      }
+    ],
+    "P155": [
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 58202,
+              "id": "Q58202"
+            }
+          }
+        }
+      }
+    ],
+    "P625": [
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "latitude": 48.816666666667,
+              "longitude": 2.4833333333333,
+              "altitude": null,
+              "precision": 0.00027777777777778,
+              "globe": "http://www.wikidata.org/entity/Q2"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

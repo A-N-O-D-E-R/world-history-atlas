@@ -1,0 +1,149 @@
+{
+  "id": "Q200262",
+  "labels": {
+    "fr": {
+      "language": "fr",
+      "value": "royaume de Navarre"
+    },
+    "en": {
+      "language": "en",
+      "value": "Kingdom of Navarre"
+    }
+  },
+  "aliases": {
+    "en": [
+      {
+        "language": "en",
+        "value": "Kingdom of Pamplona"
+      }
+    ]
+  },
+  "sitelinks": {
+    "enwiki": {
+      "site": "enwiki",
+      "title": "Kingdom of Navarre",
+      "badges": []
+    },
+    "frwiki": {
+      "site": "frwiki",
+      "title": "Royaume de Navarre",
+      "badges": []
+    }
+  },
+  "claims": {
+    "P571": [
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "time": "+1162-00-00T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 9,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+            }
+          }
+        },
+        "qualifiers": {}
+      }
+    ],
+    "P576": [
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "time": "+1841-00-00T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 9,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+            }
+          }
+        }
+      }
+    ],
+    "P36": [
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 10282,
+              "id": "Q10282"
+            }
+          }
+        }
+      }
+    ],
+    "P1365": [
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 3446210,
+              "id": "Q3446210"
+            }
+          }
+        }
+      }
+    ],
+    "P1366": [
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 63021609,
+              "id": "Q63021609"
+            }
+          }
+        },
+        "qualifiers": {}
+      },
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 111628725,
+              "id": "Q111628725"
+            }
+          }
+        },
+        "qualifiers": {}
+      }
+    ],
+    "P625": [
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "latitude": 42.816944444444,
+              "longitude": -1.6427777777778,
+              "altitude": null,
+              "precision": 0.0002777777777777778,
+              "globe": "http://www.wikidata.org/entity/Q2"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

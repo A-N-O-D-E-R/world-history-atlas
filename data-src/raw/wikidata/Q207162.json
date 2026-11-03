@@ -1,0 +1,162 @@
+{
+  "id": "Q207162",
+  "labels": {
+    "fr": {
+      "language": "fr",
+      "value": "Restauration"
+    },
+    "en": {
+      "language": "en",
+      "value": "Bourbon Restoration in France"
+    }
+  },
+  "aliases": {
+    "fr": [
+      {
+        "language": "fr",
+        "value": "Restauration francaise"
+      },
+      {
+        "language": "fr",
+        "value": "Restauration française"
+      },
+      {
+        "language": "fr",
+        "value": "Politique sous la Restauration"
+      }
+    ],
+    "en": [
+      {
+        "language": "en",
+        "value": "Kingdom of France"
+      }
+    ]
+  },
+  "sitelinks": {
+    "enwiki": {
+      "site": "enwiki",
+      "title": "Bourbon Restoration in France",
+      "badges": []
+    },
+    "frwiki": {
+      "site": "frwiki",
+      "title": "Restauration (France)",
+      "badges": []
+    }
+  },
+  "claims": {
+    "P571": [
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "time": "+1815-00-00T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 9,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+            }
+          }
+        }
+      }
+    ],
+    "P576": [
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "time": "+1830-08-09T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 11,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+            }
+          }
+        }
+      }
+    ],
+    "P36": [
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 90,
+              "id": "Q90"
+            }
+          }
+        }
+      }
+    ],
+    "P1365": [
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 71084,
+              "id": "Q71084"
+            }
+          }
+        },
+        "qualifiers": {}
+      }
+    ],
+    "P1366": [
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 58202,
+              "id": "Q58202"
+            }
+          }
+        },
+        "qualifiers": {}
+      }
+    ],
+    "P155": [
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 71084,
+              "id": "Q71084"
+            }
+          }
+        }
+      }
+    ],
+    "P156": [
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 58202,
+              "id": "Q58202"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

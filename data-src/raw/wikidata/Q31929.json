@@ -1,0 +1,189 @@
+{
+  "id": "Q31929",
+  "labels": {
+    "fr": {
+      "language": "fr",
+      "value": "Empire carolingien"
+    },
+    "en": {
+      "language": "en",
+      "value": "Carolingian Empire"
+    }
+  },
+  "aliases": {
+    "fr": [
+      {
+        "language": "fr",
+        "value": "Empire franc"
+      },
+      {
+        "language": "fr",
+        "value": "Occident chrétien médiéval"
+      },
+      {
+        "language": "fr",
+        "value": "Empire d'Occident carolingien"
+      },
+      {
+        "language": "fr",
+        "value": "Empire de Charlemagne"
+      }
+    ],
+    "en": [
+      {
+        "language": "en",
+        "value": "Frankish Empire"
+      }
+    ]
+  },
+  "sitelinks": {
+    "enwiki": {
+      "site": "enwiki",
+      "title": "Carolingian Empire",
+      "badges": []
+    },
+    "frwiki": {
+      "site": "frwiki",
+      "title": "Empire carolingien",
+      "badges": []
+    }
+  },
+  "claims": {
+    "P571": [
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "time": "+0800-00-00T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 9,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+            }
+          }
+        }
+      }
+    ],
+    "P576": [
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "time": "+0887-00-00T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 9,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+            }
+          }
+        }
+      }
+    ],
+    "P36": [
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 1017,
+              "id": "Q1017"
+            }
+          }
+        }
+      },
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 22690,
+              "id": "Q22690"
+            }
+          }
+        }
+      }
+    ],
+    "P1365": [
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 146246,
+              "id": "Q146246"
+            }
+          }
+        }
+      },
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 1152508,
+              "id": "Q1152508"
+            }
+          }
+        }
+      }
+    ],
+    "P1366": [
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 468902,
+              "id": "Q468902"
+            }
+          }
+        },
+        "qualifiers": {}
+      },
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 153080,
+              "id": "Q153080"
+            }
+          }
+        },
+        "qualifiers": {}
+      },
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 46370,
+              "id": "Q46370"
+            }
+          }
+        },
+        "qualifiers": {}
+      }
+    ]
+  }
+}

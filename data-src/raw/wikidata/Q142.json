@@ -1,0 +1,856 @@
+{
+  "id": "Q142",
+  "labels": {
+    "en": {
+      "language": "en",
+      "value": "France"
+    },
+    "fr": {
+      "language": "fr",
+      "value": "France"
+    }
+  },
+  "aliases": {
+    "fr": [
+      {
+        "language": "fr",
+        "value": "RF"
+      },
+      {
+        "language": "fr",
+        "value": "la République française"
+      },
+      {
+        "language": "fr",
+        "value": "Fr."
+      },
+      {
+        "language": "fr",
+        "value": "La France"
+      },
+      {
+        "language": "fr",
+        "value": "L'Hexagone"
+      }
+    ],
+    "en": [
+      {
+        "language": "en",
+        "value": "French Republic"
+      }
+    ]
+  },
+  "sitelinks": {
+    "enwiki": {
+      "site": "enwiki",
+      "title": "France",
+      "badges": []
+    },
+    "frwiki": {
+      "site": "frwiki",
+      "title": "France",
+      "badges": ["Q17437796"]
+    }
+  },
+  "claims": {
+    "P571": [
+      {
+        "rank": "deprecated",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "time": "+1958-10-04T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 11,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+            }
+          }
+        },
+        "qualifiers": {}
+      },
+      {
+        "rank": "deprecated",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "time": "+1792-00-00T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 9,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+            }
+          }
+        },
+        "qualifiers": {}
+      },
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "time": "+0843-08-00T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 10,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+            }
+          }
+        },
+        "qualifiers": {}
+      },
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "time": "+0481-00-00T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 9,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+            }
+          }
+        },
+        "qualifiers": {}
+      },
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "time": "+1804-05-18T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 11,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+            }
+          }
+        },
+        "qualifiers": {}
+      }
+    ],
+    "P36": [
+      {
+        "rank": "preferred",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 90,
+              "id": "Q90"
+            }
+          }
+        },
+        "qualifiers": {
+          "P580": [
+            {
+              "snaktype": "value",
+              "datavalue": {
+                "value": {
+                  "time": "+1789-10-05T00:00:00Z",
+                  "timezone": 0,
+                  "before": 0,
+                  "after": 0,
+                  "precision": 11,
+                  "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 183910,
+              "id": "Q183910"
+            }
+          }
+        },
+        "qualifiers": {
+          "P580": [
+            {
+              "snaktype": "value",
+              "datavalue": {
+                "value": {
+                  "time": "+1944-06-00T00:00:00Z",
+                  "timezone": 0,
+                  "before": 0,
+                  "after": 0,
+                  "precision": 10,
+                  "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                }
+              }
+            }
+          ],
+          "P582": [
+            {
+              "snaktype": "value",
+              "datavalue": {
+                "value": {
+                  "time": "+1944-09-00T00:00:00Z",
+                  "timezone": 0,
+                  "before": 0,
+                  "after": 0,
+                  "precision": 10,
+                  "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 93351,
+              "id": "Q93351"
+            }
+          }
+        },
+        "qualifiers": {
+          "P580": [
+            {
+              "snaktype": "value",
+              "datavalue": {
+                "value": {
+                  "time": "+1940-07-00T00:00:00Z",
+                  "timezone": 0,
+                  "before": 0,
+                  "after": 0,
+                  "precision": 10,
+                  "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                }
+              }
+            }
+          ],
+          "P582": [
+            {
+              "snaktype": "value",
+              "datavalue": {
+                "value": {
+                  "time": "+1944-08-20T00:00:00Z",
+                  "timezone": 0,
+                  "before": 0,
+                  "after": 0,
+                  "precision": 11,
+                  "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 3561,
+              "id": "Q3561"
+            }
+          }
+        },
+        "qualifiers": {
+          "P580": [
+            {
+              "snaktype": "value",
+              "datavalue": {
+                "value": {
+                  "time": "+1942-00-00T00:00:00Z",
+                  "timezone": 0,
+                  "before": 0,
+                  "after": 0,
+                  "precision": 9,
+                  "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                }
+              }
+            }
+          ],
+          "P582": [
+            {
+              "snaktype": "value",
+              "datavalue": {
+                "value": {
+                  "time": "+1944-00-00T00:00:00Z",
+                  "timezone": 0,
+                  "before": 0,
+                  "after": 0,
+                  "precision": 9,
+                  "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 84,
+              "id": "Q84"
+            }
+          }
+        },
+        "qualifiers": {
+          "P580": [
+            {
+              "snaktype": "value",
+              "datavalue": {
+                "value": {
+                  "time": "+1940-06-00T00:00:00Z",
+                  "timezone": 0,
+                  "before": 0,
+                  "after": 0,
+                  "precision": 10,
+                  "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                }
+              }
+            }
+          ],
+          "P582": [
+            {
+              "snaktype": "value",
+              "datavalue": {
+                "value": {
+                  "time": "+1942-00-00T00:00:00Z",
+                  "timezone": 0,
+                  "before": 0,
+                  "after": 0,
+                  "precision": 9,
+                  "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 3844,
+              "id": "Q3844"
+            }
+          }
+        },
+        "qualifiers": {
+          "P580": [
+            {
+              "snaktype": "value",
+              "datavalue": {
+                "value": {
+                  "time": "+1940-00-00T00:00:00Z",
+                  "timezone": 0,
+                  "before": 0,
+                  "after": 0,
+                  "precision": 9,
+                  "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                }
+              }
+            }
+          ],
+          "P582": [
+            {
+              "snaktype": "value",
+              "datavalue": {
+                "value": {
+                  "time": "+1942-00-00T00:00:00Z",
+                  "timezone": 0,
+                  "before": 0,
+                  "after": 0,
+                  "precision": 9,
+                  "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 1479,
+              "id": "Q1479"
+            }
+          }
+        },
+        "qualifiers": {
+          "P580": [
+            {
+              "snaktype": "value",
+              "datavalue": {
+                "value": {
+                  "time": "+1940-06-14T00:00:00Z",
+                  "timezone": 0,
+                  "before": 0,
+                  "after": 0,
+                  "precision": 11,
+                  "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                }
+              }
+            }
+          ],
+          "P582": [
+            {
+              "snaktype": "value",
+              "datavalue": {
+                "value": {
+                  "time": "+1940-06-28T00:00:00Z",
+                  "timezone": 0,
+                  "before": 0,
+                  "after": 0,
+                  "precision": 11,
+                  "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 288,
+              "id": "Q288"
+            }
+          }
+        },
+        "qualifiers": {
+          "P580": [
+            {
+              "snaktype": "value",
+              "datavalue": {
+                "value": {
+                  "time": "+1940-06-10T00:00:00Z",
+                  "timezone": 0,
+                  "before": 0,
+                  "after": 0,
+                  "precision": 11,
+                  "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                }
+              }
+            }
+          ],
+          "P582": [
+            {
+              "snaktype": "value",
+              "datavalue": {
+                "value": {
+                  "time": "+1940-06-13T00:00:00Z",
+                  "timezone": 0,
+                  "before": 0,
+                  "after": 0,
+                  "precision": 11,
+                  "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 621,
+              "id": "Q621"
+            }
+          }
+        },
+        "qualifiers": {
+          "P580": [
+            {
+              "snaktype": "value",
+              "datavalue": {
+                "value": {
+                  "time": "+1871-00-00T00:00:00Z",
+                  "timezone": 0,
+                  "before": 0,
+                  "after": 0,
+                  "precision": 9,
+                  "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                }
+              }
+            }
+          ],
+          "P582": [
+            {
+              "snaktype": "value",
+              "datavalue": {
+                "value": {
+                  "time": "+1879-00-00T00:00:00Z",
+                  "timezone": 0,
+                  "before": 0,
+                  "after": 0,
+                  "precision": 9,
+                  "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 621,
+              "id": "Q621"
+            }
+          }
+        },
+        "qualifiers": {
+          "P580": [
+            {
+              "snaktype": "value",
+              "datavalue": {
+                "value": {
+                  "time": "+1682-00-00T00:00:00Z",
+                  "timezone": 0,
+                  "before": 0,
+                  "after": 0,
+                  "precision": 9,
+                  "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                }
+              }
+            }
+          ],
+          "P582": [
+            {
+              "snaktype": "value",
+              "datavalue": {
+                "value": {
+                  "time": "+1789-10-05T00:00:00Z",
+                  "timezone": 0,
+                  "before": 0,
+                  "after": 0,
+                  "precision": 11,
+                  "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "P1365": [
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 70972,
+              "id": "Q70972"
+            }
+          }
+        }
+      },
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 684430,
+              "id": "Q684430"
+            }
+          }
+        },
+        "qualifiers": {}
+      },
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 2313140,
+              "id": "Q2313140"
+            }
+          }
+        },
+        "qualifiers": {}
+      },
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 3559284,
+              "id": "Q3559284"
+            }
+          }
+        },
+        "qualifiers": {}
+      },
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 3446152,
+              "id": "Q3446152"
+            }
+          }
+        },
+        "qualifiers": {}
+      }
+    ],
+    "P1448": [
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "text": "Francouzská republika",
+              "language": "cs"
+            }
+          }
+        }
+      },
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "text": "República Francesa",
+              "language": "ca"
+            }
+          }
+        }
+      },
+      {
+        "rank": "preferred",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "text": "République française",
+              "language": "fr"
+            }
+          }
+        },
+        "qualifiers": {
+          "P580": [
+            {
+              "snaktype": "value",
+              "datavalue": {
+                "value": {
+                  "time": "+1870-09-04T00:00:00Z",
+                  "timezone": 0,
+                  "before": 0,
+                  "after": 0,
+                  "precision": 11,
+                  "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "text": "Republica Franceză",
+              "language": "ro"
+            }
+          }
+        }
+      },
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "text": "Република Француска",
+              "language": "sr"
+            }
+          }
+        }
+      },
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "text": "France",
+              "language": "fr"
+            }
+          }
+        }
+      },
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "text": "ߝߊ߬ߙߊ߲߬ߛߌ߬",
+              "language": "nqo"
+            }
+          }
+        }
+      },
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "text": "ߝߊ߬ߙߊ߲߬ߛߌ߬ ߞߊ߲ߓߍ߲",
+              "language": "nqo"
+            }
+          }
+        }
+      },
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "text": "الجمهوريه الفرنساويه",
+              "language": "arz"
+            }
+          }
+        }
+      },
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "text": "جمہوریہ فرانس",
+              "language": "ur"
+            }
+          }
+        }
+      },
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "text": "Republiken Frankrike",
+              "language": "sv"
+            }
+          }
+        }
+      },
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "text": "Republica Francesa",
+              "language": "oc"
+            }
+          }
+        }
+      },
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "text": "República Francesa",
+              "language": "pt"
+            }
+          }
+        }
+      },
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "text": "República Francesa",
+              "language": "es"
+            }
+          }
+        }
+      }
+    ],
+    "P625": [
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "latitude": 47,
+              "longitude": 2,
+              "altitude": null,
+              "precision": 1,
+              "globe": "http://www.wikidata.org/entity/Q2"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

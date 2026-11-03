@@ -1,0 +1,113 @@
+{
+  "id": "Q783684",
+  "labels": {
+    "en": {
+      "language": "en",
+      "value": "Provisional Government of the French Republic"
+    },
+    "fr": {
+      "language": "fr",
+      "value": "Gouvernement provisoire de la République française"
+    }
+  },
+  "aliases": {},
+  "sitelinks": {
+    "enwiki": {
+      "site": "enwiki",
+      "title": "Provisional Government of the French Republic",
+      "badges": []
+    },
+    "frwiki": {
+      "site": "frwiki",
+      "title": "Gouvernement provisoire de la République française",
+      "badges": []
+    }
+  },
+  "claims": {
+    "P571": [
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "time": "+1944-06-03T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 11,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+            }
+          }
+        }
+      }
+    ],
+    "P576": [
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "time": "+1946-10-27T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 11,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+            }
+          }
+        }
+      }
+    ],
+    "P1365": [
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 69808,
+              "id": "Q69808"
+            }
+          }
+        },
+        "qualifiers": {}
+      }
+    ],
+    "P1366": [
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 69829,
+              "id": "Q69829"
+            }
+          }
+        },
+        "qualifiers": {}
+      }
+    ],
+    "P625": [
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "latitude": 48.86666667,
+              "longitude": 2.33305556,
+              "altitude": null,
+              "precision": 0.13656077743146,
+              "globe": "http://www.wikidata.org/entity/Q2"
+            }
+          }
+        }
+      }
+    ]
+  }
+}
