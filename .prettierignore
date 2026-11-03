@@ -1,3 +1,5 @@
 dist
 .scratch
 pnpm-lock.yaml
+data-src
+public/data

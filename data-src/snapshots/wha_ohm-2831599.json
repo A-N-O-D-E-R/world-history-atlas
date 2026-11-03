@@ -1,0 +1,16 @@
+{
+  "id": "wha:ohm-2831599",
+  "entity": "Q146246",
+  "from": {
+    "value": "481",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "to": {
+    "value": "486",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "source": "wha:ohm",
+  "note": "OpenHistoricalMap relation 2831599 (Regnum Francorum)"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "wha:ohm-2810164",
+  "entity": "Q71084",
+  "from": {
+    "value": "1809-05-17",
+    "calendar": "gregorian",
+    "precision": "day"
+  },
+  "to": {
+    "value": "1809-10-14",
+    "calendar": "gregorian",
+    "precision": "day"
+  },
+  "source": "wha:ohm",
+  "extraSources": [
+    "wha:cnig-lilim"
+  ],
+  "note": "OpenHistoricalMap relation 2810164 (Empire Français)"
+}

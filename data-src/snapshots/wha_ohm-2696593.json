@@ -1,0 +1,19 @@
+{
+  "id": "wha:ohm-2696593",
+  "entity": "Q58296",
+  "from": {
+    "value": "1792-09-21",
+    "calendar": "gregorian",
+    "precision": "day"
+  },
+  "to": {
+    "value": "1792-11-27",
+    "calendar": "gregorian",
+    "precision": "day"
+  },
+  "source": "wha:ohm",
+  "extraSources": [
+    "wha:cnig-lilim"
+  ],
+  "note": "OpenHistoricalMap relation 2696593 (République française)"
+}

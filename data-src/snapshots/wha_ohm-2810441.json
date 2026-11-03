@@ -1,0 +1,19 @@
+{
+  "id": "wha:ohm-2810441",
+  "entity": "Q58296",
+  "from": {
+    "value": "1793-03-02",
+    "calendar": "gregorian",
+    "precision": "day"
+  },
+  "to": {
+    "value": "1795-10-26",
+    "calendar": "gregorian",
+    "precision": "day"
+  },
+  "source": "wha:ohm",
+  "extraSources": [
+    "wha:cnig-lilim"
+  ],
+  "note": "OpenHistoricalMap relation 2810441 (République française)"
+}

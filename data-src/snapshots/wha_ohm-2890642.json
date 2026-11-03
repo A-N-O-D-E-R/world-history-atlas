@@ -1,0 +1,16 @@
+{
+  "id": "wha:ohm-2890642",
+  "entity": "Q46370",
+  "from": {
+    "value": "870-08-08",
+    "calendar": "gregorian",
+    "precision": "day"
+  },
+  "to": {
+    "value": "880-02",
+    "calendar": "gregorian",
+    "precision": "month"
+  },
+  "source": "wha:ohm",
+  "note": "OpenHistoricalMap relation 2890642 (Francia occidentalis)"
+}

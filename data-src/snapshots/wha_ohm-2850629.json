@@ -1,0 +1,16 @@
+{
+  "id": "wha:ohm-2850629",
+  "entity": "Q165154",
+  "from": {
+    "value": "1860-12-17",
+    "calendar": "gregorian",
+    "precision": "day"
+  },
+  "to": {
+    "value": "1861-02-13",
+    "calendar": "gregorian",
+    "precision": "day"
+  },
+  "source": "wha:ohm",
+  "note": "OpenHistoricalMap relation 2850629 (Regno di Sardegna)"
+}

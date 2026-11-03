@@ -1,0 +1,19 @@
+{
+  "id": "wha:ohm-2815278",
+  "entity": "Q70972",
+  "from": {
+    "value": "1787",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "to": {
+    "value": "1791-09-14",
+    "calendar": "gregorian",
+    "precision": "day"
+  },
+  "source": "wha:ohm",
+  "extraSources": [
+    "wha:cnig-lilim"
+  ],
+  "note": "OpenHistoricalMap relation 2815278 (Royaume de France)"
+}

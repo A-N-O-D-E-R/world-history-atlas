@@ -23,7 +23,7 @@ test('clic sur un territoire historique → Fiche Entité, « Monde » efface', 
   await page.goto('./')
   await expect(page.locator('.map')).toHaveAttribute(
     'data-snapshots',
-    /wha:fr-kingdom/,
+    /wha:ohm-/,
   )
   await clickMap(page, 2.35, 48.86) // Paris
 
@@ -48,12 +48,12 @@ test('hors du territoire historique → Pays actuel', async ({ page }) => {
   await page.goto('./')
   await expect(page.locator('.map')).toHaveAttribute(
     'data-snapshots',
-    /wha:fr-kingdom/,
+    /wha:ohm-/,
   )
-  await clickMap(page, 10.45, 51.16) // Allemagne
+  await clickMap(page, 37.62, 55.75) // Moscou : hors de toute Entité du jeu
   await expect(
     page
       .getByRole('region', { name: 'Fiche' })
-      .getByRole('heading', { name: 'Allemagne' }),
+      .getByRole('heading', { name: 'Russie' }),
   ).toBeVisible()
 })

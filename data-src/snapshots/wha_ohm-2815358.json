@@ -1,0 +1,16 @@
+{
+  "id": "wha:ohm-2815358",
+  "entity": "Q155019",
+  "from": {
+    "value": "1661-02-28",
+    "calendar": "gregorian",
+    "precision": "day"
+  },
+  "to": {
+    "value": "1697-09-20",
+    "calendar": "gregorian",
+    "precision": "day"
+  },
+  "source": "wha:ohm",
+  "note": "OpenHistoricalMap relation 2815358 (Duché de Lorraine)"
+}

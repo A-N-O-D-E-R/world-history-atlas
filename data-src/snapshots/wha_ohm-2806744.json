@@ -1,0 +1,16 @@
+{
+  "id": "wha:ohm-2806744",
+  "entity": "Q31929",
+  "from": {
+    "value": "800-12-25",
+    "calendar": "gregorian",
+    "precision": "day"
+  },
+  "to": {
+    "value": "822",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "source": "wha:ohm",
+  "note": "OpenHistoricalMap relation 2806744 (Romanorum sive Francorum imperium)"
+}

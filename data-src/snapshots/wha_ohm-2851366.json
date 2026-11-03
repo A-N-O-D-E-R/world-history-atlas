@@ -1,0 +1,16 @@
+{
+  "id": "wha:ohm-2851366",
+  "entity": "Q1122980",
+  "from": {
+    "value": "1274",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "to": {
+    "value": "1791-09-13",
+    "calendar": "gregorian",
+    "precision": "day"
+  },
+  "source": "wha:ohm",
+  "note": "OpenHistoricalMap relation 2851366 (Comtat Venaissin)"
+}

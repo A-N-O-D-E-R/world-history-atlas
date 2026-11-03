@@ -1,0 +1,19 @@
+{
+  "id": "wha:ohm-2750108",
+  "entity": "Q70972",
+  "from": {
+    "value": "987-06-01",
+    "calendar": "gregorian",
+    "precision": "day"
+  },
+  "to": {
+    "value": "1050",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "source": "wha:ohm",
+  "extraSources": [
+    "wha:cnig-lilim"
+  ],
+  "note": "OpenHistoricalMap relation 2750108 (Reaume de France)"
+}

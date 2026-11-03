@@ -1,0 +1,10 @@
+{
+  "id": "wha:gurs-si",
+  "name": "Geodetska uprava Republike Slovenije (GURS) — données géodésiques",
+  "url": "https://ipi.eprostor.gov.si/jgp/data",
+  "licence": "CC-BY-4.0",
+  "attribution": "© Geodetska uprava Republike Slovenije, CC BY 4.0",
+  "author": "Geodetska uprava Republike Slovenije",
+  "method": "Segments de frontière slovène repris dans OpenHistoricalMap",
+  "reliability": "high"
+}

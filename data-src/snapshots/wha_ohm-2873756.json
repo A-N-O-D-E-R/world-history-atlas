@@ -1,0 +1,19 @@
+{
+  "id": "wha:ohm-2873756",
+  "entity": "Q142",
+  "from": {
+    "value": "1980-07-30",
+    "calendar": "gregorian",
+    "precision": "day"
+  },
+  "to": {
+    "value": "2007",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "source": "wha:ohm",
+  "extraSources": [
+    "wha:cnig-lilim"
+  ],
+  "note": "OpenHistoricalMap relation 2873756 (France)"
+}

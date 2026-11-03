@@ -1,0 +1,19 @@
+{
+  "id": "wha:ohm-2742092",
+  "entity": "Q71092",
+  "from": {
+    "value": "1848-11-04",
+    "calendar": "gregorian",
+    "precision": "day"
+  },
+  "to": {
+    "value": "1852-12-02",
+    "calendar": "gregorian",
+    "precision": "day"
+  },
+  "source": "wha:ohm",
+  "extraSources": [
+    "wha:cnig-lilim"
+  ],
+  "note": "OpenHistoricalMap relation 2742092 (République Française)"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "wha:ohm-2696298",
+  "entity": "Q70802",
+  "from": {
+    "value": "1871-05-10",
+    "calendar": "gregorian",
+    "precision": "day"
+  },
+  "to": {
+    "value": "1890",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "source": "wha:ohm",
+  "extraSources": [
+    "wha:cnig-lilim"
+  ],
+  "note": "OpenHistoricalMap relation 2696298 (République française)"
+}

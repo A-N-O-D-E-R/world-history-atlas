@@ -1,0 +1,16 @@
+{
+  "id": "wha:ohm-2851379",
+  "entity": "Q174306",
+  "from": {
+    "value": "1742",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "to": {
+    "value": "1768",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "source": "wha:ohm",
+  "note": "OpenHistoricalMap relation 2851379 (Serenìscima Repùbrica de Zêna)"
+}

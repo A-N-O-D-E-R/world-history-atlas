@@ -1,0 +1,19 @@
+{
+  "id": "wha:ohm-2913631",
+  "entity": "Q71084",
+  "from": {
+    "value": "1807-12-10",
+    "calendar": "gregorian",
+    "precision": "day"
+  },
+  "to": {
+    "value": "1808-01-21",
+    "calendar": "gregorian",
+    "precision": "day"
+  },
+  "source": "wha:ohm",
+  "extraSources": [
+    "wha:cnig-lilim"
+  ],
+  "note": "OpenHistoricalMap relation 2913631 (République (Empire) française)"
+}

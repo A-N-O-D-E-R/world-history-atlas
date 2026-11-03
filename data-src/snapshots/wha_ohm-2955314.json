@@ -1,0 +1,19 @@
+{
+  "id": "wha:ohm-2955314",
+  "entity": "Q70972",
+  "from": {
+    "value": "1714-09-07",
+    "calendar": "gregorian",
+    "precision": "day"
+  },
+  "to": {
+    "value": "1718",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "source": "wha:ohm",
+  "extraSources": [
+    "wha:cnig-lilim"
+  ],
+  "note": "OpenHistoricalMap relation 2955314 (Royaume de France)"
+}

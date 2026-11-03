@@ -1,0 +1,16 @@
+{
+  "id": "wha:ohm-2892573",
+  "entity": "Q7703611",
+  "from": {
+    "value": "1137-04-09",
+    "calendar": "gregorian",
+    "precision": "day"
+  },
+  "to": {
+    "value": "1214-09-28",
+    "calendar": "gregorian",
+    "precision": "day"
+  },
+  "source": "wha:ohm",
+  "note": "OpenHistoricalMap relation 2892573 (Ducat d'Aquitània)"
+}

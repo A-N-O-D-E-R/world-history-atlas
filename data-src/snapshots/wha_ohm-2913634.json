@@ -1,0 +1,19 @@
+{
+  "id": "wha:ohm-2913634",
+  "entity": "Q58296",
+  "from": {
+    "value": "1792-11-27",
+    "calendar": "gregorian",
+    "precision": "day"
+  },
+  "to": {
+    "value": "1793-01-31",
+    "calendar": "gregorian",
+    "precision": "day"
+  },
+  "source": "wha:ohm",
+  "extraSources": [
+    "wha:cnig-lilim"
+  ],
+  "note": "OpenHistoricalMap relation 2913634 (République française)"
+}
