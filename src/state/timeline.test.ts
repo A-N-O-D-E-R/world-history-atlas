@@ -1,6 +1,6 @@
 import { beforeEach, expect, test } from 'vitest'
 import { useAtlas } from './atlasStore'
-import { MAX_YEAR, fromIndex, toIndex } from './timeline'
+import { MAX_YEAR, eraOf, fractionInEra, fromIndex, toIndex } from './timeline'
 
 beforeEach(() =>
   useAtlas.setState({
@@ -39,4 +39,19 @@ test('le curseur borne le jour (29 févr. → année non bissextile)', () => {
   useAtlas.setState({ date: { year: 2024, month: 2, day: 29 } })
   useAtlas.getState().setYearIndex(2023)
   expect(useAtlas.getState().date).toEqual({ year: 2023, month: 2, day: 28 })
+})
+
+test('époques : la borne appartient à l’époque qui commence', () => {
+  expect(eraOf(-500).id).toBe('antiquity')
+  expect(eraOf(475).id).toBe('antiquity')
+  expect(eraOf(476).id).toBe('middle-ages')
+  expect(eraOf(1492).id).toBe('early-modern')
+  expect(eraOf(1789).id).toBe('contemporary')
+  expect(eraOf(MAX_YEAR).id).toBe('contemporary')
+})
+
+test('position dans l’époque', () => {
+  expect(fractionInEra(476)).toBe(0)
+  expect(fractionInEra(1491)).toBeCloseTo(1015 / 1016)
+  expect(fractionInEra(-3000)).toBe(0)
 })

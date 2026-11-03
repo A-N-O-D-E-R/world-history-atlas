@@ -17,6 +17,7 @@ interface AtlasState {
   speed: Speed
   stepBy: (dir: 1 | -1) => boolean
   setYearIndex: (index: number) => void
+  jumpToYear: (year: number) => void
   setStepUnit: (unit: StepUnit) => void
   setPlaying: (playing: boolean) => void
   setSpeed: (speed: Speed) => void
@@ -48,6 +49,7 @@ export const useAtlas = create<AtlasState>((set, get) => ({
       const day = Math.min(s.date.day, daysInMonth(year, s.date.month))
       return { date: { ...s.date, year, day } }
     }),
+  jumpToYear: (year) => set({ date: { year, month: 1, day: 1 } }),
   setStepUnit: (stepUnit) => set({ stepUnit }),
   setPlaying: (playing) => set({ playing }),
   setSpeed: (speed) => set({ speed }),

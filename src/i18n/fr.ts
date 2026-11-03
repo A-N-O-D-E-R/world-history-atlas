@@ -29,6 +29,13 @@ export const fr = {
     units: { day: 'jour', month: 'mois', year: 'an' },
     speed: 'vitesse',
     slider: 'Année',
+    eras: 'Époques',
+    era: {
+      antiquity: 'Antiquité',
+      'middle-ages': 'Moyen Âge',
+      'early-modern': 'Temps modernes',
+      contemporary: 'Contemporaine',
+    },
   },
   lang: { label: 'Langue', fr: 'Français', en: 'English' },
 }

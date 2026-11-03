@@ -4,8 +4,8 @@
 
 **Blocked by:** 06 (Dock de frise)
 
-**Status:** ready-for-agent
+**Status:** done
 
-- [ ] Barre d'époques colorées, époque courante en plein, clic = saut
-- [ ] Curseur restreint à l'époque choisie, précision jour/mois conservée
-- [ ] Survols discrets
+- [x] Barre d'époques colorées, époque courante en plein, clic = saut
+- [x] Curseur restreint à l'époque choisie, précision jour/mois conservée
+- [x] Survols discrets
