@@ -20,6 +20,7 @@ import {
   makeDatePoint,
   validate,
 } from '../src/shared/dates.ts'
+import { type WdEntity, toEntity } from './wikidata.ts'
 import {
   type BBox,
   type DateSrc,
@@ -83,7 +84,10 @@ export function buildData(srcDir: string, outDir: string): Report {
   }
 
   const sources = load<SourceSrc>('sources', sourceSrc)
-  const entities = load<EntitySrc>('entities', entitySrc)
+  const entities = [
+    ...load<EntitySrc>('entities', entitySrc),
+    ...loadWikidataEntities(srcDir, error, warn),
+  ]
   const snapshots = load<SnapshotSrc>('snapshots', snapshotSrc)
 
   // ---- identifiers ----
@@ -248,11 +252,23 @@ export function buildData(srcDir: string, outDir: string): Report {
     )
     if (!refs.length && !data.point) warn(file, 'Entité sans Snapshot ni point')
     if (!start || end === null) continue
-    const { start: _start, end: _end, ...rest } = data
+    const optDate = (field: string, d?: DateSrc) =>
+      d ? (toDate(file, field, d) ?? undefined) : undefined
+    const { start: _start, end: _end, originalNames, capitals, ...rest } = data
     publishedEntities.push({
       ...rest,
       start,
       ...(end && { end }),
+      originalNames: originalNames.map((n) => ({
+        ...n,
+        from: optDate('originalNames.from', n.from),
+        to: optDate('originalNames.to', n.to),
+      })),
+      capitals: capitals.map((c) => ({
+        ...c,
+        from: optDate('capitals.from', c.from),
+        to: optDate('capitals.to', c.to),
+      })),
       snapshots: refs,
     })
   }
@@ -361,4 +377,51 @@ export function formatReport(r: Report): string {
       ...section('Avertissements', r.warnings),
     ].join('\n') + '\n'
   )
+}
+
+/**
+ * Entités politiques backed by Wikidata: curated list (data-src/curated/
+ * entities.json) + frozen extracts (data-src/raw/wikidata/<QID>.json).
+ */
+function loadWikidataEntities(
+  srcDir: string,
+  error: (f: string, m: string) => void,
+  warn: (f: string, m: string) => void,
+): { file: string; data: EntitySrc }[] {
+  const curatedPath = join(srcDir, 'curated/entities.json')
+  if (!existsSync(curatedPath)) return []
+  const curated: { id: string; type: string }[] = JSON.parse(
+    readFileSync(curatedPath, 'utf8'),
+  )
+  const known = new Set(curated.map((c) => c.id))
+  const labelsPath = join(srcDir, 'raw/wikidata/_labels.json')
+  const labels = existsSync(labelsPath)
+    ? JSON.parse(readFileSync(labelsPath, 'utf8'))
+    : {}
+  return curated.flatMap((c) => {
+    const file = `raw/wikidata/${c.id}.json`
+    const path = join(srcDir, file)
+    if (!existsSync(path)) {
+      error(
+        file,
+        'extrait Wikidata manquant (lancer pnpm data:extract:wikidata)',
+      )
+      return []
+    }
+    const { entity, issues } = toEntity(
+      JSON.parse(readFileSync(path, 'utf8')) as WdEntity,
+      c,
+      known,
+      labels,
+    )
+    issues.forEach((i) => warn(file, i))
+    if (!entity.start) return []
+    const parsed = entitySrc.safeParse(entity)
+    if (!parsed.success) {
+      for (const i of parsed.error.issues)
+        error(file, `${i.path.join('.')} : ${i.message}`)
+      return []
+    }
+    return [{ file, data: parsed.data }]
+  })
 }

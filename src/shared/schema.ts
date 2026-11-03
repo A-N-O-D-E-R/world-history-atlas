@@ -57,6 +57,28 @@ export const entitySrc = z.object({
   type: z.string().min(1),
   start: dateSrc,
   end: dateSrc.optional(),
+  aliases: z
+    .object({
+      fr: z.array(z.string()).optional(),
+      en: z.array(z.string()).optional(),
+    })
+    .optional(),
+  /** Names of the period, in their own language — never translated. */
+  originalNames: z
+    .array(
+      z.object({
+        name: z.string(),
+        lang: z.string(),
+        from: dateSrc.optional(),
+        to: dateSrc.optional(),
+      }),
+    )
+    .default([]),
+  capitals: z
+    .array(
+      z.object({ id, names, from: dateSrc.optional(), to: dateSrc.optional() }),
+    )
+    .default([]),
   point: z
     .tuple([z.number().min(-180).max(180), z.number().min(-90).max(90)])
     .optional(),
@@ -95,9 +117,25 @@ export interface SnapshotRef {
   reliability: Reliability
 }
 
+export interface DatedName {
+  name: string
+  lang: string
+  from?: HistDate
+  to?: HistDate
+}
+export interface Capital {
+  id: string
+  names: Names
+  from?: HistDate
+  to?: HistDate
+}
+
 export interface PublishedEntity {
   id: string
   names: Names
+  aliases?: { fr?: string[]; en?: string[] }
+  originalNames: DatedName[]
+  capitals: Capital[]
   type: string
   start: HistDate
   end?: HistDate

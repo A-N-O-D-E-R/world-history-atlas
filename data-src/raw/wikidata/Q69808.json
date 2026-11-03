@@ -1,0 +1,226 @@
+{
+  "id": "Q69808",
+  "labels": {
+    "fr": {
+      "language": "fr",
+      "value": "régime de Vichy"
+    },
+    "en": {
+      "language": "en",
+      "value": "Vichy France"
+    }
+  },
+  "aliases": {
+    "fr": [
+      {
+        "language": "fr",
+        "value": "France sous le régime de Vichy"
+      },
+      {
+        "language": "fr",
+        "value": "État français"
+      },
+      {
+        "language": "fr",
+        "value": "France de Vichy"
+      },
+      {
+        "language": "fr",
+        "value": "Gouvernement de Vichy"
+      },
+      {
+        "language": "fr",
+        "value": "Gouvernement Pétain"
+      },
+      {
+        "language": "fr",
+        "value": "Vichy"
+      },
+      {
+        "language": "fr",
+        "value": "Régime de l'État français"
+      },
+      {
+        "language": "fr",
+        "value": "Regime de Vichy"
+      },
+      {
+        "language": "fr",
+        "value": "Vichysme"
+      },
+      {
+        "language": "fr",
+        "value": "Vichystes"
+      }
+    ],
+    "en": [
+      {
+        "language": "en",
+        "value": "Vichy government"
+      },
+      {
+        "language": "en",
+        "value": "Vichy regime"
+      }
+    ]
+  },
+  "sitelinks": {
+    "enwiki": {
+      "site": "enwiki",
+      "title": "Vichy France",
+      "badges": []
+    },
+    "frwiki": {
+      "site": "frwiki",
+      "title": "Régime de Vichy",
+      "badges": []
+    }
+  },
+  "claims": {
+    "P571": [
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "time": "+1940-07-10T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 11,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+            }
+          }
+        },
+        "qualifiers": {}
+      },
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "time": "+1940-00-00T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 9,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+            }
+          }
+        }
+      }
+    ],
+    "P576": [
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "time": "+1944-08-29T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 11,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+            }
+          }
+        }
+      }
+    ],
+    "P36": [
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 90,
+              "id": "Q90"
+            }
+          }
+        }
+      },
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 93351,
+              "id": "Q93351"
+            }
+          }
+        },
+        "qualifiers": {}
+      }
+    ],
+    "P1365": [
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 70802,
+              "id": "Q70802"
+            }
+          }
+        },
+        "qualifiers": {}
+      }
+    ],
+    "P1366": [
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 783684,
+              "id": "Q783684"
+            }
+          }
+        },
+        "qualifiers": {}
+      }
+    ],
+    "P1448": [
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "text": "État français",
+              "language": "fr"
+            }
+          }
+        }
+      }
+    ],
+    "P625": [
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "latitude": 46.166667,
+              "longitude": 3.4,
+              "altitude": null,
+              "precision": 0.00001,
+              "globe": "http://www.wikidata.org/entity/Q2"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

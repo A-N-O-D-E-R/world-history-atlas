@@ -32,7 +32,7 @@ test('clic sur un territoire historique → Fiche Entité, « Monde » efface', 
     fiche.getByRole('heading', { name: 'Royaume de France' }),
   ).toBeVisible()
   await expect(fiche).toContainText('Royaume')
-  await expect(fiche).toContainText('987 – 21 septembre 1792')
+  await expect(fiche).toContainText('987 – 4 septembre 1791')
   await expect(fiche).toContainText('Fiabilité moyenne')
   await expect(fiche).toContainText('la plus proche') // 987: no Snapshot covers the date
   await expect(

@@ -4,10 +4,12 @@
 
 **Blocked by:** 08 (Schémas, build et validation)
 
-**Status:** ready-for-agent
+**Status:** done
 
-- [ ] Liste curée de QID d'Entités liées au territoire français
-- [ ] Extraction via JSON `wbgetentities` uniquement (WDQS seulement pour collecter des QID), User-Agent, respect des limites
-- [ ] Extraits figés et commités dans `data-src/`
-- [ ] Libellés fr/en, alias, noms d'époque datés, dates d'existence (calendrier + précision conservés, décennie/millénaire → intervalles), capitales, prédécesseurs/successeurs, lien Wikipédia
-- [ ] Tests : julien → grégorien, -0001 = 1 av. J.-C.
+- [x] Liste curée de QID d'Entités liées au territoire français
+- [x] Extraction via JSON `wbgetentities` uniquement (WDQS seulement pour collecter des QID), User-Agent, respect des limites
+- [x] Extraits figés et commités dans `data-src/`
+- [x] Libellés fr/en, alias, noms d'époque datés, dates d'existence (calendrier + précision conservés, décennie/millénaire → intervalles), capitales, prédécesseurs/successeurs, lien Wikipédia
+- [x] Tests : julien → grégorien, -0001 = 1 av. J.-C.
+
+Notes : Wikidata fixe la fin du Royaume de France (Q70972) au 4 sept. 1791 et le début de « France » (Q142) en 843 — données source, à surcharger au besoin (ticket 12). Libellés fr en minuscule chez Wikidata : majuscule initiale ajoutée à l'affichage.

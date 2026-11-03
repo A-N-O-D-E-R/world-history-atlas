@@ -1,0 +1,134 @@
+{
+  "id": "Q155019",
+  "labels": {
+    "fr": {
+      "language": "fr",
+      "value": "duché de Lorraine"
+    },
+    "en": {
+      "language": "en",
+      "value": "Duchy of Lorraine"
+    }
+  },
+  "aliases": {
+    "fr": [
+      {
+        "language": "fr",
+        "value": "Haute-Lorraine"
+      },
+      {
+        "language": "fr",
+        "value": "Duche de Lorraine"
+      },
+      {
+        "language": "fr",
+        "value": "Lorraine"
+      },
+      {
+        "language": "fr",
+        "value": "Lotharingie supérieure"
+      },
+      {
+        "language": "fr",
+        "value": "Haute-Lotharingie"
+      }
+    ]
+  },
+  "sitelinks": {
+    "enwiki": {
+      "site": "enwiki",
+      "title": "Duchy of Lorraine",
+      "badges": []
+    },
+    "frwiki": {
+      "site": "frwiki",
+      "title": "Duché de Lorraine",
+      "badges": []
+    }
+  },
+  "claims": {
+    "P571": [
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "time": "+0959-00-00T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 9,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+            }
+          }
+        }
+      }
+    ],
+    "P576": [
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "time": "+1766-01-01T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 9,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+            }
+          }
+        }
+      }
+    ],
+    "P36": [
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 40898,
+              "id": "Q40898"
+            }
+          }
+        }
+      }
+    ],
+    "P1366": [
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 3113477,
+              "id": "Q3113477"
+            }
+          }
+        }
+      }
+    ],
+    "P625": [
+      {
+        "rank": "normal",
+        "mainsnak": {
+          "snaktype": "value",
+          "datavalue": {
+            "value": {
+              "latitude": 48.692778,
+              "longitude": 6.183611,
+              "altitude": null,
+              "precision": 0.000001,
+              "globe": "http://www.wikidata.org/entity/Q2"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

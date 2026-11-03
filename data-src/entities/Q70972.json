@@ -1,9 +1,0 @@
-{
-  "id": "Q70972",
-  "names": { "fr": "Royaume de France", "en": "Kingdom of France" },
-  "type": "kingdom",
-  "start": { "value": "987", "calendar": "gregorian", "precision": "year" },
-  "end": { "value": "1792-09-21", "calendar": "gregorian", "precision": "day" },
-  "sources": ["wha:wikidata"],
-  "wikipedia": { "fr": "Royaume_de_France", "en": "Kingdom_of_France" }
-}

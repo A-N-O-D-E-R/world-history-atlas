@@ -14,7 +14,8 @@
     "data:basemap": "tsx pipeline/basemap.ts",
     "data:build": "tsx pipeline/build.ts",
     "test:e2e": "playwright test",
-    "data:extract:ohm": "tsx pipeline/extract-ohm.ts"
+    "data:extract:ohm": "tsx pipeline/extract-ohm.ts",
+    "data:extract:wikidata": "tsx pipeline/extract-wikidata.ts"
   },
   "dependencies": {
     "i18next": "^26.7.1",

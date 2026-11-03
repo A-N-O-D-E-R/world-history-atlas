@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { type Lang, formatDate } from '../shared/dates.ts'
+import { displayName } from '../query/names.ts'
 import type { Resolved } from '../query/resolve.ts'
 
 /** Never present a border as exact when it does not cover the displayed year. */
@@ -18,7 +19,7 @@ export default function SnapshotBanner({ resolved }: { resolved: Resolved[] }) {
         return (
           <li key={entity.id}>
             {t('snapshot.nearest', {
-              name: entity.names[lang] ?? entity.names.fr ?? entity.id,
+              name: displayName(entity.names, lang, entity.id),
               from,
               to,
             })}

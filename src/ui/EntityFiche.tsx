@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { loadEntity, loadSnapshotProps, loadSource } from '../query/details.ts'
+import { displayName } from '../query/names.ts'
 import type { Resolved } from '../query/resolve.ts'
 import { type Lang, formatDate } from '../shared/dates.ts'
 import type {
@@ -56,7 +57,7 @@ export default function EntityFiche({
   const details = useDetails(id, resolved?.snapshot.id)
   if (!details) return <p className="muted">{t('fiche.loading')}</p>
   const { entity, snapshot, sources } = details
-  const name = entity.names[lang] ?? entity.names.fr ?? entity.id
+  const name = displayName(entity.names, lang, entity.id)
   const existence = `${formatDate(entity.start, lang)} – ${entity.end ? formatDate(entity.end, lang) : t('snapshot.now')}`
 
   return (
