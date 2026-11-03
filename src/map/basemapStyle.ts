@@ -5,6 +5,7 @@ export const PALETTE = {
   land: '#efe4cc',
   coast: '#8a6d4b',
   border: '#7a5a3a',
+  highlight: '#b08a3e',
 }
 
 /** Parchment style over the Natural Earth PMTiles basemap. */
@@ -30,6 +31,22 @@ export function basemapStyle(pmtilesUrl: string): StyleSpecification {
         source: 'basemap',
         'source-layer': 'land',
         paint: { 'fill-color': PALETTE.land },
+      },
+      // Invisible hit layer for Pays actuel selection, plus a filtered highlight.
+      {
+        id: 'countries',
+        type: 'fill',
+        source: 'basemap',
+        'source-layer': 'countries',
+        paint: { 'fill-color': PALETTE.highlight, 'fill-opacity': 0 },
+      },
+      {
+        id: 'country-selected',
+        type: 'fill',
+        source: 'basemap',
+        'source-layer': 'countries',
+        filter: ['==', ['get', 'ADM0_A3'], ''],
+        paint: { 'fill-color': PALETTE.highlight, 'fill-opacity': 0.25 },
       },
       {
         id: 'coast',
