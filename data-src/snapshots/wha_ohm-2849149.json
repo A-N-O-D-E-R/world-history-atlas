@@ -1,0 +1,16 @@
+{
+  "id": "wha:ohm-2849149",
+  "entity": "Q17167",
+  "from": {
+    "value": "-238",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "to": {
+    "value": "-218",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "source": "wha:ohm",
+  "note": "OpenHistoricalMap relation 2849149 (Res Publica Romana)"
+}

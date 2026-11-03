@@ -1,0 +1,16 @@
+{
+  "id": "wha:ohm-2849321",
+  "entity": "Q42834",
+  "from": {
+    "value": "407",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "to": {
+    "value": "409",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "source": "wha:ohm",
+  "note": "OpenHistoricalMap relation 2849321 (Imperium Romanum Occidentale)"
+}

@@ -1,34 +1,63 @@
-// Manual extraction: OpenHistoricalMap relations → Snapshots in data-src/.
+// Manual extraction: OpenHistoricalMap boundaries → Snapshots in data-src/.
 //   pnpm data:extract:ohm
-// The curated list (data-src/curated/ohm-snapshots.json) maps OHM relations
-// to Entités politiques. Geometry is simplified with mapshaper; member ways
-// carrying their own licence are credited through extraSources.
+// Relations are discovered by their `wikidata` tag among the curated
+// Entités (data-src/curated/entities.json), plus manual entries
+// (data-src/curated/ohm.json) for relations without a usable tag.
+// OHM dates use historical years like ours (-0058 = 58 BCE, no year 0).
+// Member ways under another licence are credited through extraSources;
+// an unknown licence stops the extraction.
 import mapshaper from 'mapshaper'
-import { readFileSync, writeFileSync } from 'node:fs'
+import {
+  mkdirSync,
+  readFileSync,
+  readdirSync,
+  rmSync,
+  writeFileSync,
+} from 'node:fs'
 import { resolve } from 'node:path'
 import osmtogeojson from 'osmtogeojson'
+import booleanValid from '@turf/boolean-valid'
+import kinks from '@turf/kinks'
+import { makeDatePoint } from '../src/shared/dates.ts'
 import { fileOf } from '../src/shared/schema.ts'
+import { ohmDate } from './ohm.ts'
 
 const OVERPASS = 'https://overpass-api.openhistoricalmap.org/api/interpreter'
 const USER_AGENT =
   'world-history-atlas/0.1 (https://github.com/A-N-O-D-E-R/world-history-atlas)'
-/** Licences found on member ways → Source crediting them. */
-const LICENCE_SOURCES: Record<string, string> = {
-  'CC-BY-4.0': 'wha:cnig-lilim',
-}
+const BATCH = 10
 
-const root = resolve(import.meta.dirname, '..')
-const curated: { relation: number; entity: string; id: string }[] = JSON.parse(
-  readFileSync(resolve(root, 'data-src/curated/ohm-snapshots.json'), 'utf8'),
-)
+/** Way licence (+ source tag pattern) → Source crediting it. */
+const LICENCE_SOURCES: { licence: string; source: RegExp; id: string }[] = [
+  { licence: 'CC-BY-4.0', source: /cnig\.es/i, id: 'wha:cnig-lilim' },
+  { licence: 'CC-BY-4.0', source: /eprostor\.gov\.si/i, id: 'wha:gurs-si' },
+]
+/** "CC-BY 4.0", "CC BY 4.0" → "CC-BY-4.0"; "CC0", "CC0 1.0" → "CC0-1.0". */
+const normaliseLicence = (l: string) => {
+  const n = l
+    .trim()
+    .toUpperCase()
+    .replace(/[\s_]+/g, '-')
+  return n === 'CC0' ? 'CC0-1.0' : n
+}
 
 interface OsmElement {
   type: string
   id: number
   tags?: Record<string, string>
+  members?: { type: string; ref: number }[]
 }
 
-async function overpass(query: string): Promise<{ elements: OsmElement[] }> {
+const root = resolve(import.meta.dirname, '..')
+const curatedIds: string[] = JSON.parse(
+  readFileSync(resolve(root, 'data-src/curated/entities.json'), 'utf8'),
+).map((c: { id: string }) => c.id)
+const manual: {
+  extra: { relation: number; entity: string }[]
+  wikidataAliases: Record<string, string>
+} = JSON.parse(readFileSync(resolve(root, 'data-src/curated/ohm.json'), 'utf8'))
+
+async function overpass(query: string): Promise<OsmElement[]> {
   for (let attempt = 1; ; attempt++) {
     const res = await fetch(OVERPASS, {
       method: 'POST',
@@ -38,79 +67,151 @@ async function overpass(query: string): Promise<{ elements: OsmElement[] }> {
       },
       body: new URLSearchParams({ data: query }),
     })
-    if (res.ok) return (await res.json()) as { elements: OsmElement[] }
-    if (attempt === 3 || ![429, 504].includes(res.status))
-      throw new Error(`Overpass HTTP ${res.status}`)
-    await new Promise((r) => setTimeout(r, 30_000 * attempt))
-  }
-}
-
-/** OHM ISO date ("1697-09-20", "1718") → DateSrc. */
-export function ohmDate(value: string) {
-  const parts = value.split('-').filter(Boolean).length
-  return {
-    value,
-    calendar: 'gregorian',
-    precision: ['year', 'month', 'day'][parts - 1],
-  } as const
-}
-
-for (const { relation, entity, id } of curated) {
-  console.log(`relation ${relation} → ${id}`)
-  const osm = await overpass(
-    `[out:json][timeout:120];rel(${relation});(._;>;);out body;`,
-  )
-  const rel = osm.elements.find(
-    (e: { type: string; id: number }) =>
-      e.type === 'relation' && e.id === relation,
-  )
-  if (!rel) throw new Error(`relation ${relation} introuvable`)
-  const tags = rel.tags ?? {}
-  if (tags.license && tags.license !== 'CC0-1.0')
-    throw new Error(`relation ${relation}: licence ${tags.license}`)
-
-  const licences = new Set<string>(
-    osm.elements.flatMap((e: { type: string; tags?: { license?: string } }) =>
-      e.type === 'way' && e.tags?.license && e.tags.license !== 'CC0-1.0'
-        ? [e.tags.license]
-        : [],
-    ),
-  )
-  const extraSources = [...licences].map((l) => {
-    const source = LICENCE_SOURCES[l]
-    if (!source)
+    const text = await res.text()
+    // Overpass sometimes answers 200 with an XML/HTML error page (server busy).
+    if (res.ok && text.trimStart().startsWith('{'))
+      return (JSON.parse(text) as { elements: OsmElement[] }).elements
+    if (attempt === 5)
       throw new Error(
-        `relation ${relation}: licence de segment non gérée « ${l} »`,
+        `Overpass HTTP ${res.status} : ${text.slice(0, 300).replace(/\s+/g, ' ')}`,
       )
-    return source
-  })
-
-  const gj = osmtogeojson(osm)
-  const feature = gj.features.find(
-    (f) =>
-      f.id === `relation/${relation}` &&
-      /Polygon$/.test(f.geometry?.type ?? ''),
-  )
-  if (!feature) throw new Error(`relation ${relation}: aucun polygone assemblé`)
-  const input = JSON.stringify({
-    type: 'FeatureCollection',
-    features: [{ type: 'Feature', properties: {}, geometry: feature.geometry }],
-  })
-  const out = await mapshaper.applyCommands(
-    '-i in.json -clean -simplify 3% keep-shapes -clean -o out.json format=geojson geojson-type=FeatureCollection precision=0.0001',
-    { 'in.json': input },
-  )
-
-  const base = resolve(root, 'data-src/snapshots', fileOf(id))
-  writeFileSync(`${base}.geojson`, String(out['out.json']))
-  const meta = {
-    id,
-    entity,
-    from: ohmDate(tags.start_date),
-    ...(tags.end_date && { to: ohmDate(tags.end_date) }),
-    source: 'wha:ohm',
-    ...(extraSources.length && { extraSources }),
-    note: `OpenHistoricalMap relation ${relation} (${tags.name ?? ''})`,
+    console.warn(
+      `  Overpass indisponible (HTTP ${res.status}), nouvel essai ${attempt + 1}/5…`,
+    )
+    await new Promise((r) => setTimeout(r, 20_000 * attempt))
   }
-  writeFileSync(`${base}.json`, JSON.stringify(meta, null, 2) + '\n')
+}
+
+// ---- discovery ----
+const qids = [...curatedIds, ...Object.keys(manual.wikidataAliases)].join('|')
+const tagged = await overpass(
+  `[out:json][timeout:170];rel["wikidata"~"^(${qids})$"]["boundary"="administrative"];out tags;`,
+)
+const targets = new Map<number, string>() // relation → Entité
+for (const r of tagged) {
+  const q = r.tags!.wikidata
+  targets.set(r.id, manual.wikidataAliases[q] ?? q)
+}
+for (const { relation, entity } of manual.extra) targets.set(relation, entity)
+console.log(`${targets.size} relations`)
+
+// ---- previous OHM Snapshots are regenerated ----
+const dir = resolve(root, 'data-src/snapshots')
+mkdirSync(dir, { recursive: true })
+for (const f of readdirSync(dir))
+  if (f.startsWith('wha_ohm-')) rmSync(resolve(dir, f))
+
+const relations = [...targets.keys()].sort((a, b) => a - b)
+const unknownLicences = new Set<string>()
+for (let i = 0; i < relations.length; i += BATCH) {
+  const batch = relations.slice(i, i + BATCH)
+  const elements = await overpass(
+    `[out:json][timeout:170];rel(id:${batch.join(',')});(._;>;);out body;`,
+  )
+  const ways = new Map(
+    elements.filter((e) => e.type === 'way').map((e) => [e.id, e]),
+  )
+  const gj = osmtogeojson({ elements } as never)
+
+  for (const relation of batch) {
+    const rel = elements.find((e) => e.type === 'relation' && e.id === relation)
+    const tags = rel?.tags ?? {}
+    if (!rel || !tags.start_date) {
+      console.warn(
+        `  relation ${relation} : ignorée (absente ou sans start_date)`,
+      )
+      continue
+    }
+    if (tags.license && normaliseLicence(tags.license) !== 'CC0-1.0')
+      throw new Error(`relation ${relation} : licence ${tags.license}`)
+
+    const extraSources = new Set<string>()
+    for (const m of rel.members ?? []) {
+      const w = m.type === 'way' ? ways.get(m.ref) : undefined
+      const licence = w?.tags?.license && normaliseLicence(w.tags.license)
+      if (!licence || licence === 'CC0-1.0') continue
+      const match = LICENCE_SOURCES.find(
+        (l) => l.licence === licence && l.source.test(w!.tags!.source ?? ''),
+      )
+      if (match) extraSources.add(match.id)
+      else
+        unknownLicences.add(
+          `${licence} (source « ${w!.tags!.source ?? '?'} », relation ${relation})`,
+        )
+    }
+
+    const feature = gj.features.find(
+      (f) =>
+        f.id === `relation/${relation}` &&
+        /Polygon$/.test(f.geometry?.type ?? ''),
+    )
+    if (!feature) {
+      console.warn(`  relation ${relation} : aucun polygone assemblé, ignorée`)
+      continue
+    }
+    const input = JSON.stringify({
+      type: 'FeatureCollection',
+      features: [
+        { type: 'Feature', properties: {}, geometry: feature.geometry },
+      ],
+    })
+    const geojson = await simplifyValid(input)
+    if (!geojson) {
+      console.warn(
+        `  relation ${relation} : polygone invalide même sans simplification, ignorée`,
+      )
+      continue
+    }
+    const id = `wha:ohm-${relation}`
+    const base = resolve(dir, fileOf(id))
+    const from = ohmDate(tags.start_date)
+    const to = tags.end_date ? ohmDate(tags.end_date) : undefined
+    const key = (d: typeof from) =>
+      'value' in d ? makeDatePoint(d.value, d.precision, d.calendar).sortKey : 0
+    if (to && key(to) < key(from)) {
+      console.warn(
+        `  relation ${relation} : fin (${tags.end_date}) avant début (${tags.start_date}) dans OHM, ignorée`,
+      )
+      continue
+    }
+    writeFileSync(`${base}.geojson`, geojson)
+    const meta = {
+      id,
+      entity: targets.get(relation),
+      from,
+      ...(to && { to }),
+      source: 'wha:ohm',
+      ...(extraSources.size && { extraSources: [...extraSources] }),
+      note: `OpenHistoricalMap relation ${relation} (${tags.name ?? ''})`,
+    }
+    writeFileSync(`${base}.json`, JSON.stringify(meta, null, 2) + '\n')
+  }
+  console.log(`  ${Math.min(i + BATCH, relations.length)}/${relations.length}`)
+}
+if (unknownLicences.size) {
+  console.error(
+    `Licences de segments sans Source :\n- ${[...unknownLicences].join('\n- ')}`,
+  )
+  process.exit(1)
+}
+
+/** Simplify as much as possible while keeping valid, non self-intersecting polygons. */
+async function simplifyValid(input: string): Promise<string | null> {
+  for (const level of ['3%', '10%', '30%', null]) {
+    const simplify = level ? `-simplify ${level} keep-shapes -clean` : ''
+    const out = await mapshaper.applyCommands(
+      `-i in.json -clean ${simplify} -o out.json format=geojson geojson-type=FeatureCollection precision=0.0001`,
+      { 'in.json': input },
+    )
+    const text = String(out['out.json'])
+    const fc = JSON.parse(text) as { features: { geometry: never }[] }
+    if (
+      fc.features.every(
+        (f) =>
+          booleanValid(f.geometry) && kinks(f.geometry).features.length === 0,
+      )
+    )
+      return text
+  }
+  return null
 }

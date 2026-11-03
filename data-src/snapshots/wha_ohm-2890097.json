@@ -1,0 +1,16 @@
+{
+  "id": "wha:ohm-2890097",
+  "entity": "Q12548",
+  "from": {
+    "value": "962-02-02",
+    "calendar": "gregorian",
+    "precision": "day"
+  },
+  "to": {
+    "value": "983",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "source": "wha:ohm",
+  "note": "OpenHistoricalMap relation 2890097 (Sacrum Imperium Romanum)"
+}

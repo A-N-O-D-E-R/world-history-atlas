@@ -1,0 +1,16 @@
+{
+  "id": "wha:ohm-2851373",
+  "entity": "Q174306",
+  "from": {
+    "value": "1453",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "to": {
+    "value": "1456",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "source": "wha:ohm",
+  "note": "OpenHistoricalMap relation 2851373 (Compagna Communis Ianuensis)"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "wha:ohm-2742091",
+  "entity": "Q207162",
+  "from": {
+    "value": "1825-12-09",
+    "calendar": "gregorian",
+    "precision": "day"
+  },
+  "to": {
+    "value": "1829-10-23",
+    "calendar": "gregorian",
+    "precision": "day"
+  },
+  "source": "wha:ohm",
+  "extraSources": [
+    "wha:cnig-lilim"
+  ],
+  "note": "OpenHistoricalMap relation 2742091 (Royaume de France)"
+}

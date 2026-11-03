@@ -1,0 +1,16 @@
+{
+  "id": "wha:ohm-2848875",
+  "entity": "Q165154",
+  "from": {
+    "value": "1720-02-17",
+    "calendar": "gregorian",
+    "precision": "day"
+  },
+  "to": {
+    "value": "1734",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "source": "wha:ohm",
+  "note": "OpenHistoricalMap relation 2848875 (Sardegna)"
+}

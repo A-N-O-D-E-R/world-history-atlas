@@ -1,0 +1,19 @@
+{
+  "id": "wha:ohm-2809393",
+  "entity": "Q58296",
+  "from": {
+    "value": "1802-09-11",
+    "calendar": "gregorian",
+    "precision": "day"
+  },
+  "to": {
+    "value": "1804-05-18",
+    "calendar": "gregorian",
+    "precision": "day"
+  },
+  "source": "wha:ohm",
+  "extraSources": [
+    "wha:cnig-lilim"
+  ],
+  "note": "OpenHistoricalMap relation 2809393 (République française)"
+}

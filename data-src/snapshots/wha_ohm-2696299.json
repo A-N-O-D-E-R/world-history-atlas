@@ -1,0 +1,19 @@
+{
+  "id": "wha:ohm-2696299",
+  "entity": "Q70802",
+  "from": {
+    "value": "1918-11-22",
+    "calendar": "gregorian",
+    "precision": "day"
+  },
+  "to": {
+    "value": "1940-06-22",
+    "calendar": "gregorian",
+    "precision": "day"
+  },
+  "source": "wha:ohm",
+  "extraSources": [
+    "wha:cnig-lilim"
+  ],
+  "note": "OpenHistoricalMap relation 2696299 (République française)"
+}

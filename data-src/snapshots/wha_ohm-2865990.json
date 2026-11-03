@@ -1,0 +1,19 @@
+{
+  "id": "wha:ohm-2865990",
+  "entity": "Q69829",
+  "from": {
+    "value": "1946-10-27",
+    "calendar": "gregorian",
+    "precision": "day"
+  },
+  "to": {
+    "value": "1947-02-10",
+    "calendar": "gregorian",
+    "precision": "day"
+  },
+  "source": "wha:ohm",
+  "extraSources": [
+    "wha:cnig-lilim"
+  ],
+  "note": "OpenHistoricalMap relation 2865990 (France)"
+}

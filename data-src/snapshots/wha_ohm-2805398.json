@@ -1,0 +1,16 @@
+{
+  "id": "wha:ohm-2805398",
+  "entity": "Q71747",
+  "from": {
+    "value": "939-08-01",
+    "calendar": "gregorian",
+    "precision": "day"
+  },
+  "to": {
+    "value": "1547-08-12",
+    "calendar": "gregorian",
+    "precision": "day"
+  },
+  "source": "wha:ohm",
+  "note": "OpenHistoricalMap relation 2805398 (Dugelezh Breizh)"
+}

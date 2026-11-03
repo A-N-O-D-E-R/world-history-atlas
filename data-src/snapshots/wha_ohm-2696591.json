@@ -1,0 +1,19 @@
+{
+  "id": "wha:ohm-2696591",
+  "entity": "Q71084",
+  "from": {
+    "value": "1805-06-04",
+    "calendar": "gregorian",
+    "precision": "day"
+  },
+  "to": {
+    "value": "1807-08-04",
+    "calendar": "gregorian",
+    "precision": "day"
+  },
+  "source": "wha:ohm",
+  "extraSources": [
+    "wha:cnig-lilim"
+  ],
+  "note": "OpenHistoricalMap relation 2696591 (République (Empire) française)"
+}

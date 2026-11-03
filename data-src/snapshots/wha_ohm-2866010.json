@@ -1,0 +1,19 @@
+{
+  "id": "wha:ohm-2866010",
+  "entity": "Q70802",
+  "from": {
+    "value": "1870-09-03",
+    "calendar": "gregorian",
+    "precision": "day"
+  },
+  "to": {
+    "value": "1871-05-10",
+    "calendar": "gregorian",
+    "precision": "day"
+  },
+  "source": "wha:ohm",
+  "extraSources": [
+    "wha:cnig-lilim"
+  ],
+  "note": "OpenHistoricalMap relation 2866010 (République française)"
+}

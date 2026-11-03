@@ -1,0 +1,19 @@
+{
+  "id": "wha:ohm-2831479",
+  "entity": "Q126936",
+  "from": {
+    "value": "585",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "to": {
+    "value": "624",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "source": "wha:ohm",
+  "extraSources": [
+    "wha:cnig-lilim"
+  ],
+  "note": "OpenHistoricalMap relation 2831479 (Regnum Gothorum)"
+}

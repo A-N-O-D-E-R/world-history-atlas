@@ -1,0 +1,19 @@
+{
+  "id": "wha:ohm-2913637",
+  "entity": "Q207162",
+  "from": {
+    "value": "1829-10-23",
+    "calendar": "gregorian",
+    "precision": "day"
+  },
+  "to": {
+    "value": "1848-11-04",
+    "calendar": "gregorian",
+    "precision": "day"
+  },
+  "source": "wha:ohm",
+  "extraSources": [
+    "wha:cnig-lilim"
+  ],
+  "note": "OpenHistoricalMap relation 2913637 (Royaume de France)"
+}

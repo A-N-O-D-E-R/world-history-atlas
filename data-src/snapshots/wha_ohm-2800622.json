@@ -1,0 +1,16 @@
+{
+  "id": "wha:ohm-2800622",
+  "entity": "Q13590051",
+  "from": {
+    "value": "476",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "to": {
+    "value": "507",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "source": "wha:ohm",
+  "note": "OpenHistoricalMap relation 2800622 (Regnum Burgundionum)"
+}

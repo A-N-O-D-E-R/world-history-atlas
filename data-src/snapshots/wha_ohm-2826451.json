@@ -1,0 +1,14 @@
+{
+  "id": "wha:ohm-2826451",
+  "entity": "Q142",
+  "from": {
+    "value": "2007",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "source": "wha:ohm",
+  "extraSources": [
+    "wha:cnig-lilim"
+  ],
+  "note": "OpenHistoricalMap relation 2826451 (France)"
+}

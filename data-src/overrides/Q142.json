@@ -1,0 +1,13 @@
+{
+  "id": "Q142",
+  "changes": [
+    {
+      "field": "start",
+      "value": { "value": "1958-10-04", "calendar": "gregorian", "precision": "day" },
+      "source": "wha:wikidata",
+      "author": "A-N-O-D-E-R",
+      "date": "2026-11-03",
+      "note": "Wikidata Q142 P571 porte aussi 1958-10-04 (Ve République). La valeur préférée, 843, désigne la France historique, déjà couverte par les Entités précédentes (Francie occidentale, royaume de France, Républiques…) : avec elle, les frontières de 1947 apparaissaient dès le Moyen Âge."
+    }
+  ]
+}

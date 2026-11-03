@@ -1,0 +1,19 @@
+{
+  "id": "wha:ohm-2890861",
+  "entity": "Q146246",
+  "from": {
+    "value": "774-06-05",
+    "calendar": "gregorian",
+    "precision": "day"
+  },
+  "to": {
+    "value": "780",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "source": "wha:ohm",
+  "extraSources": [
+    "wha:cnig-lilim"
+  ],
+  "note": "OpenHistoricalMap relation 2890861 (Regnum Francorum)"
+}

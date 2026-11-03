@@ -1,0 +1,16 @@
+{
+  "id": "wha:ohm-2849324",
+  "entity": "Q2277",
+  "from": {
+    "value": "47",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "to": {
+    "value": "56",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "source": "wha:ohm",
+  "note": "OpenHistoricalMap relation 2849324 (Imperium Romanum)"
+}
