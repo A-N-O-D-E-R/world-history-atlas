@@ -1,0 +1,16 @@
+{
+  "id": "wha:clio-q207162-1815",
+  "entity": "Q207162",
+  "from": {
+    "value": "1815",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "to": {
+    "value": "1820",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "source": "wha:cliopatria",
+  "note": "Cliopatria v0.2.1 : « (Bourbon Kingdom of France) » 1815–1819"
+}

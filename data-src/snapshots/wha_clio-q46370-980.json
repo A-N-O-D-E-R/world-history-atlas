@@ -1,0 +1,16 @@
+{
+  "id": "wha:clio-q46370-980",
+  "entity": "Q46370",
+  "from": {
+    "value": "980",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "to": {
+    "value": "990",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "source": "wha:cliopatria",
+  "note": "Cliopatria v0.2.1 : « West Franks » 980–989"
+}

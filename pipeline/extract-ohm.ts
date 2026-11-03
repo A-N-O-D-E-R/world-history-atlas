@@ -6,7 +6,6 @@
 // OHM dates use historical years like ours (-0058 = 58 BCE, no year 0).
 // Member ways under another licence are credited through extraSources;
 // an unknown licence stops the extraction.
-import mapshaper from 'mapshaper'
 import {
   mkdirSync,
   readFileSync,
@@ -16,10 +15,9 @@ import {
 } from 'node:fs'
 import { resolve } from 'node:path'
 import osmtogeojson from 'osmtogeojson'
-import booleanValid from '@turf/boolean-valid'
-import kinks from '@turf/kinks'
 import { makeDatePoint } from '../src/shared/dates.ts'
 import { fileOf } from '../src/shared/schema.ts'
+import { simplifyValid } from './geometry.ts'
 import { ohmDate } from './ohm.ts'
 
 const OVERPASS = 'https://overpass-api.openhistoricalmap.org/api/interpreter'
@@ -193,25 +191,4 @@ if (unknownLicences.size) {
     `Licences de segments sans Source :\n- ${[...unknownLicences].join('\n- ')}`,
   )
   process.exit(1)
-}
-
-/** Simplify as much as possible while keeping valid, non self-intersecting polygons. */
-async function simplifyValid(input: string): Promise<string | null> {
-  for (const level of ['3%', '10%', '30%', null]) {
-    const simplify = level ? `-simplify ${level} keep-shapes -clean` : ''
-    const out = await mapshaper.applyCommands(
-      `-i in.json -clean ${simplify} -o out.json format=geojson geojson-type=FeatureCollection precision=0.0001`,
-      { 'in.json': input },
-    )
-    const text = String(out['out.json'])
-    const fc = JSON.parse(text) as { features: { geometry: never }[] }
-    if (
-      fc.features.every(
-        (f) =>
-          booleanValid(f.geometry) && kinks(f.geometry).features.length === 0,
-      )
-    )
-      return text
-  }
-  return null
 }

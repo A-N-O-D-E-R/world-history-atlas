@@ -1,0 +1,16 @@
+{
+  "id": "wha:clio-q13590051-154",
+  "entity": "Q13590051",
+  "from": {
+    "value": "154",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "to": {
+    "value": "224",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "source": "wha:cliopatria",
+  "note": "Cliopatria v0.2.1 : « Burgundians » 154–223"
+}

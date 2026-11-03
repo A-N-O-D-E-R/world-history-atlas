@@ -1,0 +1,16 @@
+{
+  "id": "wha:clio-q155019-1763",
+  "entity": "Q155019",
+  "from": {
+    "value": "1763",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "to": {
+    "value": "1769",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "source": "wha:cliopatria",
+  "note": "Cliopatria v0.2.1 : « Duchy of Lorraine » 1763–1768"
+}

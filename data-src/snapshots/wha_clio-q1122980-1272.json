@@ -1,0 +1,16 @@
+{
+  "id": "wha:clio-q1122980-1272",
+  "entity": "Q1122980",
+  "from": {
+    "value": "1272",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "to": {
+    "value": "1352",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "source": "wha:cliopatria",
+  "note": "Cliopatria v0.2.1 : « Comtat Venaissin » 1272–1351"
+}

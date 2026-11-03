@@ -1,0 +1,16 @@
+{
+  "id": "wha:clio-q7703611-1046",
+  "entity": "Q7703611",
+  "from": {
+    "value": "1046",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "to": {
+    "value": "1056",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "source": "wha:cliopatria",
+  "note": "Cliopatria v0.2.1 : « Duchy of Aquitaine » 1046–1055"
+}

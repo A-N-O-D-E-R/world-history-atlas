@@ -1,0 +1,16 @@
+{
+  "id": "wha:clio-q146246-462",
+  "entity": "Q146246",
+  "from": {
+    "value": "462",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "to": {
+    "value": "490",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "source": "wha:cliopatria",
+  "note": "Cliopatria v0.2.1 : « (Merovingian Empire) » 462–489"
+}

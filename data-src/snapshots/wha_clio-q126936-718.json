@@ -1,0 +1,16 @@
+{
+  "id": "wha:clio-q126936-718",
+  "entity": "Q126936",
+  "from": {
+    "value": "718",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "to": {
+    "value": "724",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "source": "wha:cliopatria",
+  "note": "Cliopatria v0.2.1 : « Visigothic Kingdom » 718–723"
+}

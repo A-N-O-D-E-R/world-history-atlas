@@ -1,0 +1,16 @@
+{
+  "id": "wha:clio-q200262-1333",
+  "entity": "Q200262",
+  "from": {
+    "value": "1333",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "to": {
+    "value": "1363",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "source": "wha:cliopatria",
+  "note": "Cliopatria v0.2.1 : « Kingdom of Navarre » 1333–1362"
+}

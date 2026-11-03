@@ -1,0 +1,16 @@
+{
+  "id": "wha:clio-q174306-1285",
+  "entity": "Q174306",
+  "from": {
+    "value": "1285",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "to": {
+    "value": "1305",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "source": "wha:cliopatria",
+  "note": "Cliopatria v0.2.1 : « Republic of Genoa » 1285–1304"
+}

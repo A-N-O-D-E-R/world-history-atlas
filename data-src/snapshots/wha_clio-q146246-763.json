@@ -1,0 +1,16 @@
+{
+  "id": "wha:clio-q146246-763",
+  "entity": "Q146246",
+  "from": {
+    "value": "763",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "to": {
+    "value": "768",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "source": "wha:cliopatria",
+  "note": "Cliopatria v0.2.1 : « (Carolingian Empire) » 763–767"
+}

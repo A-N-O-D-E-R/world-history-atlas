@@ -1,0 +1,16 @@
+{
+  "id": "wha:clio-q13590051-602",
+  "entity": "Q13590051",
+  "from": {
+    "value": "602",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "to": {
+    "value": "612",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "source": "wha:cliopatria",
+  "note": "Cliopatria v0.2.1 : « Burgundian Kingdom » 602–611"
+}

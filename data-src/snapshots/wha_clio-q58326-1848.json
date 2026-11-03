@@ -1,0 +1,16 @@
+{
+  "id": "wha:clio-q58326-1848",
+  "entity": "Q58326",
+  "from": {
+    "value": "1848",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "to": {
+    "value": "1849",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "source": "wha:cliopatria",
+  "note": "Cliopatria v0.2.1 : « (French Second Republic) » 1848–1848"
+}

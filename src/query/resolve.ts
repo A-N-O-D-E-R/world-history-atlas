@@ -1,5 +1,9 @@
 import { type HistDate, isInterval } from '../shared/dates.ts'
-import type { EntityIndexEntry, SnapshotRef } from '../shared/schema.ts'
+import type {
+  EntityIndexEntry,
+  Reliability,
+  SnapshotRef,
+} from '../shared/schema.ts'
 
 export interface Resolved {
   entity: EntityIndexEntry
@@ -8,6 +12,7 @@ export interface Resolved {
   exact: boolean
 }
 
+const RANK: Record<Reliability, number> = { approximate: 0, medium: 1, high: 2 }
 const first = (d: HistDate) => (isInterval(d) ? d.earliest.sortKey : d.sortKey)
 const last = (d: HistDate) => (isInterval(d) ? d.latest.sortKey : d.sortKey)
 
@@ -26,9 +31,14 @@ export function resolveSnapshot(
   day: number,
 ): Resolved | null {
   if (!existsAt(e, day) || !e.snapshots.length) return null
-  const covering = e.snapshots.find(
-    (s) => day >= first(s.from) && (!s.to || day < first(s.to)),
-  )
+  // Several Snapshots may cover the day (OHM + Cliopatria): the most reliable wins.
+  const covering = e.snapshots
+    .filter((s) => day >= first(s.from) && (!s.to || day < first(s.to)))
+    .reduce<SnapshotRef | undefined>(
+      (best, s) =>
+        !best || RANK[s.reliability] > RANK[best.reliability] ? s : best,
+      undefined,
+    )
   if (covering) return { entity: e, snapshot: covering, exact: true }
   const distance = (s: SnapshotRef) =>
     day < first(s.from) ? first(s.from) - day : day - last(s.to ?? s.from)
@@ -40,4 +50,12 @@ export function resolveSnapshot(
 
 export function resolveAll(index: EntityIndexEntry[], day: number): Resolved[] {
   return index.flatMap((e) => resolveSnapshot(e, day) ?? [])
+}
+
+/** Entités existing at the day for which no border is known at all. */
+export function withoutBorder(
+  index: EntityIndexEntry[],
+  day: number,
+): EntityIndexEntry[] {
+  return index.filter((e) => existsAt(e, day) && !e.snapshots.length)
 }

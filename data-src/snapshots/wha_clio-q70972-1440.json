@@ -1,0 +1,16 @@
+{
+  "id": "wha:clio-q70972-1440",
+  "entity": "Q70972",
+  "from": {
+    "value": "1440",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "to": {
+    "value": "1450",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "source": "wha:cliopatria",
+  "note": "Cliopatria v0.2.1 : « (Kingdom of France) » 1440–1449"
+}
