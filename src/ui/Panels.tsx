@@ -75,7 +75,7 @@ export default function Panels() {
     <>
       <aside
         className={`side side-left ${leftTab ? '' : 'off'}`}
-        aria-hidden={!leftTab}
+        inert={!leftTab}
       >
         {lastLeftTab === 'layers' ? <LayersPanel /> : <ExplorePanel />}
       </aside>
@@ -100,7 +100,7 @@ export default function Panels() {
       </nav>
       <aside
         className={`side side-right ${rightOpen ? '' : 'off'}`}
-        aria-hidden={!rightOpen}
+        inert={!rightOpen}
       >
         <FichePanel />
       </aside>

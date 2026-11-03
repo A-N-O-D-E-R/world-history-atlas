@@ -4,10 +4,10 @@
 
 **Blocked by:** 03 (Cadre de l'interface D), 05 (Modèle de dates)
 
-**Status:** ready-for-agent
+**Status:** done
 
-- [ ] Date courante dans le store, affichée en grand au-dessus du dock
-- [ ] Pas réglable jour/mois/an ; précédent/suivant respectent le pas
-- [ ] Lecture/pause et vitesse réglable
-- [ ] Curseur sur toute la plage -3000 → aujourd'hui
-- [ ] Test de bout en bout E : aller en -500, aucune année 0 n'apparaît
+- [x] Date courante dans le store, affichée en grand au-dessus du dock
+- [x] Pas réglable jour/mois/an ; précédent/suivant respectent le pas
+- [x] Lecture/pause et vitesse réglable
+- [x] Curseur sur toute la plage -3000 → aujourd'hui
+- [x] Test de bout en bout E : aller en -500, aucune année 0 n'apparaît

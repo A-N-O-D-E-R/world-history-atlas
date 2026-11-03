@@ -19,6 +19,17 @@ export const fr = {
     modernCountry: 'Pays actuel',
     noData: 'Pas encore de données historiques pour ce territoire.',
   },
+  timeline: {
+    label: 'Frise chronologique',
+    prev: 'Précédent',
+    next: 'Suivant',
+    play: 'Lecture',
+    pause: 'Pause',
+    step: 'Pas de la frise',
+    units: { day: 'jour', month: 'mois', year: 'an' },
+    speed: 'vitesse',
+    slider: 'Année',
+  },
   lang: { label: 'Langue', fr: 'Français', en: 'English' },
 }
 

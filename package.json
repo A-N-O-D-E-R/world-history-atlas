@@ -12,7 +12,8 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "data:basemap": "tsx pipeline/basemap.ts",
-    "data:build": "tsx pipeline/build.ts"
+    "data:build": "tsx pipeline/build.ts",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "i18next": "^26.7.1",
@@ -24,6 +25,7 @@
     "zustand": "^5.0.16"
   },
   "devDependencies": {
+    "@playwright/test": "^1.64.1",
     "@types/node": "^24.19.2",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
