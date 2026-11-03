@@ -2,11 +2,13 @@ import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { type Lang, type StepUnit, formatYmd } from '../shared/dates'
 import { useAtlas } from '../state/atlasStore'
+import { formatYear } from '../shared/dates'
 import {
-  MAX_YEAR,
-  MIN_YEAR,
+  ERAS,
   SPEEDS,
   type Speed,
+  eraOf,
+  fractionInEra,
   toIndex,
 } from '../state/timeline'
 
@@ -21,6 +23,7 @@ export default function TimelineDock() {
     speed,
     stepBy,
     setYearIndex,
+    jumpToYear,
     setStepUnit,
     setPlaying,
     setSpeed,
@@ -34,6 +37,7 @@ export default function TimelineDock() {
   }, [playing, speed])
 
   const label = formatYmd(date, stepUnit, lang)
+  const era = eraOf(date.year)
   return (
     <>
       <output
@@ -97,11 +101,38 @@ export default function TimelineDock() {
           className="slider"
           aria-label={t('timeline.slider')}
           aria-valuetext={label}
-          min={toIndex(MIN_YEAR)}
-          max={toIndex(MAX_YEAR)}
+          min={toIndex(era.start)}
+          max={toIndex(era.end)}
           value={toIndex(date.year)}
           onChange={(e) => setYearIndex(Number(e.target.value))}
         />
+        <div className="slider-ends" aria-hidden="true">
+          <span>{formatYear(era.start, lang)}</span>
+          <span>{formatYear(era.end, lang)}</span>
+        </div>
+        <div className="eras" role="group" aria-label={t('timeline.eras')}>
+          {ERAS.map((e) => (
+            <button
+              key={e.id}
+              type="button"
+              aria-pressed={e === era}
+              style={{
+                flexGrow: toIndex(e.end) - toIndex(e.start),
+                ['--c' as string]: e.color,
+              }}
+              title={`${formatYear(e.start, lang)} – ${formatYear(e.end, lang)}`}
+              onClick={() => jumpToYear(e.start)}
+            >
+              <span>{t(`timeline.era.${e.id}`)}</span>
+              {e === era && (
+                <i
+                  className="era-mark"
+                  style={{ left: `${fractionInEra(date.year) * 100}%` }}
+                />
+              )}
+            </button>
+          ))}
+        </div>
       </section>
     </>
   )

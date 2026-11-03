@@ -31,6 +31,13 @@ export const en: Dict = {
     units: { day: 'day', month: 'month', year: 'year' },
     speed: 'speed',
     slider: 'Year',
+    eras: 'Eras',
+    era: {
+      antiquity: 'Antiquity',
+      'middle-ages': 'Middle Ages',
+      'early-modern': 'Early modern',
+      contemporary: 'Contemporary',
+    },
   },
   lang: { label: 'Language', fr: 'Français', en: 'English' },
 }
