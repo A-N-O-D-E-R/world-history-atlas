@@ -33,3 +33,22 @@ test('le contenu du panneau reste celui du dernier onglet pendant la fermeture',
     lastLeftTab: 'layers',
   })
 })
+
+test('la sélection est exclusive et « Monde » l’efface', () => {
+  const s = useAtlas.getState
+  s().selectCountry({ code: 'FRA', names: { fr: 'France', en: 'France' } })
+  s().selectEntity('Q70972')
+  expect(s()).toMatchObject({
+    selectedEntity: 'Q70972',
+    selectedCountry: null,
+    rightOpen: true,
+  })
+  s().selectCountry({ code: 'DEU', names: { fr: 'Allemagne', en: 'Germany' } })
+  expect(s().selectedEntity).toBeNull()
+  s().clearSelection()
+  expect(s()).toMatchObject({
+    selectedEntity: null,
+    selectedCountry: null,
+    rightOpen: false,
+  })
+})

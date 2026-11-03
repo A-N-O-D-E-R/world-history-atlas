@@ -17,6 +17,7 @@ export default function MapView({ resolved }: { resolved: Resolved[] }) {
   const [map, setMap] = useState<maplibregl.Map | null>(null)
   const layers = useAtlas((s) => s.layers)
   const selected = useAtlas((s) => s.selectedCountry)
+  const selectedEntity = useAtlas((s) => s.selectedEntity)
 
   useEffect(() => {
     const url = new URL('data/basemap.pmtiles', document.baseURI).href
@@ -28,20 +29,36 @@ export default function MapView({ resolved }: { resolved: Resolved[] }) {
       maxZoom: 9,
       attributionControl: { compact: true },
     })
-    m.on('click', 'countries', (e) => {
-      const p = e.features?.[0]?.properties
+    // Historical territory first, otherwise the Pays actuel underneath.
+    m.on('click', (e) => {
+      const [polity] = m.queryRenderedFeatures(e.point, {
+        layers: ['polity-fill'],
+      })
+      if (polity)
+        return useAtlas
+          .getState()
+          .selectEntity(String(polity.properties.entity))
+      const [country] = m.queryRenderedFeatures(e.point, {
+        layers: ['countries'],
+      })
+      const p = country?.properties
       if (p)
         useAtlas.getState().selectCountry({
           code: p.ADM0_A3,
           names: { fr: p.NAME_FR || p.NAME_EN, en: p.NAME_EN || p.NAME_FR },
         })
     })
-    m.on(
-      'mouseenter',
-      'countries',
-      () => (m.getCanvas().style.cursor = 'pointer'),
-    )
-    m.on('mouseleave', 'countries', () => (m.getCanvas().style.cursor = ''))
+    let hover: string | number | undefined
+    const setHover = (id?: string | number) => {
+      if (hover !== undefined)
+        m.setFeatureState({ source: 'polities', id: hover }, { hover: false })
+      hover = id
+      if (id !== undefined)
+        m.setFeatureState({ source: 'polities', id }, { hover: true })
+      m.getCanvas().style.cursor = id !== undefined ? 'pointer' : ''
+    }
+    m.on('mousemove', 'polity-fill', (e) => setHover(e.features?.[0]?.id))
+    m.on('mouseleave', 'polity-fill', () => setHover())
     m.on('load', () => {
       addPolityLayers(m)
       setMap(m)
@@ -66,13 +83,30 @@ export default function MapView({ resolved }: { resolved: Resolved[] }) {
     ])
   }, [map, selected])
 
+  useEffect(() => {
+    if (!map || !selectedEntity) return
+    const target = { source: 'polities', id: selectedEntity }
+    map.setFeatureState(target, { selected: true })
+    return () => {
+      map.setFeatureState(target, { selected: false })
+    }
+  }, [map, selectedEntity])
+
   // Year change: swap the source data only (no map reload); ignore stale loads.
   useEffect(() => {
     if (!map) return
     let stale = false
     snapshotsCollection(resolved).then(
       (data) => {
-        if (!stale) map.getSource<GeoJSONSource>('polities')?.setData(data)
+        if (stale) return
+        map.getSource<GeoJSONSource>('polities')?.setData(data)
+        // Rendered-state marker (used by end-to-end tests).
+        map.once('idle', () => {
+          if (!stale)
+            container.current!.dataset.snapshots = resolved
+              .map((r) => r.snapshot.id)
+              .join(' ')
+        })
       },
       (e) => console.error(e),
     )

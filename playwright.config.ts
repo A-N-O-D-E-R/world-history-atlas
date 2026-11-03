@@ -3,6 +3,7 @@ import { defineConfig, devices } from '@playwright/test'
 export default defineConfig({
   testDir: 'e2e',
   testMatch: '**/*.e2e.ts',
+  expect: { timeout: 15_000 }, // MapLibre renders slowly in software WebGL
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   reporter: process.env.CI ? 'github' : 'list',

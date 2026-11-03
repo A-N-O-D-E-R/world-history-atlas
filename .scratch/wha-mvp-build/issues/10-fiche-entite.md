@@ -4,8 +4,8 @@
 
 **Blocked by:** 09 (Premier Snapshot affiché)
 
-**Status:** ready-for-agent
+**Status:** done
 
-- [ ] Survol mis en évidence, clic = sélection + ouverture de la Fiche
-- [ ] Fiche : nom, type, dates d'existence, date réelle du Snapshot, Fiabilité, Source consultable
-- [ ] Bouton « Monde » qui efface la sélection
+- [x] Survol mis en évidence, clic = sélection + ouverture de la Fiche
+- [x] Fiche : nom, type, dates d'existence, date réelle du Snapshot, Fiabilité, Source consultable
+- [x] Bouton « Monde » qui efface la sélection
