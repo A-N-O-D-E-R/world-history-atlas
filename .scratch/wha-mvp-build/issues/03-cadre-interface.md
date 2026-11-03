@@ -4,9 +4,11 @@
 
 **Blocked by:** 02 (Fond de carte Natural Earth)
 
-**Status:** ready-for-agent
+**Status:** done
 
-- [ ] Onglets verticaux aux bords ; recliquer l'onglet actif ferme le panneau
-- [ ] Animations ~350 ms (glissement + fondu, onglet qui suit le bord)
-- [ ] L'onglet Couches active/désactive réellement les couches du fond (frontières modernes…) : aucun contrôle factice
-- [ ] Store Zustand pour l'état d'interface
+- [x] Onglets verticaux aux bords ; recliquer l'onglet actif ferme le panneau
+- [x] Animations ~350 ms (glissement + fondu, onglet qui suit le bord)
+- [x] L'onglet Couches active/désactive réellement les couches du fond (frontières modernes…) : aucun contrôle factice
+- [x] Store Zustand pour l'état d'interface
+
+Note : la barre de recherche n'est pas posée (aucun champ factice) ; elle arrive avec le ticket 27. Explorer contient une présentation + lien de contribution en attendant le sélecteur de pays (ticket 23).

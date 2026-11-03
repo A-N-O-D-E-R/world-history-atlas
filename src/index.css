@@ -31,3 +31,132 @@ body,
   letter-spacing: 0.04em;
   pointer-events: none;
 }
+
+/* ---------- panels & edge tabs (variant D) ---------- */
+:root {
+  --panel: rgba(246, 238, 220, 0.9);
+  --line: rgba(59, 42, 26, 0.18);
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.side {
+  box-sizing: border-box;
+  position: absolute;
+  top: 56px;
+  bottom: 24px;
+  width: 300px;
+  padding: 14px;
+  overflow: auto;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: 0 4px 20px rgba(59, 42, 26, 0.15);
+  backdrop-filter: blur(6px);
+  transition:
+    transform 0.35s var(--ease),
+    opacity 0.25s;
+  z-index: 5;
+}
+.side-left {
+  left: 14px;
+}
+.side-right {
+  right: 14px;
+}
+.side-left.off {
+  transform: translateX(-340px);
+}
+.side-right.off {
+  transform: translateX(340px);
+}
+.side.off {
+  opacity: 0;
+  pointer-events: none;
+}
+.side > * {
+  transition:
+    opacity 0.3s 0.1s,
+    transform 0.3s 0.1s;
+}
+.side.off > * {
+  opacity: 0;
+  transform: translateY(6px);
+}
+.side h2 {
+  margin: 0 0 8px;
+  font:
+    700 20px 'Cormorant Garamond',
+    Georgia,
+    serif;
+}
+.muted {
+  color: #6b5440;
+}
+.small {
+  font-size: 12px;
+}
+.check {
+  display: block;
+  padding: 4px 0;
+}
+.close {
+  float: right;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font: inherit;
+}
+.tabs {
+  position: absolute;
+  top: 70px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  z-index: 6;
+  transition:
+    left 0.35s var(--ease),
+    right 0.35s var(--ease);
+}
+.tabs-left {
+  left: 0;
+}
+.tabs-right {
+  right: 0;
+}
+.tabs-left.shifted {
+  left: 314px;
+}
+.tabs-right.shifted {
+  right: 314px;
+}
+.tabs button {
+  writing-mode: vertical-rl;
+  padding: 10px 5px;
+  font:
+    12px Inter,
+    system-ui,
+    sans-serif;
+  letter-spacing: 0.05em;
+  color: var(--ink);
+  background: var(--panel);
+  border: 1px solid var(--line);
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    padding 0.2s;
+}
+.tabs-left button {
+  border-left: none;
+  border-radius: 0 8px 8px 0;
+  transform: rotate(180deg);
+}
+.tabs-right button {
+  border-right: none;
+  border-radius: 8px 0 0 8px;
+}
+.tabs button:hover {
+  padding-inline: 8px;
+}
+.tabs button[aria-pressed='true'] {
+  background: var(--ink);
+  color: var(--parch);
+}
