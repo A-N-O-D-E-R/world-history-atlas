@@ -1,25 +1,21 @@
+import { useTranslation } from 'react-i18next'
 import { type BasemapLayer, useAtlas } from '../state/atlasStore'
 
-const LAYER_LABELS: Record<BasemapLayer, string> = {
-  'modern-borders': 'Frontières modernes',
-  coast: 'Côtes',
-}
+const LAYERS: BasemapLayer[] = ['modern-borders', 'coast']
 
 function ExplorePanel() {
+  const { t } = useTranslation()
   return (
-    <section aria-label="Explorer">
-      <h2>Explorer</h2>
-      <p className="muted">
-        Atlas historique du monde. Les données historiques arrivent pays par
-        pays, en commençant par la France.
-      </p>
+    <section aria-label={t('tabs.explore')}>
+      <h2>{t('tabs.explore')}</h2>
+      <p className="muted">{t('explore.intro')}</p>
       <p>
         <a
           href="https://github.com/A-N-O-D-E-R/world-history-atlas"
           target="_blank"
           rel="noreferrer"
         >
-          Contribuer sur GitHub
+          {t('explore.contribute')}
         </a>
       </p>
     </section>
@@ -27,19 +23,20 @@ function ExplorePanel() {
 }
 
 function LayersPanel() {
+  const { t } = useTranslation()
   const layers = useAtlas((s) => s.layers)
   const setLayer = useAtlas((s) => s.setLayer)
   return (
-    <section aria-label="Couches">
-      <h2>Couches</h2>
-      {(Object.keys(LAYER_LABELS) as BasemapLayer[]).map((id) => (
+    <section aria-label={t('tabs.layers')}>
+      <h2>{t('tabs.layers')}</h2>
+      {LAYERS.map((id) => (
         <label key={id} className="check">
           <input
             type="checkbox"
             checked={layers[id]}
             onChange={(e) => setLayer(id, e.target.checked)}
           />
-          {LAYER_LABELS[id]}
+          {t(`layers.${id}`)}
         </label>
       ))}
     </section>
@@ -47,28 +44,31 @@ function LayersPanel() {
 }
 
 function FichePanel() {
+  const { t, i18n } = useTranslation()
   const country = useAtlas((s) => s.selectedCountry)
   const select = useAtlas((s) => s.selectCountry)
-  if (!country)
-    return <p className="muted">Cliquez sur un territoire de la carte.</p>
+  if (!country) return <p className="muted">{t('fiche.empty')}</p>
   return (
-    <section aria-label="Fiche">
+    <section aria-label={t('tabs.fiche')}>
       <button
         type="button"
         className="close"
-        aria-label="Fermer la fiche"
+        aria-label={t('fiche.close')}
         onClick={() => select(null)}
       >
         ✕
       </button>
-      <h2>{country.name}</h2>
-      <p className="muted small">Pays actuel</p>
-      <p>Pas encore de données historiques pour ce territoire.</p>
+      <h2>
+        {i18n.resolvedLanguage === 'en' ? country.names.en : country.names.fr}
+      </h2>
+      <p className="muted small">{t('fiche.modernCountry')}</p>
+      <p>{t('fiche.noData')}</p>
     </section>
   )
 }
 
 export default function Panels() {
+  const { t } = useTranslation()
   const { leftTab, lastLeftTab, rightOpen, toggleLeft, toggleRight } =
     useAtlas()
   return (
@@ -81,21 +81,21 @@ export default function Panels() {
       </aside>
       <nav
         className={`tabs tabs-left ${leftTab ? 'shifted' : ''}`}
-        aria-label="Panneaux de gauche"
+        aria-label={t('tabs.leftNav')}
       >
         <button
           type="button"
           aria-pressed={leftTab === 'explore'}
           onClick={() => toggleLeft('explore')}
         >
-          Explorer
+          {t('tabs.explore')}
         </button>
         <button
           type="button"
           aria-pressed={leftTab === 'layers'}
           onClick={() => toggleLeft('layers')}
         >
-          Couches
+          {t('tabs.layers')}
         </button>
       </nav>
       <aside
@@ -106,10 +106,10 @@ export default function Panels() {
       </aside>
       <nav
         className={`tabs tabs-right ${rightOpen ? 'shifted' : ''}`}
-        aria-label="Panneau de droite"
+        aria-label={t('tabs.rightNav')}
       >
         <button type="button" aria-pressed={rightOpen} onClick={toggleRight}>
-          Fiche
+          {t('tabs.fiche')}
         </button>
       </nav>
     </>

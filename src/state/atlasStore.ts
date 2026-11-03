@@ -5,7 +5,7 @@ export type BasemapLayer = 'coast' | 'modern-borders'
 
 export interface SelectedCountry {
   code: string // ADM0_A3
-  name: string
+  names: { fr: string; en: string }
 }
 
 interface AtlasState {

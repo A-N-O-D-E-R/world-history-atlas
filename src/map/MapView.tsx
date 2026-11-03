@@ -28,9 +28,10 @@ export default function MapView() {
     m.on('click', 'countries', (e) => {
       const p = e.features?.[0]?.properties
       if (p)
-        useAtlas
-          .getState()
-          .selectCountry({ code: p.ADM0_A3, name: p.NAME_FR || p.NAME_EN })
+        useAtlas.getState().selectCountry({
+          code: p.ADM0_A3,
+          names: { fr: p.NAME_FR || p.NAME_EN, en: p.NAME_EN || p.NAME_FR },
+        })
     })
     m.on(
       'mouseenter',
