@@ -4,11 +4,11 @@
 
 **Blocked by:** 05 (Modèle de dates)
 
-**Status:** ready-for-agent
+**Status:** done
 
-- [ ] Schémas partagés (sources + publiés) pour Entité politique, Snapshot, Source
-- [ ] Build hors réseau `data-src/` → `public/data/` (un fichier par objet + index des entités)
-- [ ] Erreurs bloquantes : JSON/GeoJSON invalide, polygone invalide, identifiant dupliqué, référence inexistante, intervalle incohérent, date sans calendrier/précision, Source sans licence, licence hors liste blanche, Snapshot sans Source
-- [ ] Avertissements : libellé fr/en manquant, pas de lien Wikipédia, Snapshot > 1 Mo gzip, Entité sans Snapshot ni point
-- [ ] Workflow PR : build + validation + rapport en commentaire
-- [ ] Tests du pipeline sur données d'exemple (point de test 1)
+- [x] Schémas partagés (sources + publiés) pour Entité politique, Snapshot, Source
+- [x] Build hors réseau `data-src/` → `public/data/` (un fichier par objet + index des entités)
+- [x] Erreurs bloquantes : JSON/GeoJSON invalide, polygone invalide, identifiant dupliqué, référence inexistante, intervalle incohérent, date sans calendrier/précision, Source sans licence, licence hors liste blanche, Snapshot sans Source
+- [x] Avertissements : libellé fr/en manquant, pas de lien Wikipédia, Snapshot > 1 Mo gzip, Entité sans Snapshot ni point
+- [x] Workflow PR : build + validation + rapport en commentaire
+- [x] Tests du pipeline sur données d'exemple (point de test 1)
