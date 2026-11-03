@@ -1,4 +1,6 @@
 import { create } from 'zustand'
+import { type StepUnit, type Ymd, daysInMonth } from '../shared/dates'
+import { type Speed, fromIndex, stepWithin } from './timeline'
 
 export type LeftTab = 'explore' | 'layers'
 export type BasemapLayer = 'coast' | 'modern-borders'
@@ -9,6 +11,15 @@ export interface SelectedCountry {
 }
 
 interface AtlasState {
+  date: Ymd // Gregorian cursor of the timeline
+  stepUnit: StepUnit
+  playing: boolean
+  speed: Speed
+  stepBy: (dir: 1 | -1) => boolean
+  setYearIndex: (index: number) => void
+  setStepUnit: (unit: StepUnit) => void
+  setPlaying: (playing: boolean) => void
+  setSpeed: (speed: Speed) => void
   leftTab: LeftTab | null
   lastLeftTab: LeftTab // content kept while the panel slides out
   rightOpen: boolean
@@ -20,7 +31,26 @@ interface AtlasState {
   selectCountry: (country: SelectedCountry | null) => void
 }
 
-export const useAtlas = create<AtlasState>((set) => ({
+export const useAtlas = create<AtlasState>((set, get) => ({
+  date: { year: 987, month: 1, day: 1 },
+  stepUnit: 'year',
+  playing: false,
+  speed: 1,
+  stepBy: (dir) => {
+    const next = stepWithin(get().date, get().stepUnit, dir)
+    if (next) set({ date: next })
+    else set({ playing: false })
+    return next !== null
+  },
+  setYearIndex: (index) =>
+    set((s) => {
+      const year = fromIndex(index)
+      const day = Math.min(s.date.day, daysInMonth(year, s.date.month))
+      return { date: { ...s.date, year, day } }
+    }),
+  setStepUnit: (stepUnit) => set({ stepUnit }),
+  setPlaying: (playing) => set({ playing }),
+  setSpeed: (speed) => set({ speed }),
   leftTab: null,
   lastLeftTab: 'explore',
   rightOpen: false,

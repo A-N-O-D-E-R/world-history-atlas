@@ -21,5 +21,16 @@ export const en: Dict = {
     modernCountry: 'Present-day country',
     noData: 'No historical data for this territory yet.',
   },
+  timeline: {
+    label: 'Timeline',
+    prev: 'Previous',
+    next: 'Next',
+    play: 'Play',
+    pause: 'Pause',
+    step: 'Timeline step',
+    units: { day: 'day', month: 'month', year: 'year' },
+    speed: 'speed',
+    slider: 'Year',
+  },
   lang: { label: 'Language', fr: 'Français', en: 'English' },
 }
