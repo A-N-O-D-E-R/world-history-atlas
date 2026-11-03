@@ -1,7 +1,10 @@
+import MapView from './map/MapView'
+
 export default function App() {
   return (
     <main className="app">
-      <h1>World History Atlas</h1>
+      <MapView />
+      <h1 className="brand">World History Atlas</h1>
     </main>
   )
 }
