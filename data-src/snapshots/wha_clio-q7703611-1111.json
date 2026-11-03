@@ -1,0 +1,16 @@
+{
+  "id": "wha:clio-q7703611-1111",
+  "entity": "Q7703611",
+  "from": {
+    "value": "1111",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "to": {
+    "value": "1139",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "source": "wha:cliopatria",
+  "note": "Cliopatria v0.2.1 : « Duchy of Aquitaine » 1111–1138"
+}

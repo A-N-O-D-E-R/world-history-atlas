@@ -1,0 +1,16 @@
+{
+  "id": "wha:clio-q12548-1619",
+  "entity": "Q12548",
+  "from": {
+    "value": "1619",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "to": {
+    "value": "1622",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "source": "wha:cliopatria",
+  "note": "Cliopatria v0.2.1 : « (Holy Roman Empire) » 1619–1621"
+}

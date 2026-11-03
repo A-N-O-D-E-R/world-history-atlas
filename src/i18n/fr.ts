@@ -54,6 +54,7 @@ export const fr = {
     nearest:
       '{{name}} : frontière de {{from}} – {{to}} (pas de frontière connue pour cette date)',
     now: 'aujourd’hui',
+    missing: 'Données indisponibles (aucune frontière connue) : {{names}}',
   },
   world: { label: 'Monde — effacer la sélection' },
   field: {

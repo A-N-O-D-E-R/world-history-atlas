@@ -1,0 +1,16 @@
+{
+  "id": "wha:clio-q42834-395",
+  "entity": "Q42834",
+  "from": {
+    "value": "395",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "to": {
+    "value": "396",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "source": "wha:cliopatria",
+  "note": "Cliopatria v0.2.1 : « Western Roman Empire » 395–395"
+}

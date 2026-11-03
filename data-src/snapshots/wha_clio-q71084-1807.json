@@ -1,0 +1,16 @@
+{
+  "id": "wha:clio-q71084-1807",
+  "entity": "Q71084",
+  "from": {
+    "value": "1807",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "to": {
+    "value": "1809",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "source": "wha:cliopatria",
+  "note": "Cliopatria v0.2.1 : « (First French Empire) » 1807–1808"
+}

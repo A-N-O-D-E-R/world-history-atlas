@@ -1,0 +1,16 @@
+{
+  "id": "wha:clio-q4712-1395",
+  "entity": "Q4712",
+  "from": {
+    "value": "1395",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "to": {
+    "value": "1402",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "source": "wha:cliopatria",
+  "note": "Cliopatria v0.2.1 : « Duchy of Burgundy » 1395–1401"
+}

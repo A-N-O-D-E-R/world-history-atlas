@@ -1,7 +1,7 @@
 import { expect, test } from 'vitest'
 import { makeDatePoint, toJdn } from '../shared/dates.ts'
 import type { EntityIndexEntry } from '../shared/schema.ts'
-import { resolveAll, resolveSnapshot } from './resolve.ts'
+import { resolveAll, resolveSnapshot, withoutBorder } from './resolve.ts'
 
 const y = (v: string) => makeDatePoint(v, 'year')
 const day = (year: number, month = 1, d = 1) => toJdn({ year, month, day: d })
@@ -61,4 +61,29 @@ test('rien hors de l’existence de l’Entité', () => {
 
 test('une Entité sans Snapshot n’est pas affichée', () => {
   expect(resolveAll([{ ...kingdom, snapshots: [] }], day(1700))).toEqual([])
+})
+
+test('plusieurs Snapshots couvrent la date : le plus fiable gagne (OHM > Cliopatria)', () => {
+  const e: EntityIndexEntry = {
+    ...kingdom,
+    snapshots: [
+      { ...ref('clio', '1690', '1720'), reliability: 'approximate' },
+      ref('ohm', '1697', '1714'),
+    ],
+  }
+  expect(resolveSnapshot(e, day(1700))).toMatchObject({
+    snapshot: { id: 'ohm' },
+  })
+  expect(resolveSnapshot(e, day(1692))).toMatchObject({
+    snapshot: { id: 'clio' },
+    exact: true,
+  })
+})
+
+test('Entités existantes sans aucune frontière', () => {
+  const none = { ...kingdom, id: 'Q2991382', snapshots: [] }
+  expect(withoutBorder([kingdom, none], day(1700)).map((e) => e.id)).toEqual([
+    'Q2991382',
+  ])
+  expect(withoutBorder([none], day(900))).toEqual([])
 })

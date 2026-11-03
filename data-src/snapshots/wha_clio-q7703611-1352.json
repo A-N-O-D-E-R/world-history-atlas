@@ -1,0 +1,16 @@
+{
+  "id": "wha:clio-q7703611-1352",
+  "entity": "Q7703611",
+  "from": {
+    "value": "1352",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "to": {
+    "value": "1363",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "source": "wha:cliopatria",
+  "note": "Cliopatria v0.2.1 : « Duchy of Aquitaine » 1352–1362"
+}

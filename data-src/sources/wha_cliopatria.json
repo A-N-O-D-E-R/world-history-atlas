@@ -1,0 +1,12 @@
+{
+  "id": "wha:cliopatria",
+  "name": "Cliopatria (Seshat Global History Databank) v0.2.1",
+  "url": "https://github.com/Seshat-Global-History-Databank/cliopatria",
+  "licence": "CC-BY-4.0",
+  "attribution": "Cliopatria, Seshat Global History Databank, CC BY 4.0 — géométries simplifiées et rattachées aux Entités (modifiées)",
+  "author": "Seshat Global History Databank",
+  "published": "2026-10-03",
+  "scale": "≈ 40 km² par pixel à l'équateur (vectorisé depuis raster)",
+  "method": "Frontières redessinées à la main d'après des atlas imprimés, vectorisées puis revues (Sci. Data 2025, doi:10.1038/s41597-025-04516-9). Pas d'incertitude encodée.",
+  "reliability": "approximate"
+}

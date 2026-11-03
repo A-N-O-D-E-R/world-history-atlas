@@ -1,0 +1,16 @@
+{
+  "id": "wha:clio-q2277-m30",
+  "entity": "Q2277",
+  "from": {
+    "value": "-30",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "to": {
+    "value": "-27",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "source": "wha:cliopatria",
+  "note": "Cliopatria v0.2.1 : « Roman Empire » -30–-28"
+}

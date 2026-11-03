@@ -1,0 +1,16 @@
+{
+  "id": "wha:clio-q12548-1260",
+  "entity": "Q12548",
+  "from": {
+    "value": "1260",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "to": {
+    "value": "1272",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "source": "wha:cliopatria",
+  "note": "Cliopatria v0.2.1 : « (Holy Roman Empire) » 1260–1271"
+}

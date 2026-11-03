@@ -1,0 +1,16 @@
+{
+  "id": "wha:clio-q69829-1950",
+  "entity": "Q69829",
+  "from": {
+    "value": "1950",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "to": {
+    "value": "1953",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "source": "wha:cliopatria",
+  "note": "Cliopatria v0.2.1 : « (French Fourth Republic) » 1950–1952"
+}

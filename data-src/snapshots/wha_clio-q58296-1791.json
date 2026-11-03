@@ -1,0 +1,16 @@
+{
+  "id": "wha:clio-q58296-1791",
+  "entity": "Q58296",
+  "from": {
+    "value": "1791",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "to": {
+    "value": "1792",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "source": "wha:cliopatria",
+  "note": "Cliopatria v0.2.1 : « (French First Republic) » 1791–1791"
+}

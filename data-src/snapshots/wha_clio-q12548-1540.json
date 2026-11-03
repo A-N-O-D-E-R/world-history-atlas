@@ -1,0 +1,16 @@
+{
+  "id": "wha:clio-q12548-1540",
+  "entity": "Q12548",
+  "from": {
+    "value": "1540",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "to": {
+    "value": "1547",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "source": "wha:cliopatria",
+  "note": "Cliopatria v0.2.1 : « (Holy Roman Empire) » 1540–1546"
+}

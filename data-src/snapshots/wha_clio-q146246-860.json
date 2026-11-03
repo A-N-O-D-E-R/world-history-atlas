@@ -1,0 +1,16 @@
+{
+  "id": "wha:clio-q146246-860",
+  "entity": "Q146246",
+  "from": {
+    "value": "860",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "to": {
+    "value": "866",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "source": "wha:cliopatria",
+  "note": "Cliopatria v0.2.1 : « (Carolingian Empire) » 860–865"
+}

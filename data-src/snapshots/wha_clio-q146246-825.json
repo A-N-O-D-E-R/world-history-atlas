@@ -1,0 +1,16 @@
+{
+  "id": "wha:clio-q146246-825",
+  "entity": "Q146246",
+  "from": {
+    "value": "825",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "to": {
+    "value": "830",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "source": "wha:cliopatria",
+  "note": "Cliopatria v0.2.1 : « (Kingdom of the Franks) » 825–829"
+}

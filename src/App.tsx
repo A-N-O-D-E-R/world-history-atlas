@@ -9,11 +9,11 @@ import TimelineDock from './ui/TimelineDock'
 
 export default function App() {
   const { t } = useTranslation()
-  const resolved = useResolved()
+  const { resolved, missing } = useResolved()
   return (
     <main className="app">
       <MapView resolved={resolved} />
-      <SnapshotBanner resolved={resolved} />
+      <SnapshotBanner resolved={resolved} missing={missing} />
       <h1 className="brand">{t('brand')}</h1>
       <LangSelect />
       <Panels resolved={resolved} />

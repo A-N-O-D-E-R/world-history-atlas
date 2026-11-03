@@ -1,0 +1,16 @@
+{
+  "id": "wha:clio-q70972-1632",
+  "entity": "Q70972",
+  "from": {
+    "value": "1632",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "to": {
+    "value": "1636",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "source": "wha:cliopatria",
+  "note": "Cliopatria v0.2.1 : « (Kingdom of France) » 1632–1635"
+}

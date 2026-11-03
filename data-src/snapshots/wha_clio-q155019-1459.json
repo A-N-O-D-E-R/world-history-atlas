@@ -1,0 +1,16 @@
+{
+  "id": "wha:clio-q155019-1459",
+  "entity": "Q155019",
+  "from": {
+    "value": "1459",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "to": {
+    "value": "1463",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "source": "wha:cliopatria",
+  "note": "Cliopatria v0.2.1 : « Duchy of Lorraine » 1459–1462"
+}

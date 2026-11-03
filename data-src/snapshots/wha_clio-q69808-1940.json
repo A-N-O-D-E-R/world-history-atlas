@@ -1,0 +1,16 @@
+{
+  "id": "wha:clio-q69808-1940",
+  "entity": "Q69808",
+  "from": {
+    "value": "1940",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "to": {
+    "value": "1941",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "source": "wha:cliopatria",
+  "note": "Cliopatria v0.2.1 : « (Vichy France) » 1940–1940"
+}

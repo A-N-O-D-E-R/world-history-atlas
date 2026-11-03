@@ -56,6 +56,7 @@ export const en: Dict = {
     nearest:
       '{{name}}: border of {{from}} – {{to}} (no known border for this date)',
     now: 'today',
+    missing: 'Data unavailable (no known border): {{names}}',
   },
   world: { label: 'World — clear selection' },
   field: {

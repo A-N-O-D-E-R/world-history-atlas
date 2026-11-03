@@ -1,0 +1,16 @@
+{
+  "id": "wha:clio-q71092-1870",
+  "entity": "Q71092",
+  "from": {
+    "value": "1870",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "to": {
+    "value": "1871",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "source": "wha:cliopatria",
+  "note": "Cliopatria v0.2.1 : « (Second French Empire) » 1870–1870"
+}

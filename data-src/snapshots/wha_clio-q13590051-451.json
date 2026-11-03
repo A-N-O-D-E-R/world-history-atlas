@@ -1,0 +1,16 @@
+{
+  "id": "wha:clio-q13590051-451",
+  "entity": "Q13590051",
+  "from": {
+    "value": "451",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "to": {
+    "value": "455",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "source": "wha:cliopatria",
+  "note": "Cliopatria v0.2.1 : « Burgundian Kingdom » 451–454"
+}

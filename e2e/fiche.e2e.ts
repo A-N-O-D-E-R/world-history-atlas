@@ -57,3 +57,26 @@ test('hors du territoire historique → Pays actuel', async ({ page }) => {
       .getByRole('heading', { name: 'Russie' }),
   ).toBeVisible()
 })
+
+// Parcours B : Empire romain en 117, Snapshot disponible affiché.
+test('parcours B — Empire romain en 117', async ({ page }) => {
+  await page.goto('./')
+  await page.getByRole('button', { name: 'Antiquité' }).click()
+  await page.getByRole('slider', { name: 'Année' }).fill('117')
+  await expect(page.getByTestId('current-date')).toHaveText('117')
+  await expect(page.locator('.map')).toHaveAttribute(
+    'data-snapshots',
+    /wha:ohm-2849539/,
+  )
+  await clickMap(page, 12.5, 41.9) // Rome
+
+  const fiche = page.getByRole('region', { name: 'Fiche' })
+  await expect(
+    fiche.getByRole('heading', { name: 'Empire romain' }),
+  ).toBeVisible()
+  await expect(fiche).toContainText('117 – 118') // frontière OHM de l'année
+  await expect(fiche).not.toContainText('la plus proche')
+  await expect(
+    fiche.getByRole('link', { name: 'OpenHistoricalMap' }),
+  ).toBeVisible()
+})

@@ -1,0 +1,16 @@
+{
+  "id": "wha:clio-q12548-990",
+  "entity": "Q12548",
+  "from": {
+    "value": "990",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "to": {
+    "value": "1003",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "source": "wha:cliopatria",
+  "note": "Cliopatria v0.2.1 : « (Holy Roman Empire) » 990–1002"
+}

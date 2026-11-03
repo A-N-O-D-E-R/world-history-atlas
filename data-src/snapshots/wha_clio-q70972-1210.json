@@ -1,0 +1,16 @@
+{
+  "id": "wha:clio-q70972-1210",
+  "entity": "Q70972",
+  "from": {
+    "value": "1210",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "to": {
+    "value": "1216",
+    "calendar": "gregorian",
+    "precision": "year"
+  },
+  "source": "wha:cliopatria",
+  "note": "Cliopatria v0.2.1 : « (Kingdom of France) » 1210–1215"
+}
