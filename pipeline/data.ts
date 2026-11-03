@@ -160,6 +160,7 @@ export function buildData(srcDir: string, outDir: string): Report {
       error(file, `référence inexistante : Entité « ${data.entity} »`)
     if (!data.source) error(file, 'Snapshot sans Source')
     else checkSourceRef(file, data.source)
+    for (const ref of data.extraSources) checkSourceRef(file, ref)
     if (data.reliability && !data.note)
       error(file, 'fiabilité surchargée sans note')
 
@@ -179,6 +180,7 @@ export function buildData(srcDir: string, outDir: string): Report {
       id: data.id,
       entity: data.entity,
       source: data.source,
+      extraSources: data.extraSources,
       from,
       ...(to && { to }),
       reliability,
@@ -200,7 +202,13 @@ export function buildData(srcDir: string, outDir: string): Report {
       )
 
     publishedSnapshots.push({ id: data.id, geojson })
-    const { entity: _entity, source: _source, note: _note, ...ref } = props
+    const {
+      entity: _entity,
+      source: _source,
+      extraSources: _extra,
+      note: _note,
+      ...ref
+    } = props
     refsByEntity.set(data.entity, [
       ...(refsByEntity.get(data.entity) ?? []),
       ref,

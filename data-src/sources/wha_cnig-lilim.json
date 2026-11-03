@@ -1,0 +1,10 @@
+{
+  "id": "wha:cnig-lilim",
+  "name": "CNIG — Límites municipales, provinciales y autonómicas (LILIM)",
+  "url": "https://centrodedescargas.cnig.es/CentroDescargas/",
+  "licence": "CC-BY-4.0",
+  "attribution": "© Instituto Geográfico Nacional de España (CNIG), CC BY 4.0",
+  "author": "Instituto Geográfico Nacional (Espagne)",
+  "method": "Segments de la frontière franco-espagnole repris dans OpenHistoricalMap",
+  "reliability": "high"
+}

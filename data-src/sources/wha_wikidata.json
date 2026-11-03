@@ -1,0 +1,9 @@
+{
+  "id": "wha:wikidata",
+  "name": "Wikidata",
+  "url": "https://www.wikidata.org/",
+  "licence": "CC0-1.0",
+  "attribution": "Wikidata (CC0)",
+  "author": "Contributeurs Wikidata",
+  "reliability": "medium"
+}

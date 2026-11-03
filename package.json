@@ -13,7 +13,8 @@
     "format:check": "prettier --check .",
     "data:basemap": "tsx pipeline/basemap.ts",
     "data:build": "tsx pipeline/build.ts",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "data:extract:ohm": "tsx pipeline/extract-ohm.ts"
   },
   "dependencies": {
     "i18next": "^26.7.1",
@@ -30,10 +31,13 @@
     "@turf/bbox": "^7.4.0",
     "@turf/boolean-valid": "^7.4.0",
     "@turf/kinks": "^7.4.0",
+    "@types/geojson": "^7946.0.16",
     "@types/node": "^24.19.2",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "@vitejs/plugin-react": "^6.1.2",
+    "mapshaper": "^0.7.101",
+    "osmtogeojson": "3.0.0-beta.5",
     "oxlint": "^1.89.0",
     "prettier": "^3.9.10",
     "tsx": "^4.23.15",

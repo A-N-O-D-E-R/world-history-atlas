@@ -1,14 +1,18 @@
 import { useTranslation } from 'react-i18next'
 import MapView from './map/MapView'
+import { useResolved } from './query/useResolved.ts'
+import SnapshotBanner from './ui/SnapshotBanner.tsx'
 import LangSelect from './ui/LangSelect'
 import Panels from './ui/Panels'
 import TimelineDock from './ui/TimelineDock'
 
 export default function App() {
   const { t } = useTranslation()
+  const resolved = useResolved()
   return (
     <main className="app">
-      <MapView />
+      <MapView resolved={resolved} />
+      <SnapshotBanner resolved={resolved} />
       <h1 className="brand">{t('brand')}</h1>
       <LangSelect />
       <Panels />

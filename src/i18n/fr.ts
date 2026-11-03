@@ -37,6 +37,11 @@ export const fr = {
       contemporary: 'Contemporaine',
     },
   },
+  snapshot: {
+    nearest:
+      '{{name}} : frontière de {{from}} – {{to}} (pas de frontière connue pour cette date)',
+    now: 'aujourd’hui',
+  },
   lang: { label: 'Langue', fr: 'Français', en: 'English' },
 }
 
