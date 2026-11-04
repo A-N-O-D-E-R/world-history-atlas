@@ -89,5 +89,17 @@ export const en: Dict = {
     'modern-state': 'Modern state',
     other: 'Other political entity',
   },
+  sources: {
+    title: 'Sources and licences',
+    link: 'Sources and licences',
+    intro:
+      'All atlas data comes from open, redistributable sources. Every border shows its source and reliability.',
+    close: 'Close',
+    author: 'Author / body',
+    published: 'Published',
+    scale: 'Scale',
+    method: 'Method',
+    publicDomain: 'Public domain',
+  },
   lang: { label: 'Language', fr: 'Français', en: 'English' },
 }

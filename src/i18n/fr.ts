@@ -87,6 +87,18 @@ export const fr = {
     'modern-state': 'État moderne',
     other: 'Autre entité politique',
   },
+  sources: {
+    title: 'Sources et licences',
+    link: 'Sources et licences',
+    intro:
+      'Toutes les données de l’atlas viennent de sources ouvertes et redistribuables. Chaque frontière affiche sa source et sa fiabilité.',
+    close: 'Fermer',
+    author: 'Auteur / organisme',
+    published: 'Publication',
+    scale: 'Échelle',
+    method: 'Méthode',
+    publicDomain: 'Domaine public',
+  },
   lang: { label: 'Langue', fr: 'Français', en: 'English' },
 }
 

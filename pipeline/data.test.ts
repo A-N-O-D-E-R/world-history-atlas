@@ -99,6 +99,9 @@ describe('publication', () => {
       reliability: 'medium',
     })
     expect(read('sources/wha_ohm.json').licence).toBe('CC0-1.0')
+    expect(read('index/sources.json')).toEqual([
+      expect.objectContaining({ id: 'wha:ohm', licence: 'CC0-1.0' }),
+    ])
     const [entry] = read('index/entities.json')
     expect(entry).toMatchObject({ id: 'Q70972', bbox: [0, 45, 2, 47] })
   })
