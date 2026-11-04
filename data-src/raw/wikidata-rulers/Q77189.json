@@ -1,0 +1,141 @@
+{
+ "id": "Q77189",
+ "labels": {
+  "fr": {
+   "language": "fr",
+   "value": "Lothaire de Supplinbourg"
+  },
+  "en": {
+   "language": "en",
+   "value": "Lothair III"
+  }
+ },
+ "aliases": {
+  "fr": [
+   {
+    "language": "fr",
+    "value": "Lothaire Ier de Supplimbourg"
+   },
+   {
+    "language": "fr",
+    "value": "Lothaire II du Saint-Empire"
+   },
+   {
+    "language": "fr",
+    "value": "Lothaire III du Saint-Empire"
+   }
+  ]
+ },
+ "sitelinks": {
+  "enwiki": {
+   "site": "enwiki",
+   "title": "Lothair III, Holy Roman Emperor",
+   "badges": []
+  },
+  "frwiki": {
+   "site": "frwiki",
+   "title": "Lothaire de Supplinbourg",
+   "badges": []
+  }
+ },
+ "claims": {
+  "P39": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 181765,
+       "id": "Q181765"
+      }
+     }
+    },
+    "qualifiers": {
+     "P580": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+1133-00-00T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 9,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+        }
+       }
+      }
+     ],
+     "P582": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+1137-00-00T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 9,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+        }
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "P569": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+1075-06-09T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    }
+   }
+  ],
+  "P570": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+1137-12-04T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    }
+   }
+  ],
+  "P53": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 567638,
+       "id": "Q567638"
+      }
+     }
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,135 @@
+{
+ "id": "Q3620409",
+ "labels": {
+  "en": {
+   "language": "en",
+   "value": "Antoniotto II Adorno"
+  },
+  "fr": {
+   "language": "fr",
+   "value": "Antoniotto II Adorno"
+  }
+ },
+ "aliases": {
+  "fr": [
+   {
+    "language": "fr",
+    "value": "Antoniotto Adorno"
+   }
+  ]
+ },
+ "sitelinks": {
+  "enwiki": {
+   "site": "enwiki",
+   "title": "Antoniotto II Adorno",
+   "badges": []
+  },
+  "frwiki": {
+   "site": "frwiki",
+   "title": "Antoniotto Adorno (1479-1528)",
+   "badges": []
+  }
+ },
+ "claims": {
+  "P39": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 3712541,
+       "id": "Q3712541"
+      }
+     }
+    },
+    "qualifiers": {
+     "P580": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+1522-05-31T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+        }
+       }
+      }
+     ],
+     "P582": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+1527-08-00T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 10,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+        }
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "P569": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+1479-01-01T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 9,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+      }
+     }
+    },
+    "qualifiers": {}
+   }
+  ],
+  "P570": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+1528-09-12T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+      }
+     }
+    },
+    "qualifiers": {}
+   }
+  ],
+  "P53": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 3064891,
+       "id": "Q3064891"
+      }
+     }
+    }
+   }
+  ]
+ }
+}

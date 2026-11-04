@@ -1,0 +1,144 @@
+{
+ "id": "Q318258",
+ "labels": {
+  "fr": {
+   "language": "fr",
+   "value": "Sanche VI de Navarre"
+  },
+  "en": {
+   "language": "en",
+   "value": "Sancho VI of Navarre"
+  }
+ },
+ "aliases": {
+  "fr": [
+   {
+    "language": "fr",
+    "value": "Sancho le Sage"
+   }
+  ],
+  "en": [
+   {
+    "language": "en",
+    "value": "Sancho Garcés VI"
+   },
+   {
+    "language": "en",
+    "value": "the Wise"
+   }
+  ]
+ },
+ "sitelinks": {
+  "enwiki": {
+   "site": "enwiki",
+   "title": "Sancho VI of Navarre",
+   "badges": []
+  },
+  "frwiki": {
+   "site": "frwiki",
+   "title": "Sanche VI",
+   "badges": []
+  }
+ },
+ "claims": {
+  "P39": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 29166132,
+       "id": "Q29166132"
+      }
+     }
+    },
+    "qualifiers": {
+     "P580": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+1162-00-00T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 9,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+        }
+       }
+      }
+     ],
+     "P582": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+1194-00-00T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 9,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+        }
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "P569": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+1132-04-21T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+      }
+     }
+    },
+    "qualifiers": {}
+   }
+  ],
+  "P570": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+1194-06-27T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    }
+   }
+  ],
+  "P53": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 938786,
+       "id": "Q938786"
+      }
+     }
+    }
+   }
+  ]
+ }
+}

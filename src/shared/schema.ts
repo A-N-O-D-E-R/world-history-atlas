@@ -121,6 +121,28 @@ export const overrideSrc = z.object({
 })
 export type CorrectionSrc = z.infer<typeof correctionSrc>
 
+export const rulerSrc = z.object({
+  id,
+  names,
+  birth: dateSrc.optional(),
+  death: dateSrc.optional(),
+  dynasty: id.optional(),
+  reigns: z
+    .array(
+      z.object({
+        entity: id,
+        position: id,
+        title: names,
+        from: dateSrc,
+        to: dateSrc.optional(),
+      }),
+    )
+    .min(1),
+  sources: z.array(id),
+  wikipedia: names.optional(),
+})
+export type RulerSrc = z.infer<typeof rulerSrc>
+
 // ---------- published files (public/data/) ----------
 
 export type Names = z.infer<typeof names>
@@ -155,8 +177,33 @@ export interface Correction extends CorrectionSrc {
   previous?: unknown
 }
 
+/** Règne : a Dirigeant holding power over an Entité politique. */
+export interface Reign {
+  entity: string
+  position: string
+  title: Names
+  from: HistDate
+  to?: HistDate
+}
+export interface PublishedRuler {
+  id: string
+  names: Names
+  birth?: HistDate
+  death?: HistDate
+  dynasty?: string
+  reigns: Reign[]
+  sources: string[]
+  wikipedia?: Names
+}
+/** Règne as listed on its Entité. */
+export interface EntityReign extends Omit<Reign, 'entity'> {
+  ruler: string
+  names: Names
+}
+
 export interface PublishedEntity {
   id: string
+  reigns?: EntityReign[]
   corrections?: Correction[]
   names: Names
   aliases?: { fr?: string[]; en?: string[] }

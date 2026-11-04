@@ -1,0 +1,120 @@
+{
+ "id": "Q378675",
+ "labels": {
+  "fr": {
+   "language": "fr",
+   "value": "Macrien"
+  },
+  "en": {
+   "language": "en",
+   "value": "Macrianus Major"
+  }
+ },
+ "aliases": {
+  "en": [
+   {
+    "language": "en",
+    "value": "Titus Fulvius Macrianus"
+   }
+  ]
+ },
+ "sitelinks": {
+  "enwiki": {
+   "site": "enwiki",
+   "title": "Macrianus Major",
+   "badges": []
+  },
+  "frwiki": {
+   "site": "frwiki",
+   "title": "Macrien",
+   "badges": []
+  }
+ },
+ "claims": {
+  "P39": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 842606,
+       "id": "Q842606"
+      }
+     }
+    },
+    "qualifiers": {
+     "P580": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+0260-00-00T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 9,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+        }
+       }
+      }
+     ],
+     "P582": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+0261-00-00T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 9,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+        }
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "P569": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+0250-00-00T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 7,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    }
+   }
+  ],
+  "P570": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+0261-01-01T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 9,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+      }
+     }
+    },
+    "qualifiers": {}
+   }
+  ],
+  "P53": []
+ }
+}

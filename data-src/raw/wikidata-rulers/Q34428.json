@@ -1,0 +1,151 @@
+{
+ "id": "Q34428",
+ "labels": {
+  "fr": {
+   "language": "fr",
+   "value": "Philippe II Auguste"
+  },
+  "en": {
+   "language": "en",
+   "value": "Philip II of France"
+  }
+ },
+ "aliases": {
+  "fr": [
+   {
+    "language": "fr",
+    "value": "Philippe II de France"
+   },
+   {
+    "language": "fr",
+    "value": "Philippe Auguste"
+   }
+  ],
+  "en": [
+   {
+    "language": "en",
+    "value": "Philippe II"
+   },
+   {
+    "language": "en",
+    "value": "Philip Augustus"
+   },
+   {
+    "language": "en",
+    "value": "Philip II"
+   }
+  ]
+ },
+ "sitelinks": {
+  "enwiki": {
+   "site": "enwiki",
+   "title": "Philip II of France",
+   "badges": []
+  },
+  "frwiki": {
+   "site": "frwiki",
+   "title": "Philippe II Auguste",
+   "badges": []
+  }
+ },
+ "claims": {
+  "P39": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 18384454,
+       "id": "Q18384454"
+      }
+     }
+    },
+    "qualifiers": {
+     "P580": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+1180-09-18T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+        }
+       }
+      }
+     ],
+     "P582": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+1223-07-14T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+        }
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "P569": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+1165-08-21T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    }
+   }
+  ],
+  "P570": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+1223-07-14T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    }
+   }
+  ],
+  "P53": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 179544,
+       "id": "Q179544"
+      }
+     }
+    }
+   }
+  ]
+ }
+}

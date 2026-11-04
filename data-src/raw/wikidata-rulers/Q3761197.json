@@ -1,0 +1,140 @@
+{
+ "id": "Q3761197",
+ "labels": {
+  "fr": {
+   "language": "fr",
+   "value": "Gerolamo De Franchi Toso"
+  },
+  "en": {
+   "language": "en",
+   "value": "Gerolamo De Franchi Toso"
+  }
+ },
+ "aliases": {},
+ "sitelinks": {
+  "enwiki": {
+   "site": "enwiki",
+   "title": "Gerolamo De Franchi Toso (1522–1586)",
+   "badges": []
+  },
+  "frwiki": {
+   "site": "frwiki",
+   "title": "Gerolamo De Franchi Toso (1522-1586)",
+   "badges": []
+  }
+ },
+ "claims": {
+  "P39": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 3712541,
+       "id": "Q3712541"
+      }
+     }
+    },
+    "qualifiers": {
+     "P580": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+1581-10-21T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+        }
+       }
+      }
+     ],
+     "P582": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+1583-10-21T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+        }
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "P569": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+1522-00-00T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 9,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+      }
+     }
+    },
+    "qualifiers": {}
+   }
+  ],
+  "P570": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+1586-00-00T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 9,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+      }
+     }
+    }
+   }
+  ],
+  "P53": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 110896556,
+       "id": "Q110896556"
+      }
+     }
+    }
+   },
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 110897093,
+       "id": "Q110897093"
+      }
+     }
+    }
+   }
+  ]
+ }
+}

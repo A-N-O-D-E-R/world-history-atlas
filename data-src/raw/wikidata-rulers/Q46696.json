@@ -1,0 +1,183 @@
+{
+ "id": "Q46696",
+ "labels": {
+  "en": {
+   "language": "en",
+   "value": "Theodosius I"
+  },
+  "fr": {
+   "language": "fr",
+   "value": "Théodose Ier"
+  }
+ },
+ "aliases": {
+  "fr": [
+   {
+    "language": "fr",
+    "value": "Theodose 1er"
+   },
+   {
+    "language": "fr",
+    "value": "Théodose le Grand"
+   },
+   {
+    "language": "fr",
+    "value": "Theodose Ier"
+   }
+  ],
+  "en": [
+   {
+    "language": "en",
+    "value": "Theodosios I the Great"
+   },
+   {
+    "language": "en",
+    "value": "Emperor of Rome Theodosius I"
+   },
+   {
+    "language": "en",
+    "value": "Flavius Theodosius Augustus"
+   },
+   {
+    "language": "en",
+    "value": "Theodosios I"
+   },
+   {
+    "language": "en",
+    "value": "Theodosius I, the Great"
+   },
+   {
+    "language": "en",
+    "value": "Dominus Noster Flavius Theodosius Augustus"
+   }
+  ]
+ },
+ "sitelinks": {
+  "enwiki": {
+   "site": "enwiki",
+   "title": "Theodosius I",
+   "badges": [
+    "Q17437798"
+   ]
+  },
+  "frwiki": {
+   "site": "frwiki",
+   "title": "Théodose Ier",
+   "badges": []
+  }
+ },
+ "claims": {
+  "P39": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 842606,
+       "id": "Q842606"
+      }
+     }
+    },
+    "qualifiers": {
+     "P580": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+0379-01-19T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+        }
+       }
+      }
+     ],
+     "P582": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+0395-01-17T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+        }
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "P569": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+0347-01-11T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    }
+   }
+  ],
+  "P570": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+0395-01-17T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    }
+   }
+  ],
+  "P53": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 854070,
+       "id": "Q854070"
+      }
+     }
+    }
+   },
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 1324480,
+       "id": "Q1324480"
+      }
+     }
+    },
+    "qualifiers": {}
+   }
+  ]
+ }
+}

@@ -1,0 +1,188 @@
+{
+ "id": "Q46837",
+ "labels": {
+  "fr": {
+   "language": "fr",
+   "value": "Hostilien"
+  },
+  "en": {
+   "language": "en",
+   "value": "Hostilian"
+  }
+ },
+ "aliases": {
+  "fr": [
+   {
+    "language": "fr",
+    "value": "Hostilianus"
+   }
+  ],
+  "en": [
+   {
+    "language": "en",
+    "value": "Gaius Valens Hostilianus Messius Quintus"
+   },
+   {
+    "language": "en",
+    "value": "Hostilianus"
+   },
+   {
+    "language": "en",
+    "value": "Gaius Valentius Hostilianus Messius Quintus"
+   },
+   {
+    "language": "en",
+    "value": "Hostilianus Perpenna"
+   },
+   {
+    "language": "en",
+    "value": "Valens Hostilianus"
+   }
+  ]
+ },
+ "sitelinks": {
+  "enwiki": {
+   "site": "enwiki",
+   "title": "Hostilian",
+   "badges": [
+    "Q17437798"
+   ]
+  },
+  "frwiki": {
+   "site": "frwiki",
+   "title": "Hostilien",
+   "badges": []
+  }
+ },
+ "claims": {
+  "P39": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 842606,
+       "id": "Q842606"
+      }
+     }
+    },
+    "qualifiers": {
+     "P580": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+0251-06-00T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 10,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+        }
+       }
+      }
+     ],
+     "P582": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+0251-11-00T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 10,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+        }
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "P569": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+0230-00-00T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 9,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    },
+    "qualifiers": {}
+   },
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+0235-01-01T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 9,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+      }
+     }
+    }
+   }
+  ],
+  "P570": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+0251-11-00T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 10,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    }
+   }
+  ],
+  "P53": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 113465828,
+       "id": "Q113465828"
+      }
+     }
+    }
+   },
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 141180732,
+       "id": "Q141180732"
+      }
+     }
+    },
+    "qualifiers": {}
+   }
+  ]
+ }
+}

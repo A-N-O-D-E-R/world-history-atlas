@@ -1,0 +1,53 @@
+{
+ "id": "Q1200638",
+ "labels": {
+  "en": {
+   "language": "en",
+   "value": "Desiderius"
+  },
+  "fr": {
+   "language": "fr",
+   "value": "Desiderius"
+  }
+ },
+ "aliases": {},
+ "sitelinks": {},
+ "claims": {
+  "P39": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 842606,
+       "id": "Q842606"
+      }
+     }
+    }
+   }
+  ],
+  "P569": [],
+  "P570": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+0353-00-00T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 9,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+      }
+     }
+    },
+    "qualifiers": {}
+   }
+  ],
+  "P53": []
+ }
+}

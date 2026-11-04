@@ -1,0 +1,175 @@
+{
+ "id": "Q1762",
+ "labels": {
+  "fr": {
+   "language": "fr",
+   "value": "Héliogabale"
+  },
+  "en": {
+   "language": "en",
+   "value": "Elagabalus"
+  }
+ },
+ "aliases": {
+  "en": [
+   {
+    "language": "en",
+    "value": "Marcus Aurelius Antoninus Augustus"
+   },
+   {
+    "language": "en",
+    "value": "Marcus Aurelius Antoninus Heliogabalus"
+   },
+   {
+    "language": "en",
+    "value": "Varius Avitus"
+   },
+   {
+    "language": "en",
+    "value": "Tiberinus"
+   },
+   {
+    "language": "en",
+    "value": "Heliogabalus"
+   },
+   {
+    "language": "en",
+    "value": "Sextus Varius Avitus Bassianus"
+   },
+   {
+    "language": "en",
+    "value": "Varius Avitus Bassianus"
+   }
+  ],
+  "fr": [
+   {
+    "language": "fr",
+    "value": "Marcus Aurelius Antoninus"
+   },
+   {
+    "language": "fr",
+    "value": "Élagabal"
+   },
+   {
+    "language": "fr",
+    "value": "Bassien"
+   },
+   {
+    "language": "fr",
+    "value": "Antonin"
+   }
+  ]
+ },
+ "sitelinks": {
+  "enwiki": {
+   "site": "enwiki",
+   "title": "Elagabalus",
+   "badges": []
+  },
+  "frwiki": {
+   "site": "frwiki",
+   "title": "Héliogabale",
+   "badges": []
+  }
+ },
+ "claims": {
+  "P39": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 842606,
+       "id": "Q842606"
+      }
+     }
+    },
+    "qualifiers": {
+     "P580": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+0218-06-08T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+        }
+       }
+      }
+     ],
+     "P582": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+0222-03-11T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+        }
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "P569": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+0203-03-20T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    }
+   }
+  ],
+  "P570": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+0222-03-11T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    }
+   }
+  ],
+  "P53": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 321219,
+       "id": "Q321219"
+      }
+     }
+    }
+   }
+  ]
+ }
+}

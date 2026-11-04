@@ -1,0 +1,253 @@
+{
+ "id": "Q32500",
+ "labels": {
+  "en": {
+   "language": "en",
+   "value": "Charles V, Holy Roman Emperor"
+  },
+  "fr": {
+   "language": "fr",
+   "value": "Charles Quint"
+  }
+ },
+ "aliases": {
+  "fr": [
+   {
+    "language": "fr",
+    "value": "Charles V"
+   },
+   {
+    "language": "fr",
+    "value": "Charles de Habsbourg"
+   },
+   {
+    "language": "fr",
+    "value": "Charles I"
+   }
+  ],
+  "en": [
+   {
+    "language": "en",
+    "value": "Karl V."
+   },
+   {
+    "language": "en",
+    "value": "Holy Roman Emperor Charles V"
+   },
+   {
+    "language": "en",
+    "value": "King Carlos I"
+   },
+   {
+    "language": "en",
+    "value": "King Charles I"
+   },
+   {
+    "language": "en",
+    "value": "Emperor Charles V"
+   },
+   {
+    "language": "en",
+    "value": "Charles I of Spain"
+   },
+   {
+    "language": "en",
+    "value": "Don Carlos"
+   },
+   {
+    "language": "en",
+    "value": "King Charles"
+   },
+   {
+    "language": "en",
+    "value": "Carlos I"
+   },
+   {
+    "language": "en",
+    "value": "Charles I"
+   },
+   {
+    "language": "en",
+    "value": "Carlos V"
+   },
+   {
+    "language": "en",
+    "value": "King Carlos"
+   },
+   {
+    "language": "en",
+    "value": "Emperor Karl V"
+   }
+  ]
+ },
+ "sitelinks": {
+  "enwiki": {
+   "site": "enwiki",
+   "title": "Charles V, Holy Roman Emperor",
+   "badges": []
+  },
+  "frwiki": {
+   "site": "frwiki",
+   "title": "Charles Quint",
+   "badges": []
+  }
+ },
+ "claims": {
+  "P39": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 181765,
+       "id": "Q181765"
+      }
+     }
+    },
+    "qualifiers": {
+     "P580": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+1519-00-00T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 9,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+        }
+       }
+      }
+     ],
+     "P582": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+1556-01-26T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+        }
+       }
+      }
+     ]
+    }
+   },
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 58006791,
+       "id": "Q58006791"
+      }
+     }
+    },
+    "qualifiers": {
+     "P580": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+1516-02-02T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+        }
+       }
+      }
+     ],
+     "P582": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+1556-01-16T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+        }
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "P569": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+1500-02-24T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    }
+   }
+  ],
+  "P570": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+1558-09-21T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    }
+   }
+  ],
+  "P53": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 3624777,
+       "id": "Q3624777"
+      }
+     }
+    }
+   },
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 65968,
+       "id": "Q65968"
+      }
+     }
+    }
+   }
+  ]
+ }
+}

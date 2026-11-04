@@ -1,0 +1,157 @@
+{
+ "id": "Q918950",
+ "labels": {
+  "fr": {
+   "language": "fr",
+   "value": "Raimond-Bérenger IV de Provence"
+  },
+  "en": {
+   "language": "en",
+   "value": "Ramon Berenguer III, Count of Provence"
+  }
+ },
+ "aliases": {
+  "fr": [
+   {
+    "language": "fr",
+    "value": "Raymond-Bérenger III De Provence"
+   },
+   {
+    "language": "fr",
+    "value": "Raimond Bérenger III de Provence"
+   },
+   {
+    "language": "fr",
+    "value": "Pierre de Cerdagne"
+   },
+   {
+    "language": "fr",
+    "value": "Raimond-Berenger III de Provence"
+   }
+  ],
+  "en": [
+   {
+    "language": "en",
+    "value": "Raimond Berengar IV, Comte de Provence"
+   },
+   {
+    "language": "en",
+    "value": "Peter"
+   }
+  ]
+ },
+ "sitelinks": {
+  "enwiki": {
+   "site": "enwiki",
+   "title": "Ramon Berenguer III of Provence",
+   "badges": []
+  },
+  "frwiki": {
+   "site": "frwiki",
+   "title": "Raimond-Bérenger III de Provence",
+   "badges": []
+  }
+ },
+ "claims": {
+  "P39": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 21095877,
+       "id": "Q21095877"
+      }
+     }
+    },
+    "qualifiers": {
+     "P580": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+1173-00-00T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 9,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+        }
+       }
+      }
+     ],
+     "P582": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+1181-04-05T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+        }
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "P569": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+1158-01-01T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 9,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+      }
+     }
+    },
+    "qualifiers": {}
+   }
+  ],
+  "P570": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+1181-04-05T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+      }
+     }
+    },
+    "qualifiers": {}
+   }
+  ],
+  "P53": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 661534,
+       "id": "Q661534"
+      }
+     }
+    }
+   }
+  ]
+ }
+}

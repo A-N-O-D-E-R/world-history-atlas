@@ -1,0 +1,202 @@
+{
+ "id": "Q936976",
+ "labels": {
+  "en": {
+   "language": "en",
+   "value": "Henry IV of France"
+  },
+  "fr": {
+   "language": "fr",
+   "value": "Henri IV de France"
+  }
+ },
+ "aliases": {
+  "fr": [
+   {
+    "language": "fr",
+    "value": "Henri de Bourbon"
+   },
+   {
+    "language": "fr",
+    "value": "le Vert-Galant"
+   },
+   {
+    "language": "fr",
+    "value": "Henri Quatre"
+   },
+   {
+    "language": "fr",
+    "value": "Henri le Grand"
+   },
+   {
+    "language": "fr",
+    "value": "Henri III de Navarre"
+   }
+  ],
+  "en": [
+   {
+    "language": "en",
+    "value": "Good King Henry"
+   },
+   {
+    "language": "en",
+    "value": "the Verdant Gallant"
+   },
+   {
+    "language": "en",
+    "value": "Le Vert Galant"
+   },
+   {
+    "language": "en",
+    "value": "Henri de Bourbon"
+   },
+   {
+    "language": "en",
+    "value": "Henry IV"
+   },
+   {
+    "language": "en",
+    "value": "Henry the Great"
+   }
+  ]
+ },
+ "sitelinks": {
+  "enwiki": {
+   "site": "enwiki",
+   "title": "Henry IV of France",
+   "badges": []
+  },
+  "frwiki": {
+   "site": "frwiki",
+   "title": "Henri IV (roi de France)",
+   "badges": []
+  }
+ },
+ "claims": {
+  "P39": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 18384454,
+       "id": "Q18384454"
+      }
+     }
+    },
+    "qualifiers": {
+     "P580": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+1589-08-02T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+        }
+       }
+      }
+     ],
+     "P582": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+1610-05-14T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+        }
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "P569": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+1553-12-13T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    }
+   }
+  ],
+  "P570": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+1610-05-14T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+      }
+     }
+    },
+    "qualifiers": {}
+   }
+  ],
+  "P53": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 182135,
+       "id": "Q182135"
+      }
+     }
+    }
+   },
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 58389,
+       "id": "Q58389"
+      }
+     }
+    }
+   },
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 2608761,
+       "id": "Q2608761"
+      }
+     }
+    }
+   }
+  ]
+ }
+}

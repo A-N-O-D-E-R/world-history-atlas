@@ -1,0 +1,95 @@
+{
+ "id": "Q176536",
+ "labels": {
+  "en": {
+   "language": "en",
+   "value": "Jotapianus"
+  },
+  "fr": {
+   "language": "fr",
+   "value": "Jotapianus"
+  }
+ },
+ "aliases": {
+  "en": [
+   {
+    "language": "en",
+    "value": "Marcus Fulvius Ru. Jotapianus"
+   },
+   {
+    "language": "en",
+    "value": "Marcus Fulvius Rufus Iotapianus"
+   },
+   {
+    "language": "en",
+    "value": "Marcus Fulvius Rufus Jotapianus"
+   },
+   {
+    "language": "en",
+    "value": "M. Fulvius Rufus Iotapianus"
+   },
+   {
+    "language": "en",
+    "value": "M. Fulvius Rufus Jotapianus"
+   },
+   {
+    "language": "en",
+    "value": "Iopatianus"
+   },
+   {
+    "language": "en",
+    "value": "Iopatian"
+   }
+  ]
+ },
+ "sitelinks": {
+  "enwiki": {
+   "site": "enwiki",
+   "title": "Jotapian",
+   "badges": []
+  },
+  "frwiki": {
+   "site": "frwiki",
+   "title": "Jotapianus",
+   "badges": []
+  }
+ },
+ "claims": {
+  "P39": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 842606,
+       "id": "Q842606"
+      }
+     }
+    }
+   }
+  ],
+  "P569": [],
+  "P570": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+0249-01-01T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 9,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+      }
+     }
+    },
+    "qualifiers": {}
+   }
+  ],
+  "P53": []
+ }
+}

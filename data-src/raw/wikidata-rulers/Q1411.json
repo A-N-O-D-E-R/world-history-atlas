@@ -1,0 +1,198 @@
+{
+ "id": "Q1411",
+ "labels": {
+  "en": {
+   "language": "en",
+   "value": "Claudius"
+  },
+  "fr": {
+   "language": "fr",
+   "value": "Claude"
+  }
+ },
+ "aliases": {
+  "fr": [
+   {
+    "language": "fr",
+    "value": "empereur Claude"
+   },
+   {
+    "language": "fr",
+    "value": "Claude (empereur)"
+   },
+   {
+    "language": "fr",
+    "value": "Claudius"
+   },
+   {
+    "language": "fr",
+    "value": "Claude I"
+   }
+  ],
+  "en": [
+   {
+    "language": "en",
+    "value": "Claudius Caesar"
+   },
+   {
+    "language": "en",
+    "value": "Claudius I"
+   },
+   {
+    "language": "en",
+    "value": "Tiberius Claudius Nero"
+   },
+   {
+    "language": "en",
+    "value": "Tiberius Claudius Caesar Augustus Germanicus"
+   },
+   {
+    "language": "en",
+    "value": "Tiberius Claudius Nero Germanicus"
+   },
+   {
+    "language": "en",
+    "value": "Tiberius Claudius Nero Drusus Germanicus"
+   },
+   {
+    "language": "en",
+    "value": "Tiberius Claudius Drusus Germanicus"
+   },
+   {
+    "language": "en",
+    "value": "Tiberius Claudius Nero Caesar Drusus"
+   },
+   {
+    "language": "en",
+    "value": "Tiberius Claudius Drusus Nero Germanicus"
+   }
+  ]
+ },
+ "sitelinks": {
+  "enwiki": {
+   "site": "enwiki",
+   "title": "Claudius",
+   "badges": []
+  },
+  "frwiki": {
+   "site": "frwiki",
+   "title": "Claude (empereur romain)",
+   "badges": [
+    "Q17437798"
+   ]
+  }
+ },
+ "claims": {
+  "P39": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 842606,
+       "id": "Q842606"
+      }
+     }
+    },
+    "qualifiers": {
+     "P580": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+0041-01-25T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+        }
+       }
+      }
+     ],
+     "P582": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+0054-10-13T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+        }
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "P569": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "-0010-08-01T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    }
+   }
+  ],
+  "P570": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+0054-10-13T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    }
+   }
+  ],
+  "P53": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 192841,
+       "id": "Q192841"
+      }
+     }
+    }
+   },
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 102259474,
+       "id": "Q102259474"
+      }
+     }
+    }
+   }
+  ]
+ }
+}

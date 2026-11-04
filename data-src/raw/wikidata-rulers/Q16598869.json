@@ -1,0 +1,66 @@
+{
+ "id": "Q16598869",
+ "labels": {
+  "en": {
+   "language": "en",
+   "value": "Rotbold I of Provence"
+  },
+  "fr": {
+   "language": "fr",
+   "value": "Rotbald Ier de Provence"
+  }
+ },
+ "aliases": {
+  "en": [
+   {
+    "language": "en",
+    "value": "Ratbold l'Antic"
+   },
+   {
+    "language": "en",
+    "value": "Rotboldo I di Provenza"
+   }
+  ],
+  "fr": [
+   {
+    "language": "fr",
+    "value": "Roubaud de Provence"
+   }
+  ]
+ },
+ "sitelinks": {},
+ "claims": {
+  "P39": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 21095877,
+       "id": "Q21095877"
+      }
+     }
+    }
+   }
+  ],
+  "P569": [],
+  "P570": [],
+  "P53": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 894485,
+       "id": "Q894485"
+      }
+     }
+    }
+   }
+  ]
+ }
+}

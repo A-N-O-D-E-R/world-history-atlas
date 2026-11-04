@@ -1,0 +1,149 @@
+{
+ "id": "Q1429",
+ "labels": {
+  "en": {
+   "language": "en",
+   "value": "Antoninus Pius"
+  },
+  "fr": {
+   "language": "fr",
+   "value": "Antonin le Pieux"
+  }
+ },
+ "aliases": {
+  "en": [
+   {
+    "language": "en",
+    "value": "Caesar Aelius Hadrianus Antoninus Augustus Pius"
+   },
+   {
+    "language": "en",
+    "value": "Antoninus"
+   },
+   {
+    "language": "en",
+    "value": "Titus Aurelius Fulvius Boionius Arrius Antoninus"
+   },
+   {
+    "language": "en",
+    "value": "Caesar Titus Aelius Hadrianus Antoninus Augustus Pius"
+   },
+   {
+    "language": "en",
+    "value": "Titus Aurelius Fulvus Boionius Arrius Antoninus"
+   }
+  ]
+ },
+ "sitelinks": {
+  "enwiki": {
+   "site": "enwiki",
+   "title": "Antoninus Pius",
+   "badges": []
+  },
+  "frwiki": {
+   "site": "frwiki",
+   "title": "Antonin le Pieux",
+   "badges": []
+  }
+ },
+ "claims": {
+  "P39": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 842606,
+       "id": "Q842606"
+      }
+     }
+    },
+    "qualifiers": {
+     "P580": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+0138-07-10T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+        }
+       }
+      }
+     ],
+     "P582": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+0161-03-07T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+        }
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "P569": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+0086-09-19T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    }
+   }
+  ],
+  "P570": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+0161-03-07T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    }
+   }
+  ],
+  "P53": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 3291176,
+       "id": "Q3291176"
+      }
+     }
+    }
+   }
+  ]
+ }
+}

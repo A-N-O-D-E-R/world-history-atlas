@@ -16,7 +16,8 @@
     "test:e2e": "playwright test",
     "data:extract:ohm": "tsx pipeline/extract-ohm.ts",
     "data:extract:wikidata": "tsx pipeline/extract-wikidata.ts",
-    "data:extract:cliopatria": "tsx pipeline/extract-cliopatria.ts"
+    "data:extract:cliopatria": "tsx pipeline/extract-cliopatria.ts",
+    "data:extract:rulers": "tsx pipeline/extract-rulers.ts"
   },
   "dependencies": {
     "i18next": "^26.7.1",

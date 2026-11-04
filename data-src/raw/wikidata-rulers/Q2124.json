@@ -1,0 +1,167 @@
+{
+ "id": "Q2124",
+ "labels": {
+  "fr": {
+   "language": "fr",
+   "value": "Valéry Giscard d'Estaing"
+  },
+  "en": {
+   "language": "en",
+   "value": "Valéry Giscard d'Estaing"
+  }
+ },
+ "aliases": {
+  "en": [
+   {
+    "language": "en",
+    "value": "VGE"
+   },
+   {
+    "language": "en",
+    "value": "Giscard"
+   },
+   {
+    "language": "en",
+    "value": "Giscard d'Estaing"
+   },
+   {
+    "language": "en",
+    "value": "Valery Giscard d'Estaing"
+   },
+   {
+    "language": "en",
+    "value": "Valéry René Marie Georges Giscard d'Estaing"
+   },
+   {
+    "language": "en",
+    "value": "Valery Rene Marie Georges Giscard d'Estaing"
+   }
+  ],
+  "fr": [
+   {
+    "language": "fr",
+    "value": "VGE"
+   },
+   {
+    "language": "fr",
+    "value": "Giscard"
+   },
+   {
+    "language": "fr",
+    "value": "Giscard d'Estaing"
+   }
+  ]
+ },
+ "sitelinks": {
+  "enwiki": {
+   "site": "enwiki",
+   "title": "Valéry Giscard d'Estaing",
+   "badges": []
+  },
+  "frwiki": {
+   "site": "frwiki",
+   "title": "Valéry Giscard d'Estaing",
+   "badges": []
+  }
+ },
+ "claims": {
+  "P39": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 191954,
+       "id": "Q191954"
+      }
+     }
+    },
+    "qualifiers": {
+     "P580": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+1974-05-27T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+        }
+       }
+      }
+     ],
+     "P582": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+1981-05-21T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+        }
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "P569": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+1926-02-02T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+      }
+     }
+    }
+   }
+  ],
+  "P570": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+2020-12-02T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+      }
+     }
+    }
+   }
+  ],
+  "P53": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 11742227,
+       "id": "Q11742227"
+      }
+     }
+    }
+   }
+  ]
+ }
+}

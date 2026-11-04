@@ -1,0 +1,52 @@
+{
+ "id": "Q3153786",
+ "labels": {
+  "fr": {
+   "language": "fr",
+   "value": "intérim du président de la République française"
+  }
+ },
+ "aliases": {
+  "fr": [
+   {
+    "language": "fr",
+    "value": "Ordre de succession présidentielle de la République française"
+   },
+   {
+    "language": "fr",
+    "value": "Intérim du Président de la République française"
+   },
+   {
+    "language": "fr",
+    "value": "Ordre de succession présidentielle de la France"
+   }
+  ]
+ },
+ "sitelinks": {
+  "frwiki": {
+   "site": "frwiki",
+   "title": "Intérim du président de la République française",
+   "badges": []
+  }
+ },
+ "claims": {
+  "P39": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 191954,
+       "id": "Q191954"
+      }
+     }
+    }
+   }
+  ],
+  "P569": [],
+  "P570": [],
+  "P53": []
+ }
+}

@@ -1,0 +1,214 @@
+{
+ "id": "Q151075",
+ "labels": {
+  "en": {
+   "language": "en",
+   "value": "Francis I, Holy Roman Emperor"
+  },
+  "fr": {
+   "language": "fr",
+   "value": "François Ier du Saint-Empire"
+  }
+ },
+ "aliases": {
+  "fr": [
+   {
+    "language": "fr",
+    "value": "François Ier"
+   },
+   {
+    "language": "fr",
+    "value": "François ier du saint-empire"
+   },
+   {
+    "language": "fr",
+    "value": "François III de Lorraine"
+   },
+   {
+    "language": "fr",
+    "value": "Francois Ier du Saint-Empire"
+   },
+   {
+    "language": "fr",
+    "value": "François-Étienne de Lorraine"
+   },
+   {
+    "language": "fr",
+    "value": "François-Stéphane de Lorraine"
+   },
+   {
+    "language": "fr",
+    "value": "François Ier du Saint Empire"
+   }
+  ],
+  "en": [
+   {
+    "language": "en",
+    "value": "Holy Roman Emperor Franz I. Stephan"
+   },
+   {
+    "language": "en",
+    "value": "Kaiser Franz I. Heiliges Römisches Reich"
+   },
+   {
+    "language": "en",
+    "value": "Holy Roman Emperor Francis Stephen"
+   },
+   {
+    "language": "en",
+    "value": "Franz Stephan von Lothringen"
+   },
+   {
+    "language": "en",
+    "value": "Franz Anton Stephan von Lothringen-Bar"
+   },
+   {
+    "language": "en",
+    "value": "empereur germanique François I"
+   },
+   {
+    "language": "en",
+    "value": "Emperor of Germany Franz I"
+   },
+   {
+    "language": "en",
+    "value": "Holy Roman Emperor Franz Stephan"
+   },
+   {
+    "language": "en",
+    "value": "Holy Roman Emperor Francis I"
+   },
+   {
+    "language": "en",
+    "value": "imperatore del Sacro romano impero Franz I"
+   }
+  ]
+ },
+ "sitelinks": {
+  "enwiki": {
+   "site": "enwiki",
+   "title": "Francis I, Holy Roman Emperor",
+   "badges": []
+  },
+  "frwiki": {
+   "site": "frwiki",
+   "title": "François Ier (empereur du Saint-Empire)",
+   "badges": []
+  }
+ },
+ "claims": {
+  "P39": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 181765,
+       "id": "Q181765"
+      }
+     }
+    },
+    "qualifiers": {
+     "P580": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+1745-10-04T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+        }
+       }
+      }
+     ],
+     "P582": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+1765-08-18T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+        }
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "P569": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+1708-12-08T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+      }
+     }
+    }
+   }
+  ],
+  "P570": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+1765-08-18T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+      }
+     }
+    }
+   }
+  ],
+  "P53": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 2638011,
+       "id": "Q2638011"
+      }
+     }
+    },
+    "qualifiers": {}
+   },
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 645719,
+       "id": "Q645719"
+      }
+     }
+    },
+    "qualifiers": {}
+   }
+  ]
+ }
+}

@@ -1,0 +1,203 @@
+{
+ "id": "Q33941",
+ "labels": {
+  "fr": {
+   "language": "fr",
+   "value": "Julien"
+  },
+  "en": {
+   "language": "en",
+   "value": "Julian"
+  }
+ },
+ "aliases": {
+  "fr": [
+   {
+    "language": "fr",
+    "value": "Julien l’Apostat"
+   },
+   {
+    "language": "fr",
+    "value": "Flavius Claudius Julianus"
+   },
+   {
+    "language": "fr",
+    "value": "Julien II dit l'Apostat"
+   },
+   {
+    "language": "fr",
+    "value": "Julien le philosophe"
+   },
+   {
+    "language": "fr",
+    "value": "Julien II"
+   },
+   {
+    "language": "fr",
+    "value": "Julien l'apostat"
+   }
+  ],
+  "en": [
+   {
+    "language": "en",
+    "value": "Flavius Claudius Julianus"
+   },
+   {
+    "language": "en",
+    "value": "Julian III"
+   },
+   {
+    "language": "en",
+    "value": "Julian the Apostate"
+   },
+   {
+    "language": "en",
+    "value": "Imperator Caesar Flavius Claudius Julianus Augustus"
+   },
+   {
+    "language": "en",
+    "value": "Julianus II"
+   },
+   {
+    "language": "en",
+    "value": "Flavius Claudius Iulianus"
+   },
+   {
+    "language": "en",
+    "value": "Julian II"
+   },
+   {
+    "language": "en",
+    "value": "Julianus III"
+   }
+  ]
+ },
+ "sitelinks": {
+  "enwiki": {
+   "site": "enwiki",
+   "title": "Julian (emperor)",
+   "badges": []
+  },
+  "frwiki": {
+   "site": "frwiki",
+   "title": "Julien (empereur romain)",
+   "badges": []
+  }
+ },
+ "claims": {
+  "P39": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 842606,
+       "id": "Q842606"
+      }
+     }
+    },
+    "qualifiers": {
+     "P580": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+0360-02-00T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 10,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+        }
+       }
+      }
+     ],
+     "P582": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+0363-06-00T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 10,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+        }
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "P569": [
+   {
+    "rank": "preferred",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+0331-11-17T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    }
+   },
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+0331-00-00T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 9,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    }
+   }
+  ],
+  "P570": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+0363-06-26T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    }
+   }
+  ],
+  "P53": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 175454,
+       "id": "Q175454"
+      }
+     }
+    }
+   }
+  ]
+ }
+}

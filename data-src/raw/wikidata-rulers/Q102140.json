@@ -1,0 +1,181 @@
+{
+ "id": "Q102140",
+ "labels": {
+  "fr": {
+   "language": "fr",
+   "value": "Henri II d'Angleterre"
+  },
+  "en": {
+   "language": "en",
+   "value": "Henry II of England"
+  }
+ },
+ "aliases": {
+  "fr": [
+   {
+    "language": "fr",
+    "value": "Henri Court-Mantel"
+   },
+   {
+    "language": "fr",
+    "value": "Henry II d'Angleterre"
+   },
+   {
+    "language": "fr",
+    "value": "Henri Plantagenêt"
+   },
+   {
+    "language": "fr",
+    "value": "Henri II Plantagenêt"
+   },
+   {
+    "language": "fr",
+    "value": "Henri II"
+   },
+   {
+    "language": "fr",
+    "value": "Henri 2 Plantagenêt"
+   }
+  ],
+  "en": [
+   {
+    "language": "en",
+    "value": "King Henry II of England"
+   },
+   {
+    "language": "en",
+    "value": "Henry of Anjou"
+   },
+   {
+    "language": "en",
+    "value": "Henry Curtmantle"
+   },
+   {
+    "language": "en",
+    "value": "Henry FitzEmpress"
+   },
+   {
+    "language": "en",
+    "value": "Henry Plantagenet"
+   },
+   {
+    "language": "en",
+    "value": "King Henry II"
+   },
+   {
+    "language": "en",
+    "value": "Henry II"
+   }
+  ]
+ },
+ "sitelinks": {
+  "enwiki": {
+   "site": "enwiki",
+   "title": "Henry II of England",
+   "badges": [
+    "Q17437796"
+   ]
+  },
+  "frwiki": {
+   "site": "frwiki",
+   "title": "Henri II (roi d'Angleterre)",
+   "badges": [
+    "Q17437798"
+   ]
+  }
+ },
+ "claims": {
+  "P39": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 21096233,
+       "id": "Q21096233"
+      }
+     }
+    }
+   }
+  ],
+  "P569": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+1133-03-05T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    }
+   }
+  ],
+  "P570": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+1189-07-06T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    }
+   }
+  ],
+  "P53": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 106151,
+       "id": "Q106151"
+      }
+     }
+    }
+   },
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 836484,
+       "id": "Q836484"
+      }
+     }
+    }
+   },
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 516569,
+       "id": "Q516569"
+      }
+     }
+    }
+   }
+  ]
+ }
+}

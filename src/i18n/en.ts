@@ -101,5 +101,13 @@ export const en: Dict = {
     method: 'Method',
     publicDomain: 'Public domain',
   },
+  ruler: {
+    kind: 'Ruler',
+    atDate: 'Ruler at this date',
+    none: 'No known ruler at this date',
+    life: 'Life',
+    reigns: 'Reigns',
+    source: 'Wikidata',
+  },
   lang: { label: 'Language', fr: 'Français', en: 'English' },
 }

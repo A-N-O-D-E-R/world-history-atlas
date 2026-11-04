@@ -1,0 +1,111 @@
+{
+ "id": "Q134259",
+ "labels": {
+  "fr": {
+   "language": "fr",
+   "value": "Louis VII"
+  },
+  "en": {
+   "language": "en",
+   "value": "Louis VII of France"
+  }
+ },
+ "aliases": {
+  "fr": [
+   {
+    "language": "fr",
+    "value": "Louis VII le Jeune"
+   }
+  ],
+  "en": [
+   {
+    "language": "en",
+    "value": "Lois VII, the Young"
+   },
+   {
+    "language": "en",
+    "value": "Louis VII"
+   }
+  ]
+ },
+ "sitelinks": {
+  "enwiki": {
+   "site": "enwiki",
+   "title": "Louis VII of France",
+   "badges": []
+  },
+  "frwiki": {
+   "site": "frwiki",
+   "title": "Louis VII le Jeune",
+   "badges": []
+  }
+ },
+ "claims": {
+  "P39": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 21096233,
+       "id": "Q21096233"
+      }
+     }
+    }
+   }
+  ],
+  "P569": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+1120-01-01T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 9,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    }
+   }
+  ],
+  "P570": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+1180-09-18T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    }
+   }
+  ],
+  "P53": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 179544,
+       "id": "Q179544"
+      }
+     }
+    }
+   }
+  ]
+ }
+}

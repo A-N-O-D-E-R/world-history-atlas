@@ -1,0 +1,207 @@
+{
+ "id": "Q76736",
+ "labels": {
+  "fr": {
+   "language": "fr",
+   "value": "Charles VII du Saint-Empire"
+  },
+  "en": {
+   "language": "en",
+   "value": "Charles VII, Holy Roman Emperor"
+  }
+ },
+ "aliases": {
+  "fr": [
+   {
+    "language": "fr",
+    "value": "Charles VII du Saint Empire"
+   },
+   {
+    "language": "fr",
+    "value": "Charles III de Bohème"
+   },
+   {
+    "language": "fr",
+    "value": "Charles  Albert de Bavière"
+   }
+  ],
+  "en": [
+   {
+    "language": "en",
+    "value": "Carolus VII"
+   },
+   {
+    "language": "en",
+    "value": "Holy Roman Emperor Charles VII Albert"
+   },
+   {
+    "language": "en",
+    "value": "Karl VII"
+   },
+   {
+    "language": "en",
+    "value": "Emperor of Germany Karl VI"
+   },
+   {
+    "language": "en",
+    "value": "Karl Albrecht"
+   },
+   {
+    "language": "en",
+    "value": "Charles Albert"
+   },
+   {
+    "language": "en",
+    "value": "Carolus Albertus"
+   },
+   {
+    "language": "en",
+    "value": "Kaiser Karl VII. Heiliges Römisches Reich"
+   },
+   {
+    "language": "en",
+    "value": "imperatore del Sacro romano impero Karl VII"
+   },
+   {
+    "language": "en",
+    "value": "Holy Roman Emperor Charles VII"
+   },
+   {
+    "language": "en",
+    "value": "Elector of Bavaria Charles Albert"
+   },
+   {
+    "language": "en",
+    "value": "empereur germanique Charles VII"
+   },
+   {
+    "language": "en",
+    "value": "Elector of Bavaria Karl Albrecht"
+   },
+   {
+    "language": "en",
+    "value": "Holy Roman Emperor Karl VII"
+   },
+   {
+    "language": "en",
+    "value": "Charles VII"
+   },
+   {
+    "language": "en",
+    "value": "Karl VII. (HRR)"
+   }
+  ]
+ },
+ "sitelinks": {
+  "enwiki": {
+   "site": "enwiki",
+   "title": "Charles VII, Holy Roman Emperor",
+   "badges": []
+  },
+  "frwiki": {
+   "site": "frwiki",
+   "title": "Charles VII (empereur du Saint-Empire)",
+   "badges": []
+  }
+ },
+ "claims": {
+  "P39": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 181765,
+       "id": "Q181765"
+      }
+     }
+    },
+    "qualifiers": {
+     "P580": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+1742-01-24T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+        }
+       }
+      }
+     ],
+     "P582": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+1745-01-20T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+        }
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "P569": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+1697-08-06T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+      }
+     }
+    }
+   }
+  ],
+  "P570": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+1745-01-20T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+      }
+     }
+    }
+   }
+  ],
+  "P53": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 131621,
+       "id": "Q131621"
+      }
+     }
+    }
+   }
+  ]
+ }
+}

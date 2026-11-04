@@ -1,0 +1,137 @@
+{
+ "id": "Q211396",
+ "labels": {
+  "fr": {
+   "language": "fr",
+   "value": "Magnus Maximus"
+  },
+  "en": {
+   "language": "en",
+   "value": "Magnus Maximus"
+  }
+ },
+ "aliases": {
+  "fr": [
+   {
+    "language": "fr",
+    "value": "Maxime"
+   }
+  ],
+  "en": [
+   {
+    "language": "en",
+    "value": "Macsen Wledig"
+   },
+   {
+    "language": "en",
+    "value": "Emperor Flavius Clemens Maximus, Governor of Britain 370, Emperor of Rome 383"
+   },
+   {
+    "language": "en",
+    "value": "Maximianus"
+   },
+   {
+    "language": "en",
+    "value": "Dominus Noster Magnus Maximus Pius Felix Augustus"
+   }
+  ]
+ },
+ "sitelinks": {
+  "enwiki": {
+   "site": "enwiki",
+   "title": "Magnus Maximus",
+   "badges": []
+  },
+  "frwiki": {
+   "site": "frwiki",
+   "title": "Magnus Maximus",
+   "badges": []
+  }
+ },
+ "claims": {
+  "P39": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 842606,
+       "id": "Q842606"
+      }
+     }
+    }
+   }
+  ],
+  "P569": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+0335-01-01T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 9,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+      }
+     }
+    },
+    "qualifiers": {}
+   }
+  ],
+  "P570": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+0388-08-27T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    }
+   },
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+0388-08-28T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    }
+   }
+  ],
+  "P53": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 854070,
+       "id": "Q854070"
+      }
+     }
+    },
+    "qualifiers": {}
+   }
+  ]
+ }
+}

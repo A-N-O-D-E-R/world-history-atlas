@@ -1,0 +1,163 @@
+{
+ "id": "Q7758",
+ "labels": {
+  "fr": {
+   "language": "fr",
+   "value": "Charles X"
+  },
+  "en": {
+   "language": "en",
+   "value": "Charles X of France"
+  }
+ },
+ "aliases": {
+  "en": [
+   {
+    "language": "en",
+    "value": "Charles X"
+   },
+   {
+    "language": "en",
+    "value": "Monseigneur d'Artois"
+   }
+  ],
+  "fr": [
+   {
+    "language": "fr",
+    "value": "Monsieur comte d'Artois"
+   },
+   {
+    "language": "fr",
+    "value": "Charles-Philippe, comte d'Artois"
+   },
+   {
+    "language": "fr",
+    "value": "Charles X de France"
+   },
+   {
+    "language": "fr",
+    "value": "Artois"
+   },
+   {
+    "language": "fr",
+    "value": "Charles-Philippe de France"
+   },
+   {
+    "language": "fr",
+    "value": "comte d'Artois"
+   }
+  ]
+ },
+ "sitelinks": {
+  "enwiki": {
+   "site": "enwiki",
+   "title": "Charles X of France",
+   "badges": []
+  },
+  "frwiki": {
+   "site": "frwiki",
+   "title": "Charles X",
+   "badges": []
+  }
+ },
+ "claims": {
+  "P39": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 3439798,
+       "id": "Q3439798"
+      }
+     }
+    },
+    "qualifiers": {
+     "P580": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+1824-09-16T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+        }
+       }
+      }
+     ],
+     "P582": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+1830-08-02T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+        }
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "P569": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+1757-10-09T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+      }
+     }
+    }
+   }
+  ],
+  "P570": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+1836-11-06T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+      }
+     }
+    }
+   }
+  ],
+  "P53": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 58389,
+       "id": "Q58389"
+      }
+     }
+    }
+   }
+  ]
+ }
+}

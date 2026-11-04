@@ -3,8 +3,10 @@ import { useTranslation } from 'react-i18next'
 import { loadEntity, loadSnapshotProps, loadSource } from '../query/details.ts'
 import { formatValue } from '../query/corrections.ts'
 import { displayName } from '../query/names.ts'
+import { reignsAt } from '../query/reigns.ts'
+import { useAtlas } from '../state/atlasStore.ts'
 import type { Resolved } from '../query/resolve.ts'
-import { type Lang, formatDate } from '../shared/dates.ts'
+import { type Lang, formatDate, toJdn } from '../shared/dates.ts'
 import type {
   PublishedEntity,
   PublishedSnapshotProps,
@@ -56,6 +58,8 @@ export default function EntityFiche({
   const { t, i18n } = useTranslation()
   const lang = (i18n.resolvedLanguage ?? 'fr') as Lang
   const details = useDetails(id, resolved?.snapshot.id)
+  const date = useAtlas((s) => s.date)
+  const selectRuler = useAtlas((s) => s.selectRuler)
   if (!details) return <p className="muted">{t('fiche.loading')}</p>
   const { entity, snapshot, sources } = details
   const name = displayName(entity.names, lang, entity.id)
@@ -106,6 +110,31 @@ export default function EntityFiche({
             </dd>
           </>
         )}
+        {entity.reigns?.length ? (
+          <>
+            <dt>{t('ruler.atDate')}</dt>
+            <dd>
+              {reignsAt(entity.reigns, toJdn(date)).map((r, i) => (
+                <div key={i}>
+                  <button
+                    type="button"
+                    className="link"
+                    onClick={() => selectRuler(r.ruler)}
+                  >
+                    {displayName(r.names, lang, r.ruler)}
+                  </button>{' '}
+                  <span className="muted small">
+                    {displayName(r.title, lang)}, {formatDate(r.from, lang)} –{' '}
+                    {r.to ? formatDate(r.to, lang) : '?'}
+                  </span>
+                </div>
+              ))}
+              {!reignsAt(entity.reigns, toJdn(date)).length && (
+                <span className="muted">{t('ruler.none')}</span>
+              )}
+            </dd>
+          </>
+        ) : null}
         <dt>{t('fiche.sources')}</dt>
         <dd>
           <ul className="sources">

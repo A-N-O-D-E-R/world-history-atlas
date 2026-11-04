@@ -1,0 +1,163 @@
+{
+ "id": "Q170586",
+ "labels": {
+  "fr": {
+   "language": "fr",
+   "value": "Philippe VI de France"
+  },
+  "en": {
+   "language": "en",
+   "value": "Philip VI of France"
+  }
+ },
+ "aliases": {
+  "fr": [
+   {
+    "language": "fr",
+    "value": "Philippe de Valois"
+   },
+   {
+    "language": "fr",
+    "value": "Philippe de France"
+   },
+   {
+    "language": "fr",
+    "value": "Philippe VI"
+   },
+   {
+    "language": "fr",
+    "value": "Philippe VI de Valois"
+   }
+  ],
+  "en": [
+   {
+    "language": "en",
+    "value": "Philip VI of Valois"
+   },
+   {
+    "language": "en",
+    "value": "Philippe VI"
+   },
+   {
+    "language": "en",
+    "value": "Philippe VI de Valois"
+   },
+   {
+    "language": "en",
+    "value": "Philip VI"
+   }
+  ]
+ },
+ "sitelinks": {
+  "enwiki": {
+   "site": "enwiki",
+   "title": "Philip VI of France",
+   "badges": []
+  },
+  "frwiki": {
+   "site": "frwiki",
+   "title": "Philippe VI de Valois",
+   "badges": []
+  }
+ },
+ "claims": {
+  "P39": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 18384454,
+       "id": "Q18384454"
+      }
+     }
+    },
+    "qualifiers": {
+     "P580": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+1328-04-01T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+        }
+       }
+      }
+     ],
+     "P582": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+1350-08-22T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+        }
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "P569": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+1293-11-17T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    }
+   }
+  ],
+  "P570": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+1350-08-22T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    }
+   }
+  ],
+  "P53": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 182135,
+       "id": "Q182135"
+      }
+     }
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,35 @@
+{
+ "id": "Q116212447",
+ "labels": {
+  "en": {
+   "language": "en",
+   "value": "Jeff Tuche"
+  },
+  "fr": {
+   "language": "fr",
+   "value": "Jeff Tuche"
+  }
+ },
+ "aliases": {},
+ "sitelinks": {},
+ "claims": {
+  "P39": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 191954,
+       "id": "Q191954"
+      }
+     }
+    }
+   }
+  ],
+  "P569": [],
+  "P570": [],
+  "P53": []
+ }
+}

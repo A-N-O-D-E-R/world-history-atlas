@@ -27,11 +27,13 @@ interface AtlasState {
   layers: Record<BasemapLayer, boolean>
   selectedCountry: SelectedCountry | null
   selectedEntity: string | null // id of an Entité politique
+  selectedRuler: string | null // id of a Dirigeant
   toggleLeft: (tab: LeftTab) => void
   toggleRight: () => void
   setLayer: (layer: BasemapLayer, visible: boolean) => void
   selectCountry: (country: SelectedCountry | null) => void
   selectEntity: (id: string | null) => void
+  selectRuler: (id: string | null) => void
   clearSelection: () => void
 }
 
@@ -62,6 +64,7 @@ export const useAtlas = create<AtlasState>((set, get) => ({
   layers: { coast: true, 'modern-borders': true },
   selectedCountry: null,
   selectedEntity: null,
+  selectedRuler: null,
   toggleLeft: (tab) =>
     set((s) =>
       s.leftTab === tab
@@ -76,10 +79,28 @@ export const useAtlas = create<AtlasState>((set, get) => ({
     set({
       selectedCountry: country,
       selectedEntity: null,
+      selectedRuler: null,
       rightOpen: country !== null,
     }),
   selectEntity: (id) =>
-    set({ selectedEntity: id, selectedCountry: null, rightOpen: id !== null }),
+    set({
+      selectedEntity: id,
+      selectedRuler: null,
+      selectedCountry: null,
+      rightOpen: id !== null,
+    }),
+  selectRuler: (id) =>
+    set({
+      selectedRuler: id,
+      selectedEntity: null,
+      selectedCountry: null,
+      rightOpen: id !== null,
+    }),
   clearSelection: () =>
-    set({ selectedCountry: null, selectedEntity: null, rightOpen: false }),
+    set({
+      selectedCountry: null,
+      selectedEntity: null,
+      selectedRuler: null,
+      rightOpen: false,
+    }),
 }))

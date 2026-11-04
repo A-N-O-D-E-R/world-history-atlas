@@ -1,0 +1,159 @@
+{
+ "id": "Q150599",
+ "labels": {
+  "fr": {
+   "language": "fr",
+   "value": "Ferdinand II du Saint-Empire"
+  },
+  "en": {
+   "language": "en",
+   "value": "Ferdinand II, Holy Roman Emperor"
+  }
+ },
+ "aliases": {
+  "fr": [
+   {
+    "language": "fr",
+    "value": "Ferdinand de Styrie"
+   },
+   {
+    "language": "fr",
+    "value": "Ferdinand II"
+   },
+   {
+    "language": "fr",
+    "value": "Ferdinand II du Saint Empire"
+   },
+   {
+    "language": "fr",
+    "value": "Ferdinand II de Habsbourg"
+   }
+  ],
+  "en": [
+   {
+    "language": "en",
+    "value": "Emperor of Germany Ferdinand II"
+   },
+   {
+    "language": "en",
+    "value": "Holy Roman Emperor Ferdinand II"
+   },
+   {
+    "language": "en",
+    "value": "Ferdinand II"
+   }
+  ]
+ },
+ "sitelinks": {
+  "enwiki": {
+   "site": "enwiki",
+   "title": "Ferdinand II, Holy Roman Emperor",
+   "badges": []
+  },
+  "frwiki": {
+   "site": "frwiki",
+   "title": "Ferdinand II (empereur du Saint-Empire)",
+   "badges": []
+  }
+ },
+ "claims": {
+  "P39": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 181765,
+       "id": "Q181765"
+      }
+     }
+    },
+    "qualifiers": {
+     "P580": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+1619-08-28T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+        }
+       }
+      }
+     ],
+     "P582": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+1637-02-15T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+        }
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "P569": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+1578-07-09T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+      }
+     }
+    }
+   }
+  ],
+  "P570": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+1637-02-15T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+      }
+     }
+    }
+   }
+  ],
+  "P53": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 65968,
+       "id": "Q65968"
+      }
+     }
+    }
+   }
+  ]
+ }
+}
