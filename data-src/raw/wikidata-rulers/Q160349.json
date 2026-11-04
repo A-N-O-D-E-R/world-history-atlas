@@ -1,0 +1,179 @@
+{
+ "id": "Q160349",
+ "labels": {
+  "fr": {
+   "language": "fr",
+   "value": "Charles VI de France"
+  },
+  "en": {
+   "language": "en",
+   "value": "Charles VI of France"
+  }
+ },
+ "aliases": {
+  "fr": [
+   {
+    "language": "fr",
+    "value": "Charles VI le Fol"
+   },
+   {
+    "language": "fr",
+    "value": "Charles le Fol"
+   },
+   {
+    "language": "fr",
+    "value": "Roi loco"
+   },
+   {
+    "language": "fr",
+    "value": "Charles VI le Bien-Aimé"
+   },
+   {
+    "language": "fr",
+    "value": "Charles le Bien-Aimé"
+   },
+   {
+    "language": "fr",
+    "value": "Roi fol"
+   },
+   {
+    "language": "fr",
+    "value": "Charles VI le Fou"
+   }
+  ],
+  "en": [
+   {
+    "language": "en",
+    "value": "Charles the Beloved"
+   },
+   {
+    "language": "en",
+    "value": "Charles the Mad"
+   },
+   {
+    "language": "en",
+    "value": "Charles VI"
+   },
+   {
+    "language": "en",
+    "value": "Charles VI the Well-Beloved"
+   },
+   {
+    "language": "en",
+    "value": "Charles VI, the Well-Beloved"
+   }
+  ]
+ },
+ "sitelinks": {
+  "enwiki": {
+   "site": "enwiki",
+   "title": "Charles VI of France",
+   "badges": []
+  },
+  "frwiki": {
+   "site": "frwiki",
+   "title": "Charles VI (roi de France)",
+   "badges": []
+  }
+ },
+ "claims": {
+  "P39": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 18384454,
+       "id": "Q18384454"
+      }
+     }
+    },
+    "qualifiers": {
+     "P580": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+1380-09-16T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+        }
+       }
+      }
+     ],
+     "P582": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+1422-10-21T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+        }
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "P569": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+1368-12-03T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    }
+   }
+  ],
+  "P570": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+1422-10-21T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    }
+   }
+  ],
+  "P53": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 182135,
+       "id": "Q182135"
+      }
+     }
+    }
+   }
+  ]
+ }
+}

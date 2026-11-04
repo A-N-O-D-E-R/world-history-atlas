@@ -1,0 +1,174 @@
+{
+ "id": "Q7738",
+ "labels": {
+  "fr": {
+   "language": "fr",
+   "value": "Louis XV"
+  },
+  "en": {
+   "language": "en",
+   "value": "Louis XV of France"
+  }
+ },
+ "aliases": {
+  "en": [
+   {
+    "language": "en",
+    "value": "Louis the Beloved"
+   },
+   {
+    "language": "en",
+    "value": "Louis XV"
+   },
+   {
+    "language": "en",
+    "value": "Louis the Well beloved"
+   },
+   {
+    "language": "en",
+    "value": "Louis le bien aimé"
+   }
+  ],
+  "fr": [
+   {
+    "language": "fr",
+    "value": "Louis le Bien-Aimé"
+   },
+   {
+    "language": "fr",
+    "value": "Louis XV de France"
+   },
+   {
+    "language": "fr",
+    "value": "le Bien-Aimé"
+   }
+  ]
+ },
+ "sitelinks": {
+  "enwiki": {
+   "site": "enwiki",
+   "title": "Louis XV",
+   "badges": []
+  },
+  "frwiki": {
+   "site": "frwiki",
+   "title": "Louis XV",
+   "badges": [
+    "Q17437798"
+   ]
+  }
+ },
+ "claims": {
+  "P39": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 3439798,
+       "id": "Q3439798"
+      }
+     }
+    },
+    "qualifiers": {
+     "P580": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+1715-09-01T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+        }
+       }
+      }
+     ],
+     "P582": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+1774-05-10T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+        }
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "P569": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+1710-02-15T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+      }
+     }
+    }
+   }
+  ],
+  "P570": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+1774-05-10T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+      }
+     }
+    }
+   }
+  ],
+  "P53": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 58389,
+       "id": "Q58389"
+      }
+     }
+    }
+   },
+   {
+    "rank": "preferred",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 3642350,
+       "id": "Q3642350"
+      }
+     }
+    }
+   }
+  ]
+ }
+}

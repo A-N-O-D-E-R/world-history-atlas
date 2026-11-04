@@ -1,0 +1,200 @@
+{
+ "id": "Q1427",
+ "labels": {
+  "en": {
+   "language": "en",
+   "value": "Hadrian"
+  },
+  "fr": {
+   "language": "fr",
+   "value": "Hadrien"
+  }
+ },
+ "aliases": {
+  "en": [
+   {
+    "language": "en",
+    "value": "Emperor of Rome Adrian"
+   },
+   {
+    "language": "en",
+    "value": "Caesar Traianus Hadrianus Augustus"
+   },
+   {
+    "language": "en",
+    "value": "Emperor of Rome Hadrian"
+   },
+   {
+    "language": "en",
+    "value": "Adrian"
+   },
+   {
+    "language": "en",
+    "value": "Hadrianus"
+   },
+   {
+    "language": "en",
+    "value": "Caesar Publius Aelius Traianus Hadrianus Buccellanus Augustus"
+   },
+   {
+    "language": "en",
+    "value": "Publius Aelius Hadrianus Buccellanus"
+   },
+   {
+    "language": "en",
+    "value": "Publius Aelius Traianus Hadrianus Augustus"
+   },
+   {
+    "language": "en",
+    "value": "Emperor Publius Aelius Hadrianus"
+   },
+   {
+    "language": "en",
+    "value": "Emperor Hadrian"
+   }
+  ],
+  "fr": [
+   {
+    "language": "fr",
+    "value": "Hadrianus"
+   },
+   {
+    "language": "fr",
+    "value": "Imperator Caesar Traianus Hadrianus Augustus"
+   },
+   {
+    "language": "fr",
+    "value": "Hadrianus Imperator"
+   }
+  ]
+ },
+ "sitelinks": {
+  "enwiki": {
+   "site": "enwiki",
+   "title": "Hadrian",
+   "badges": [
+    "Q17437798"
+   ]
+  },
+  "frwiki": {
+   "site": "frwiki",
+   "title": "Hadrien",
+   "badges": []
+  }
+ },
+ "claims": {
+  "P39": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 842606,
+       "id": "Q842606"
+      }
+     }
+    },
+    "qualifiers": {
+     "P580": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+0117-08-11T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+        }
+       }
+      }
+     ],
+     "P582": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+0138-07-10T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+        }
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "P569": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+0076-01-24T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    },
+    "qualifiers": {}
+   }
+  ],
+  "P570": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+0138-07-10T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    },
+    "qualifiers": {}
+   }
+  ],
+  "P53": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 3202662,
+       "id": "Q3202662"
+      }
+     }
+    }
+   },
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 112865577,
+       "id": "Q112865577"
+      }
+     }
+    }
+   }
+  ]
+ }
+}

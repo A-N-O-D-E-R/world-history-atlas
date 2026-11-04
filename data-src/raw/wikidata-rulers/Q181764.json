@@ -1,0 +1,121 @@
+{
+ "id": "Q181764",
+ "labels": {
+  "fr": {
+   "language": "fr",
+   "value": "Maurice"
+  },
+  "en": {
+   "language": "en",
+   "value": "Maurice"
+  }
+ },
+ "aliases": {
+  "en": [
+   {
+    "language": "en",
+    "value": "Mauricius"
+   },
+   {
+    "language": "en",
+    "value": "Mauricius Tiberius"
+   },
+   {
+    "language": "en",
+    "value": "Flavius Mauricius Tiberius Augustus"
+   },
+   {
+    "language": "en",
+    "value": "Mauritius"
+   },
+   {
+    "language": "en",
+    "value": "Maurikios"
+   }
+  ]
+ },
+ "sitelinks": {
+  "enwiki": {
+   "site": "enwiki",
+   "title": "Maurice (emperor)",
+   "badges": [
+    "Q17437798"
+   ]
+  },
+  "frwiki": {
+   "site": "frwiki",
+   "title": "Maurice (empereur)",
+   "badges": [
+    "Q17437798"
+   ]
+  }
+ },
+ "claims": {
+  "P39": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 842606,
+       "id": "Q842606"
+      }
+     }
+    }
+   }
+  ],
+  "P569": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+0539-00-00T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 9,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    }
+   }
+  ],
+  "P570": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+0602-11-27T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    }
+   }
+  ],
+  "P53": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 1133400,
+       "id": "Q1133400"
+      }
+     }
+    }
+   }
+  ]
+ }
+}

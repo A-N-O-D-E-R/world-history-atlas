@@ -1,0 +1,43 @@
+{
+ "id": "Q116213051",
+ "labels": {
+  "en": {
+   "language": "en",
+   "value": "Michel Papin"
+  }
+ },
+ "aliases": {},
+ "sitelinks": {},
+ "claims": {
+  "P39": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 191954,
+       "id": "Q191954"
+      }
+     }
+    },
+    "qualifiers": {
+     "P580": [
+      {
+       "snaktype": "somevalue"
+      }
+     ],
+     "P582": [
+      {
+       "snaktype": "somevalue"
+      }
+     ]
+    }
+   }
+  ],
+  "P569": [],
+  "P570": [],
+  "P53": []
+ }
+}

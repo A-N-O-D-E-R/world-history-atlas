@@ -1,0 +1,159 @@
+{
+ "id": "Q209579",
+ "labels": {
+  "fr": {
+   "language": "fr",
+   "value": "Victor-Amédée II de Savoie"
+  },
+  "en": {
+   "language": "en",
+   "value": "Victor Amadeus II of Savoy"
+  }
+ },
+ "aliases": {
+  "fr": [
+   {
+    "language": "fr",
+    "value": "Victor-Amédée II"
+   },
+   {
+    "language": "fr",
+    "value": "Victor Amédée II de Sardaigne"
+   },
+   {
+    "language": "fr",
+    "value": "Victor Amédée II de Savoie"
+   },
+   {
+    "language": "fr",
+    "value": "Victor-Amédée II de Sardaigne"
+   },
+   {
+    "language": "fr",
+    "value": "Victor-Amedee II de Savoie"
+   }
+  ],
+  "en": [
+   {
+    "language": "en",
+    "value": "Vittorio Amedeo II"
+   },
+   {
+    "language": "en",
+    "value": "Victor Amadeus II"
+   }
+  ]
+ },
+ "sitelinks": {
+  "enwiki": {
+   "site": "enwiki",
+   "title": "Victor Amadeus II",
+   "badges": []
+  },
+  "frwiki": {
+   "site": "frwiki",
+   "title": "Victor-Amédée II",
+   "badges": []
+  }
+ },
+ "claims": {
+  "P39": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 111730452,
+       "id": "Q111730452"
+      }
+     }
+    },
+    "qualifiers": {
+     "P580": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+1720-02-20T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+        }
+       }
+      }
+     ],
+     "P582": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+1730-09-03T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+        }
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "P569": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+1666-05-14T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+      }
+     }
+    }
+   }
+  ],
+  "P570": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+1732-10-31T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+      }
+     }
+    }
+   }
+  ],
+  "P53": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 200229,
+       "id": "Q200229"
+      }
+     }
+    }
+   }
+  ]
+ }
+}

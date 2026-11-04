@@ -3,12 +3,14 @@ import type {
   PublishedEntity,
   PublishedSnapshotProps,
   PublishedSource,
+  PublishedRuler,
 } from '../shared/schema.ts'
 import { fileOf } from '../shared/schema.ts'
 import { getJson, loadSnapshot } from './data.ts'
 
 const entities = new Map<string, Promise<PublishedEntity>>()
 const sources = new Map<string, Promise<PublishedSource>>()
+const rulers = new Map<string, Promise<PublishedRuler>>()
 
 const cached = <T>(
   cache: Map<string, Promise<T>>,
@@ -40,3 +42,6 @@ export async function loadSnapshotProps(
   const fc: FeatureCollection = await loadSnapshot(id)
   return fc.features[0].properties as PublishedSnapshotProps
 }
+
+export const loadRuler = (id: string) =>
+  cached(rulers, id, () => getJson<PublishedRuler>(`rulers/${fileOf(id)}.json`))

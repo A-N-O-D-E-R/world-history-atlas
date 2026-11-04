@@ -1,0 +1,207 @@
+{
+ "id": "Q129857",
+ "labels": {
+  "en": {
+   "language": "en",
+   "value": "Francis I of France"
+  },
+  "fr": {
+   "language": "fr",
+   "value": "François Ier de France"
+  }
+ },
+ "aliases": {
+  "fr": [
+   {
+    "language": "fr",
+    "value": "François 1er de France"
+   },
+   {
+    "language": "fr",
+    "value": "François Ier De France"
+   },
+   {
+    "language": "fr",
+    "value": "Père des Lettres"
+   },
+   {
+    "language": "fr",
+    "value": "François d'Angoulême"
+   },
+   {
+    "language": "fr",
+    "value": "Francois Ier de France"
+   },
+   {
+    "language": "fr",
+    "value": "François de Valois-Angoulême"
+   },
+   {
+    "language": "fr",
+    "value": "François 1er"
+   },
+   {
+    "language": "fr",
+    "value": "le Roi Chevalier"
+   },
+   {
+    "language": "fr",
+    "value": "le Roi Guerrier"
+   },
+   {
+    "language": "fr",
+    "value": "le Grand Colas"
+   },
+   {
+    "language": "fr",
+    "value": "le Bonhomme Colas"
+   },
+   {
+    "language": "fr",
+    "value": "François au Grand Nez"
+   },
+   {
+    "language": "fr",
+    "value": "le Père et Restaurateur des Lettres"
+   },
+   {
+    "language": "fr",
+    "value": "François Ier"
+   }
+  ],
+  "en": [
+   {
+    "language": "en",
+    "value": "François I"
+   }
+  ]
+ },
+ "sitelinks": {
+  "enwiki": {
+   "site": "enwiki",
+   "title": "Francis I of France",
+   "badges": []
+  },
+  "frwiki": {
+   "site": "frwiki",
+   "title": "François Ier (roi de France)",
+   "badges": []
+  }
+ },
+ "claims": {
+  "P39": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 18384454,
+       "id": "Q18384454"
+      }
+     }
+    },
+    "qualifiers": {
+     "P580": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+1515-01-01T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+        }
+       }
+      }
+     ],
+     "P582": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+1547-03-31T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+        }
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "P569": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+1494-09-12T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    }
+   }
+  ],
+  "P570": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+1547-03-31T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    }
+   },
+   {
+    "rank": "deprecated",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+1547-07-31T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+      }
+     }
+    }
+   }
+  ],
+  "P53": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 182135,
+       "id": "Q182135"
+      }
+     }
+    }
+   }
+  ]
+ }
+}

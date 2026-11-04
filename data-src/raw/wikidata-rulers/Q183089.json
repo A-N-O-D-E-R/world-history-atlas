@@ -1,0 +1,195 @@
+{
+ "id": "Q183089",
+ "labels": {
+  "fr": {
+   "language": "fr",
+   "value": "Publius Septimius Geta"
+  },
+  "en": {
+   "language": "en",
+   "value": "Geta"
+  }
+ },
+ "aliases": {
+  "fr": [
+   {
+    "language": "fr",
+    "value": "Géta"
+   },
+   {
+    "language": "fr",
+    "value": "Geta"
+   }
+  ],
+  "en": [
+   {
+    "language": "en",
+    "value": "Publius Septimius Geta"
+   },
+   {
+    "language": "en",
+    "value": "Lucius Septimius Bassianus"
+   },
+   {
+    "language": "en",
+    "value": "Geta Publius Septimius"
+   },
+   {
+    "language": "en",
+    "value": "Geta Lucius Septimius"
+   },
+   {
+    "language": "en",
+    "value": "P. Septimius Geta"
+   },
+   {
+    "language": "en",
+    "value": "P. Sept. Geta"
+   },
+   {
+    "language": "en",
+    "value": "L. Septimius Geta"
+   },
+   {
+    "language": "en",
+    "value": "L. Sept. Geta"
+   },
+   {
+    "language": "en",
+    "value": "Publius Septimius Bassianus Geta"
+   },
+   {
+    "language": "en",
+    "value": "Publius Septimius Geta Bassianus"
+   }
+  ]
+ },
+ "sitelinks": {
+  "enwiki": {
+   "site": "enwiki",
+   "title": "Geta (emperor)",
+   "badges": []
+  },
+  "frwiki": {
+   "site": "frwiki",
+   "title": "Geta (empereur romain)",
+   "badges": []
+  }
+ },
+ "claims": {
+  "P39": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 842606,
+       "id": "Q842606"
+      }
+     }
+    },
+    "qualifiers": {
+     "P580": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+0209-00-00T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 9,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+        }
+       }
+      }
+     ],
+     "P582": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+0211-12-26T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+        }
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "P569": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+0189-03-07T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    }
+   },
+   {
+    "rank": "deprecated",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+0189-05-27T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    }
+   }
+  ],
+  "P570": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+0211-12-26T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    }
+   }
+  ],
+  "P53": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 321219,
+       "id": "Q321219"
+      }
+     }
+    }
+   }
+  ]
+ }
+}

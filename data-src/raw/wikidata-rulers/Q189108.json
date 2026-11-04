@@ -1,0 +1,161 @@
+{
+ "id": "Q189108",
+ "labels": {
+  "fr": {
+   "language": "fr",
+   "value": "Gratien"
+  },
+  "en": {
+   "language": "en",
+   "value": "Gratian"
+  }
+ },
+ "aliases": {
+  "en": [
+   {
+    "language": "en",
+    "value": "Flavius Gratianus Augustus"
+   },
+   {
+    "language": "en",
+    "value": "Emperor of Rome Flavius Gratianus"
+   },
+   {
+    "language": "en",
+    "value": "Emperor of Rome Flavius Gratian"
+   },
+   {
+    "language": "en",
+    "value": "Emperor of Rome Gratianus"
+   },
+   {
+    "language": "en",
+    "value": "Emperor of Rome Gratian"
+   },
+   {
+    "language": "en",
+    "value": "Emperor of Rome Flavius Gratianus Augustus"
+   },
+   {
+    "language": "en",
+    "value": "Gratianus"
+   },
+   {
+    "language": "en",
+    "value": "Augustus Gratianus"
+   }
+  ]
+ },
+ "sitelinks": {
+  "enwiki": {
+   "site": "enwiki",
+   "title": "Gratian",
+   "badges": []
+  },
+  "frwiki": {
+   "site": "frwiki",
+   "title": "Gratien",
+   "badges": []
+  }
+ },
+ "claims": {
+  "P39": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 842606,
+       "id": "Q842606"
+      }
+     }
+    },
+    "qualifiers": {
+     "P580": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+0367-08-04T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+        }
+       }
+      }
+     ],
+     "P582": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+0383-08-25T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+        }
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "P569": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+0359-04-18T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    }
+   }
+  ],
+  "P570": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+0383-08-25T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    }
+   }
+  ],
+  "P53": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 1324480,
+       "id": "Q1324480"
+      }
+     }
+    }
+   }
+  ]
+ }
+}

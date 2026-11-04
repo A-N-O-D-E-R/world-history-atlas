@@ -1,0 +1,211 @@
+{
+ "id": "Q79789",
+ "labels": {
+  "fr": {
+   "language": "fr",
+   "value": "Frédéric Barberousse"
+  },
+  "en": {
+   "language": "en",
+   "value": "Frederick Barbarossa"
+  }
+ },
+ "aliases": {
+  "fr": [
+   {
+    "language": "fr",
+    "value": "Frédéric Ier Barberousse"
+   },
+   {
+    "language": "fr",
+    "value": "Frédéric Ier du Saint-Empire"
+   },
+   {
+    "language": "fr",
+    "value": "Barberousse"
+   },
+   {
+    "language": "fr",
+    "value": "Barbarossa"
+   },
+   {
+    "language": "fr",
+    "value": "Frederic Barberousse"
+   },
+   {
+    "language": "fr",
+    "value": "Frédéric Ier"
+   }
+  ],
+  "en": [
+   {
+    "language": "en",
+    "value": "Frederick I Barbarossa"
+   },
+   {
+    "language": "en",
+    "value": "Holy Roman Emperor Frederick I"
+   },
+   {
+    "language": "en",
+    "value": "Barbarossa"
+   },
+   {
+    "language": "en",
+    "value": "Aënobarbus"
+   },
+   {
+    "language": "en",
+    "value": "Fridericus I Aënobarbus"
+   },
+   {
+    "language": "en",
+    "value": "Fridericus Aënobarbus"
+   }
+  ]
+ },
+ "sitelinks": {
+  "enwiki": {
+   "site": "enwiki",
+   "title": "Frederick Barbarossa",
+   "badges": []
+  },
+  "frwiki": {
+   "site": "frwiki",
+   "title": "Frédéric Barberousse",
+   "badges": []
+  }
+ },
+ "claims": {
+  "P39": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 181765,
+       "id": "Q181765"
+      }
+     }
+    },
+    "qualifiers": {
+     "P580": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+1155-00-00T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 9,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+        }
+       }
+      }
+     ],
+     "P582": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+1190-06-10T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+        }
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "P569": [
+   {
+    "rank": "preferred",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+1122-12-00T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 10,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    }
+   },
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+1122-00-00T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 9,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    }
+   }
+  ],
+  "P570": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+1190-06-10T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    }
+   },
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+1190-06-24T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+      }
+     }
+    }
+   }
+  ],
+  "P53": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 130875,
+       "id": "Q130875"
+      }
+     }
+    }
+   }
+  ]
+ }
+}

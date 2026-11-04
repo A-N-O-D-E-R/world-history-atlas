@@ -1,0 +1,147 @@
+{
+ "id": "Q46780",
+ "labels": {
+  "fr": {
+   "language": "fr",
+   "value": "Aurélien"
+  },
+  "en": {
+   "language": "en",
+   "value": "Aurelian"
+  }
+ },
+ "aliases": {
+  "fr": [
+   {
+    "language": "fr",
+    "value": "Lucius Domitius Aurelianus"
+   },
+   {
+    "language": "fr",
+    "value": "Aurelien"
+   }
+  ],
+  "en": [
+   {
+    "language": "en",
+    "value": "Aurelianus"
+   },
+   {
+    "language": "en",
+    "value": "Lucius Domitius Aurelianus"
+   },
+   {
+    "language": "en",
+    "value": "Lucius Domiticus Aurelianus"
+   },
+   {
+    "language": "en",
+    "value": "Imperator Caesar Lucius Domitius Aurelianus Pius Felix Invictus Augustus Pontifex maximus Germanicus maximus Gothicus maximus Parthicus maximus Carpicus maximus Tribunicia potestate VI Consul III Imperator Pater patriae Proconsul Restitutor orbis"
+   },
+   {
+    "language": "en",
+    "value": "Imperator Caesar Lucius Domitius Aurelianus Pius Felix Augustus Germanicus Maximus Gothicus Maximus Carpicus Maximus Dacicus Maximus Arabicus Maximus Palmyrenus Maximus"
+   }
+  ]
+ },
+ "sitelinks": {
+  "enwiki": {
+   "site": "enwiki",
+   "title": "Aurelian",
+   "badges": []
+  },
+  "frwiki": {
+   "site": "frwiki",
+   "title": "Aurélien (empereur romain)",
+   "badges": []
+  }
+ },
+ "claims": {
+  "P39": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 842606,
+       "id": "Q842606"
+      }
+     }
+    },
+    "qualifiers": {
+     "P580": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+0270-09-00T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 10,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+        }
+       }
+      }
+     ],
+     "P582": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+0275-09-25T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+        }
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "P569": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+0214-09-09T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+      }
+     }
+    },
+    "qualifiers": {}
+   }
+  ],
+  "P570": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+0275-10-00T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 10,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    },
+    "qualifiers": {}
+   }
+  ],
+  "P53": []
+ }
+}

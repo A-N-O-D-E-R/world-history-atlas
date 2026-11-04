@@ -99,6 +99,14 @@ export const fr = {
     method: 'Méthode',
     publicDomain: 'Domaine public',
   },
+  ruler: {
+    kind: 'Dirigeant',
+    atDate: 'Dirigeant à cette date',
+    none: 'Aucun Dirigeant connu à cette date',
+    life: 'Vie',
+    reigns: 'Règnes',
+    source: 'Wikidata',
+  },
   lang: { label: 'Langue', fr: 'Français', en: 'English' },
 }
 

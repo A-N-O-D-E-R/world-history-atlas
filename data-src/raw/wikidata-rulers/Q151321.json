@@ -1,0 +1,227 @@
+{
+ "id": "Q151321",
+ "labels": {
+  "fr": {
+   "language": "fr",
+   "value": "Léopold II"
+  },
+  "en": {
+   "language": "en",
+   "value": "Leopold II, Holy Roman Emperor"
+  }
+ },
+ "aliases": {
+  "fr": [
+   {
+    "language": "fr",
+    "value": "Pierre Léopold Ier de Toscane"
+   },
+   {
+    "language": "fr",
+    "value": "Léopold II d'Autriche"
+   },
+   {
+    "language": "fr",
+    "value": "Pierre Léopold Ier, grand-duc de Toscane"
+   },
+   {
+    "language": "fr",
+    "value": "Pierre léopold de toscane"
+   },
+   {
+    "language": "fr",
+    "value": "Léopold II d’Autriche"
+   },
+   {
+    "language": "fr",
+    "value": "Pierre-Léopold de Toscane"
+   },
+   {
+    "language": "fr",
+    "value": "Leopold II d'Autriche"
+   },
+   {
+    "language": "fr",
+    "value": "Pierre Leopold Ier de Toscane"
+   },
+   {
+    "language": "fr",
+    "value": "Pierre-Léopold de Habsbourg-Lorraine"
+   },
+   {
+    "language": "fr",
+    "value": "Léopold II du Saint Empire"
+   }
+  ],
+  "en": [
+   {
+    "language": "en",
+    "value": "imperatore del Sacro romano impero Leopold II"
+   },
+   {
+    "language": "en",
+    "value": "Kaiser Leopold II. Heiliges Römisches Reich"
+   },
+   {
+    "language": "en",
+    "value": "Peter Leopold Josef Anton Joachim Pius Gotthard"
+   },
+   {
+    "language": "en",
+    "value": "Holy Roman Emperor Leopold II"
+   },
+   {
+    "language": "en",
+    "value": "Leopold II"
+   },
+   {
+    "language": "en",
+    "value": "empereur germanique Léopold II"
+   },
+   {
+    "language": "en",
+    "value": "granduca di Toscana Leopoldo I"
+   },
+   {
+    "language": "en",
+    "value": "Pietro Leopoldo Gieuseppe Antonio Gioacchino Pio Gottardo"
+   },
+   {
+    "language": "en",
+    "value": "Grand Duke of Tuscany Leopold I"
+   },
+   {
+    "language": "en",
+    "value": "Emperor of Germany Leopold II"
+   },
+   {
+    "language": "en",
+    "value": "King of Hungary Lipót II"
+   },
+   {
+    "language": "en",
+    "value": "granduca di Toscana Pietro Leopoldo I"
+   },
+   {
+    "language": "en",
+    "value": "empereur germanique Leopold II"
+   },
+   {
+    "language": "en",
+    "value": "King of Hungary Lipot II"
+   }
+  ]
+ },
+ "sitelinks": {
+  "enwiki": {
+   "site": "enwiki",
+   "title": "Leopold II, Holy Roman Emperor",
+   "badges": []
+  },
+  "frwiki": {
+   "site": "frwiki",
+   "title": "Léopold II (empereur du Saint-Empire)",
+   "badges": []
+  }
+ },
+ "claims": {
+  "P39": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 181765,
+       "id": "Q181765"
+      }
+     }
+    },
+    "qualifiers": {
+     "P580": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+1790-10-06T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+        }
+       }
+      }
+     ],
+     "P582": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+1792-03-01T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+        }
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "P569": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+1747-05-05T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+      }
+     }
+    }
+   }
+  ],
+  "P570": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+1792-03-01T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+      }
+     }
+    }
+   }
+  ],
+  "P53": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 645719,
+       "id": "Q645719"
+      }
+     }
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,222 @@
+{
+ "id": "Q1407",
+ "labels": {
+  "en": {
+   "language": "en",
+   "value": "Tiberius"
+  },
+  "fr": {
+   "language": "fr",
+   "value": "Tibère"
+  }
+ },
+ "aliases": {
+  "fr": [
+   {
+    "language": "fr",
+    "value": "Tiberius"
+   }
+  ],
+  "en": [
+   {
+    "language": "en",
+    "value": "Tiberius Julius Caesar Augustus"
+   },
+   {
+    "language": "en",
+    "value": "Emperor Tiberius"
+   },
+   {
+    "language": "en",
+    "value": "Marcus Gallius Claudianus"
+   },
+   {
+    "language": "en",
+    "value": "Tiberius Caesar"
+   },
+   {
+    "language": "en",
+    "value": "Caesar Tiberius"
+   },
+   {
+    "language": "en",
+    "value": "Tibeius Gallius Claudianus"
+   },
+   {
+    "language": "en",
+    "value": "Imperator Caesar Divi filius Augustus"
+   },
+   {
+    "language": "en",
+    "value": "Emperor of Rome Tiberius Claudius Nero"
+   },
+   {
+    "language": "en",
+    "value": "Tiberius Julius Caesar"
+   },
+   {
+    "language": "en",
+    "value": "Emperor of Rome Tiberius"
+   },
+   {
+    "language": "en",
+    "value": "Tiberius Caesar Augustus"
+   }
+  ]
+ },
+ "sitelinks": {
+  "enwiki": {
+   "site": "enwiki",
+   "title": "Tiberius",
+   "badges": []
+  },
+  "frwiki": {
+   "site": "frwiki",
+   "title": "Tibère",
+   "badges": []
+  }
+ },
+ "claims": {
+  "P39": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 842606,
+       "id": "Q842606"
+      }
+     }
+    },
+    "qualifiers": {
+     "P580": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+0014-09-18T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+        }
+       }
+      }
+     ],
+     "P582": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+0037-03-16T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+        }
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "P569": [
+   {
+    "rank": "preferred",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "-0042-11-16T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    }
+   },
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "-0042-11-17T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    }
+   }
+  ],
+  "P570": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+0037-03-16T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    }
+   }
+  ],
+  "P53": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 192841,
+       "id": "Q192841"
+      }
+     }
+    }
+   },
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 102259474,
+       "id": "Q102259474"
+      }
+     }
+    }
+   },
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 3268376,
+       "id": "Q3268376"
+      }
+     }
+    },
+    "qualifiers": {}
+   }
+  ]
+ }
+}

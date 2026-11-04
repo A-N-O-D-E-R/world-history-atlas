@@ -1,0 +1,111 @@
+{
+ "id": "Q160337",
+ "labels": {
+  "fr": {
+   "language": "fr",
+   "value": "Henri VI (roi d'Angleterre)"
+  },
+  "en": {
+   "language": "en",
+   "value": "Henry VI of England"
+  }
+ },
+ "aliases": {
+  "fr": [
+   {
+    "language": "fr",
+    "value": "Henri VI d’Angleterre"
+   },
+   {
+    "language": "fr",
+    "value": "Henry VI"
+   }
+  ],
+  "en": [
+   {
+    "language": "en",
+    "value": "Henry VI"
+   }
+  ]
+ },
+ "sitelinks": {
+  "enwiki": {
+   "site": "enwiki",
+   "title": "Henry VI of England",
+   "badges": []
+  },
+  "frwiki": {
+   "site": "frwiki",
+   "title": "Henri VI (roi d'Angleterre)",
+   "badges": []
+  }
+ },
+ "claims": {
+  "P39": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 21096233,
+       "id": "Q21096233"
+      }
+     }
+    }
+   }
+  ],
+  "P569": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+1421-12-06T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    }
+   }
+  ],
+  "P570": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+1471-05-21T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    }
+   }
+  ],
+  "P53": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 105278,
+       "id": "Q105278"
+      }
+     }
+    }
+   }
+  ]
+ }
+}

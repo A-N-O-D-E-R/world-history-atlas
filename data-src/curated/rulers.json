@@ -1,0 +1,23 @@
+{
+  "notes": "Postes (P39) dont les titulaires sont des Dirigeants. Un Règne est rattaché à l'Entité de la même ligne dont l'existence contient sa date de début. Aucun poste trouvé pour le royaume des Francs et l'Empire carolingien.",
+  "positions": [
+    { "entities": ["Q2277"], "positions": ["Q842606"] },
+    { "entities": ["Q46370"], "positions": ["Q29168087"] },
+    { "entities": ["Q70972", "Q207162"], "positions": ["Q18384454", "Q3439798"] },
+    { "entities": ["Q58202"], "positions": ["Q3439814"] },
+    { "entities": ["Q71084", "Q71092"], "positions": ["Q5373953"] },
+    { "entities": ["Q58296"], "positions": ["Q1131971"] },
+    { "entities": ["Q58326", "Q70802", "Q69829", "Q142"], "positions": ["Q191954"] },
+    { "entities": ["Q69808"], "positions": ["Q19018293"] },
+    { "entities": ["Q783684"], "positions": ["Q23004974"] },
+    { "entities": ["Q12548"], "positions": ["Q181765"] },
+    { "entities": ["Q4712"], "positions": ["Q16145107"] },
+    { "entities": ["Q71747"], "positions": ["Q54506275"] },
+    { "entities": ["Q7703611"], "positions": ["Q21096233"] },
+    { "entities": ["Q155019"], "positions": ["Q21096112"] },
+    { "entities": ["Q2991382"], "positions": ["Q21095877"] },
+    { "entities": ["Q200262"], "positions": ["Q29166132"] },
+    { "entities": ["Q165154"], "positions": ["Q58006791", "Q111730452"] },
+    { "entities": ["Q174306"], "positions": ["Q3712541"] }
+  ]
+}

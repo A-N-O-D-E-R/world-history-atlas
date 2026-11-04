@@ -1,0 +1,289 @@
+{
+ "id": "Q1405",
+ "labels": {
+  "en": {
+   "language": "en",
+   "value": "Augustus"
+  },
+  "fr": {
+   "language": "fr",
+   "value": "Auguste"
+  }
+ },
+ "aliases": {
+  "en": [
+   {
+    "language": "en",
+    "value": "Gaius Julius Caesar"
+   },
+   {
+    "language": "en",
+    "value": "Gaius Caesar"
+   },
+   {
+    "language": "en",
+    "value": "Caesar Octavianus"
+   },
+   {
+    "language": "en",
+    "value": "Gaius Octavius Thurinus"
+   },
+   {
+    "language": "en",
+    "value": "Gaius Octavius Caepias"
+   },
+   {
+    "language": "en",
+    "value": "Caius Octavius Thurinus"
+   },
+   {
+    "language": "en",
+    "value": "Gaius Julius Caesar Octavianus"
+   },
+   {
+    "language": "en",
+    "value": "Octavius Caesar"
+   },
+   {
+    "language": "en",
+    "value": "Gaius Julius Caesar Octavianus Augustus"
+   },
+   {
+    "language": "en",
+    "value": "Octavianus"
+   },
+   {
+    "language": "en",
+    "value": "Caius Julius Cæsar Octavianus"
+   },
+   {
+    "language": "en",
+    "value": "Augustus Caesar"
+   },
+   {
+    "language": "en",
+    "value": "Imperator Gaius Julius Caesar Octavianus Divi Filius Augustus"
+   },
+   {
+    "language": "en",
+    "value": "Octavian"
+   },
+   {
+    "language": "en",
+    "value": "Gaius Octavian"
+   },
+   {
+    "language": "en",
+    "value": "Caius Octavius"
+   },
+   {
+    "language": "en",
+    "value": "Gaius Julius Caesar Augustus"
+   }
+  ],
+  "fr": [
+   {
+    "language": "fr",
+    "value": "Gaius Julius Caesar"
+   },
+   {
+    "language": "fr",
+    "value": "Octave"
+   },
+   {
+    "language": "fr",
+    "value": "Octavius Caesar"
+   },
+   {
+    "language": "fr",
+    "value": "Empereur Romain Auguste"
+   },
+   {
+    "language": "fr",
+    "value": "César Auguste"
+   },
+   {
+    "language": "fr",
+    "value": "Gaius Julius Caesar Augustus"
+   },
+   {
+    "language": "fr",
+    "value": "Octavien"
+   }
+  ]
+ },
+ "sitelinks": {
+  "enwiki": {
+   "site": "enwiki",
+   "title": "Augustus",
+   "badges": [
+    "Q17437796"
+   ]
+  },
+  "frwiki": {
+   "site": "frwiki",
+   "title": "Auguste",
+   "badges": []
+  }
+ },
+ "claims": {
+  "P39": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 842606,
+       "id": "Q842606"
+      }
+     }
+    },
+    "qualifiers": {
+     "P580": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "-0027-01-16T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 10,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+        }
+       }
+      }
+     ],
+     "P582": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+0014-08-19T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+        }
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "P569": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "-0063-00-00T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 9,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    }
+   },
+   {
+    "rank": "preferred",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "-0063-09-23T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    }
+   }
+  ],
+  "P570": [
+   {
+    "rank": "preferred",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+0014-08-19T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    }
+   },
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+0014-00-00T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 9,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    }
+   }
+  ],
+  "P53": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 192841,
+       "id": "Q192841"
+      }
+     }
+    },
+    "qualifiers": {}
+   },
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 3268376,
+       "id": "Q3268376"
+      }
+     }
+    },
+    "qualifiers": {}
+   },
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 105335230,
+       "id": "Q105335230"
+      }
+     }
+    }
+   }
+  ]
+ }
+}

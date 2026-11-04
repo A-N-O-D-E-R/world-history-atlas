@@ -1,0 +1,187 @@
+{
+ "id": "Q43915",
+ "labels": {
+  "en": {
+   "language": "en",
+   "value": "Otto I the Great"
+  },
+  "fr": {
+   "language": "fr",
+   "value": "Otton le Grand"
+  }
+ },
+ "aliases": {
+  "fr": [
+   {
+    "language": "fr",
+    "value": "Otton ier du saint-empire"
+   },
+   {
+    "language": "fr",
+    "value": "Otton 1er le Grand"
+   },
+   {
+    "language": "fr",
+    "value": "Othon le Grand"
+   },
+   {
+    "language": "fr",
+    "value": "Otton Ier le Grand"
+   },
+   {
+    "language": "fr",
+    "value": "Othon Ier de Germanie"
+   },
+   {
+    "language": "fr",
+    "value": "Othon Ier du Saint-Empire"
+   },
+   {
+    "language": "fr",
+    "value": "Otton Ier de Germanie"
+   },
+   {
+    "language": "fr",
+    "value": "Otton Ier du Saint Empire"
+   }
+  ],
+  "en": [
+   {
+    "language": "en",
+    "value": "Otto I"
+   },
+   {
+    "language": "en",
+    "value": "Otto I Magnus"
+   },
+   {
+    "language": "en",
+    "value": "Otto I, Holy Roman Emperor"
+   },
+   {
+    "language": "en",
+    "value": "Otto the Great"
+   },
+   {
+    "language": "en",
+    "value": "Otto I 'the Great', Holy Roman Emperor (962-973)"
+   },
+   {
+    "language": "en",
+    "value": "Otto Magnus"
+   }
+  ]
+ },
+ "sitelinks": {
+  "enwiki": {
+   "site": "enwiki",
+   "title": "Otto the Great",
+   "badges": []
+  },
+  "frwiki": {
+   "site": "frwiki",
+   "title": "Otton Ier (empereur du Saint-Empire)",
+   "badges": []
+  }
+ },
+ "claims": {
+  "P39": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 181765,
+       "id": "Q181765"
+      }
+     }
+    },
+    "qualifiers": {
+     "P580": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+0962-02-02T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+        }
+       }
+      }
+     ],
+     "P582": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+0973-05-07T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+        }
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "P569": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+0912-11-23T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    }
+   }
+  ],
+  "P570": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+0973-05-07T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    }
+   }
+  ],
+  "P53": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 157106,
+       "id": "Q157106"
+      }
+     }
+    }
+   }
+  ]
+ }
+}

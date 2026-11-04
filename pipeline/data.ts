@@ -20,12 +20,16 @@ import {
   makeDatePoint,
   validate,
 } from '../src/shared/dates.ts'
+import { toRuler } from './rulers.ts'
 import { type WdEntity, toEntity } from './wikidata.ts'
 import {
   type BBox,
   type Correction,
   type CorrectionSrc,
   type DateSrc,
+  type EntityReign,
+  type PublishedRuler,
+  rulerSrc,
   type EntityIndexEntry,
   type EntitySrc,
   LICENCE_WHITELIST,
@@ -322,10 +326,30 @@ export function buildData(srcDir: string, outDir: string): Report {
     })
   }
 
+  // ---- Dirigeants and Règnes (Wikidata) ----
+  const publishedRulers = loadRulers(
+    srcDir,
+    publishedEntities,
+    error,
+    warn,
+    (file, field, d) => toDate(file, field, d),
+  )
+  const reignsByEntity = new Map<string, EntityReign[]>()
+  for (const ruler of publishedRulers)
+    for (const { entity, ...reign } of ruler.reigns)
+      reignsByEntity.set(entity, [
+        ...(reignsByEntity.get(entity) ?? []),
+        { ...reign, ruler: ruler.id, names: ruler.names },
+      ])
+  for (const e of publishedEntities) {
+    const reigns = reignsByEntity.get(e.id)
+    if (reigns) e.reigns = reigns.sort((a, b) => first(a.from) - first(b.from))
+  }
+
   if (report.errors.length) return report
 
   // ---- publish ----
-  for (const kind of ['entities', 'snapshots', 'sources', 'index']) {
+  for (const kind of ['entities', 'snapshots', 'sources', 'rulers', 'index']) {
     rmSync(join(outDir, kind), { recursive: true, force: true })
     mkdirSync(join(outDir, kind), { recursive: true })
   }
@@ -334,6 +358,8 @@ export function buildData(srcDir: string, outDir: string): Report {
   for (const e of publishedEntities) write(`entities/${fileOf(e.id)}.json`, e)
   for (const s of publishedSnapshots)
     write(`snapshots/${fileOf(s.id)}.geojson`, s.geojson)
+  for (const ruler of publishedRulers)
+    write(`rulers/${fileOf(ruler.id)}.json`, ruler)
   for (const { data } of sources) write(`sources/${fileOf(data.id)}.json`, data)
   const index: EntityIndexEntry[] = publishedEntities.map((e) => ({
     id: e.id,
@@ -480,4 +506,84 @@ function loadWikidataEntities(
     }
     return [{ file, data: parsed.data }]
   })
+}
+
+/** Dirigeants: holders of the curated positions (data-src/raw/wikidata-rulers/). */
+function loadRulers(
+  srcDir: string,
+  entities: PublishedEntity[],
+  error: (f: string, m: string) => void,
+  warn: (f: string, m: string) => void,
+  toDate: (file: string, field: string, d: DateSrc) => HistDate | null,
+): PublishedRuler[] {
+  const configPath = join(srcDir, 'curated/rulers.json')
+  const dir = join(srcDir, 'raw/wikidata-rulers')
+  if (!existsSync(configPath) || !existsSync(dir)) return []
+  const config: { positions: { entities: string[]; positions: string[] }[] } =
+    JSON.parse(readFileSync(configPath, 'utf8'))
+  const positionEntities = new Map<string, string[]>()
+  for (const p of config.positions)
+    for (const pos of p.positions)
+      positionEntities.set(pos, [
+        ...(positionEntities.get(pos) ?? []),
+        ...p.entities,
+      ])
+  const existence = new Map(
+    entities.map((e) => [e.id, { start: e.start, end: e.end }]),
+  )
+  const titlesPath = join(dir, '_positions.json')
+  const titles = existsSync(titlesPath)
+    ? JSON.parse(readFileSync(titlesPath, 'utf8'))
+    : {}
+
+  let skipped = 0
+  const rulers: PublishedRuler[] = []
+  for (const f of readdirSync(dir)
+    .filter((f) => /^Q\d+\.json$/.test(f))
+    .sort()) {
+    const file = `raw/wikidata-rulers/${f}`
+    const { ruler, skipped: n } = toRuler(
+      JSON.parse(readFileSync(join(dir, f), 'utf8')),
+      positionEntities,
+      existence,
+      titles,
+    )
+    skipped += n
+    if (!ruler.reigns.length) continue
+    const parsed = rulerSrc.safeParse(ruler)
+    if (!parsed.success) {
+      for (const i of parsed.error.issues)
+        error(file, `${i.path.join('.')} : ${i.message}`)
+      continue
+    }
+    const d = parsed.data
+    const opt = (field: string, v?: DateSrc) =>
+      v ? (toDate(file, field, v) ?? undefined) : undefined
+    const reigns = d.reigns.flatMap((r) => {
+      const from = toDate(file, 'reigns.from', r.from)
+      const to = opt('reigns.to', r.to)
+      if (!from) return []
+      const a = isInterval(from) ? from.earliest.sortKey : from.sortKey
+      const b = to && (isInterval(to) ? to.latest.sortKey : to.sortKey)
+      if (b !== undefined && b < a) {
+        warn(file, `Règne ignoré : fin avant début (${r.position})`)
+        return []
+      }
+      const { to: _to, ...rest } = r
+      return [{ ...rest, from, ...(to && { to }) }]
+    })
+    if (!reigns.length) continue
+    rulers.push({
+      ...d,
+      birth: opt('birth', d.birth),
+      death: opt('death', d.death),
+      reigns,
+    })
+  }
+  if (skipped)
+    warn(
+      'raw/wikidata-rulers',
+      `${skipped} Règne(s) ignoré(s) : sans date de début ou hors de l'existence des Entités`,
+    )
+  return rulers
 }

@@ -1,0 +1,157 @@
+{
+ "id": "Q5721",
+ "labels": {
+  "en": {
+   "language": "en",
+   "value": "Philippe Pétain"
+  }
+ },
+ "aliases": {
+  "fr": [
+   {
+    "language": "fr",
+    "value": "Maréchal Pétain"
+   },
+   {
+    "language": "fr",
+    "value": "le vainqueur de Verdun"
+   },
+   {
+    "language": "fr",
+    "value": "Henri Philippe Benoni Omer Joseph Pétain"
+   },
+   {
+    "language": "fr",
+    "value": "Henri Philippe Bénoni Omer Joseph Pétain"
+   },
+   {
+    "language": "fr",
+    "value": "Le héros de Verdun"
+   },
+   {
+    "language": "fr",
+    "value": "Le lion de Verdun"
+   }
+  ],
+  "en": [
+   {
+    "language": "en",
+    "value": "Henri Philippe Benoni Omer Joseph Pétain"
+   },
+   {
+    "language": "en",
+    "value": "Marshal Pétain"
+   },
+   {
+    "language": "en",
+    "value": "Philippe Petain"
+   },
+   {
+    "language": "en",
+    "value": "Henri Philippe Benoni Omer Joseph Petain"
+   },
+   {
+    "language": "en",
+    "value": "Marshal Petain"
+   }
+  ]
+ },
+ "sitelinks": {
+  "enwiki": {
+   "site": "enwiki",
+   "title": "Philippe Pétain",
+   "badges": []
+  },
+  "frwiki": {
+   "site": "frwiki",
+   "title": "Philippe Pétain",
+   "badges": []
+  }
+ },
+ "claims": {
+  "P39": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 19018293,
+       "id": "Q19018293"
+      }
+     }
+    },
+    "qualifiers": {
+     "P580": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+1940-07-11T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+        }
+       }
+      }
+     ],
+     "P582": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+1944-08-20T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+        }
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "P569": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+1856-04-24T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+      }
+     }
+    }
+   }
+  ],
+  "P570": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+1951-07-23T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+      }
+     }
+    }
+   }
+  ],
+  "P53": []
+ }
+}

@@ -1,0 +1,141 @@
+{
+ "id": "Q298892",
+ "labels": {
+  "fr": {
+   "language": "fr",
+   "value": "Philippe II de Bourgogne"
+  },
+  "en": {
+   "language": "en",
+   "value": "Philip the Bold"
+  }
+ },
+ "aliases": {
+  "fr": [
+   {
+    "language": "fr",
+    "value": "Philippe II de Flandre"
+   },
+   {
+    "language": "fr",
+    "value": "Philippe le Hardi"
+   },
+   {
+    "language": "fr",
+    "value": "Philippe « sans terre »"
+   }
+  ],
+  "en": [
+   {
+    "language": "en",
+    "value": "Duke of Burgundy Philip II"
+   },
+   {
+    "language": "en",
+    "value": "Duke of Burgundy Philippe le Hardi"
+   },
+   {
+    "language": "en",
+    "value": "the Bold Philip"
+   },
+   {
+    "language": "en",
+    "value": "Duke of Burgundy Philip the Bold"
+   },
+   {
+    "language": "en",
+    "value": "Philippe II le Hardi"
+   },
+   {
+    "language": "en",
+    "value": "Filips de Stoute"
+   },
+   {
+    "language": "en",
+    "value": "Philip II the Bold"
+   }
+  ]
+ },
+ "sitelinks": {
+  "enwiki": {
+   "site": "enwiki",
+   "title": "Philip the Bold",
+   "badges": []
+  },
+  "frwiki": {
+   "site": "frwiki",
+   "title": "Philippe II de Bourgogne",
+   "badges": [
+    "Q17437796"
+   ]
+  }
+ },
+ "claims": {
+  "P39": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 16145107,
+       "id": "Q16145107"
+      }
+     }
+    }
+   }
+  ],
+  "P569": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+1342-01-17T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    }
+   }
+  ],
+  "P570": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+1404-04-27T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    }
+   }
+  ],
+  "P53": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 59027,
+       "id": "Q59027"
+      }
+     }
+    }
+   }
+  ]
+ }
+}

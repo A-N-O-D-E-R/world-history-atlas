@@ -1,0 +1,143 @@
+{
+ "id": "Q3431757",
+ "labels": {
+  "en": {
+   "language": "en",
+   "value": "Rodolfo Emilio Brignole Sale"
+  },
+  "fr": {
+   "language": "fr",
+   "value": "Ridolfo-Emilio Brignole-Sale"
+  }
+ },
+ "aliases": {
+  "fr": [
+   {
+    "language": "fr",
+    "value": "Brignole Sale Rodolfo Giulio"
+   },
+   {
+    "language": "fr",
+    "value": "Ridolfo Brignole-Sale"
+   },
+   {
+    "language": "fr",
+    "value": "Ridolfo Emilio Brignole Sale"
+   },
+   {
+    "language": "fr",
+    "value": "Ridolfo Emilio Brignole-Sale"
+   },
+   {
+    "language": "fr",
+    "value": "Rodolfo Giulio Brignole Sale"
+   },
+   {
+    "language": "fr",
+    "value": "Ridolfo-Emilio Brignole Sale"
+   },
+   {
+    "language": "fr",
+    "value": "Rodolphe-Emile Brignole-Sale"
+   }
+  ]
+ },
+ "sitelinks": {
+  "enwiki": {
+   "site": "enwiki",
+   "title": "Rodolfo Emilio Brignole Sale",
+   "badges": []
+  },
+  "frwiki": {
+   "site": "frwiki",
+   "title": "Rodolfo Emilio Brignole Sale",
+   "badges": []
+  }
+ },
+ "claims": {
+  "P39": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 3712541,
+       "id": "Q3712541"
+      }
+     }
+    },
+    "qualifiers": {
+     "P580": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+1762-11-25T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+        }
+       }
+      }
+     ],
+     "P582": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+1764-11-25T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+        }
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "P569": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+1708-06-27T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+      }
+     }
+    }
+   }
+  ],
+  "P570": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+1774-04-18T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+      }
+     }
+    }
+   }
+  ],
+  "P53": []
+ }
+}

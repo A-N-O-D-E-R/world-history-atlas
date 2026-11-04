@@ -1,0 +1,192 @@
+{
+ "id": "Q1409",
+ "labels": {
+  "en": {
+   "language": "en",
+   "value": "Caligula"
+  },
+  "fr": {
+   "language": "fr",
+   "value": "Caligula"
+  }
+ },
+ "aliases": {
+  "en": [
+   {
+    "language": "en",
+    "value": "Gaius Iulius Caesar Germanicus Caligula"
+   },
+   {
+    "language": "en",
+    "value": "Gaius Julius Caesar Augustus Germanicus"
+   },
+   {
+    "language": "en",
+    "value": "Julius Caesar Germanicus, Emperor of Rome Gaius"
+   },
+   {
+    "language": "en",
+    "value": "Gaius Julius Caesar Germanicus Minor"
+   },
+   {
+    "language": "en",
+    "value": "Emperor of Rome Caligula"
+   },
+   {
+    "language": "en",
+    "value": "Gaius Julius Caesar Germanicus"
+   },
+   {
+    "language": "en",
+    "value": "Gaius Caesar"
+   },
+   {
+    "language": "en",
+    "value": "Gaius Caesar Germanicus"
+   },
+   {
+    "language": "en",
+    "value": "Emperor of Rome Gaius Caesar Germanicus"
+   },
+   {
+    "language": "en",
+    "value": "Gaius"
+   },
+   {
+    "language": "en",
+    "value": "Emperor of Rome Gaius"
+   }
+  ],
+  "fr": [
+   {
+    "language": "fr",
+    "value": "Caius Julius Caesar Augustus Germanicus"
+   }
+  ]
+ },
+ "sitelinks": {
+  "enwiki": {
+   "site": "enwiki",
+   "title": "Caligula",
+   "badges": []
+  },
+  "frwiki": {
+   "site": "frwiki",
+   "title": "Caligula",
+   "badges": []
+  }
+ },
+ "claims": {
+  "P39": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 842606,
+       "id": "Q842606"
+      }
+     }
+    },
+    "qualifiers": {
+     "P580": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+0037-03-18T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+        }
+       }
+      }
+     ],
+     "P582": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+0041-01-24T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+        }
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "P569": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+0012-08-31T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    }
+   }
+  ],
+  "P570": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+0041-01-24T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    }
+   }
+  ],
+  "P53": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 192841,
+       "id": "Q192841"
+      }
+     }
+    }
+   },
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 3268376,
+       "id": "Q3268376"
+      }
+     }
+    }
+   }
+  ]
+ }
+}

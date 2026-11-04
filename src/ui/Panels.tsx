@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next'
 import type { Resolved } from '../query/resolve.ts'
 import { type BasemapLayer, useAtlas } from '../state/atlasStore'
 import EntityFiche from './EntityFiche.tsx'
+import RulerFiche from './RulerFiche.tsx'
 
 const LAYERS: BasemapLayer[] = ['modern-borders', 'coast']
 
@@ -52,8 +53,10 @@ function FichePanel({ resolved }: { resolved: Resolved[] }) {
   const { t, i18n } = useTranslation()
   const country = useAtlas((s) => s.selectedCountry)
   const entity = useAtlas((s) => s.selectedEntity)
+  const ruler = useAtlas((s) => s.selectedRuler)
   const select = useAtlas((s) => s.selectCountry)
   const clear = useAtlas((s) => s.clearSelection)
+  if (ruler) return <RulerFiche id={ruler} onClose={clear} />
   if (entity)
     return (
       <EntityFiche

@@ -1,0 +1,216 @@
+{
+ "id": "Q7742",
+ "labels": {
+  "fr": {
+   "language": "fr",
+   "value": "Louis XIV"
+  },
+  "en": {
+   "language": "en",
+   "value": "Louis XIV of France"
+  }
+ },
+ "aliases": {
+  "fr": [
+   {
+    "language": "fr",
+    "value": "Louis Dieudonné"
+   },
+   {
+    "language": "fr",
+    "value": "Louis XIV de France"
+   },
+   {
+    "language": "fr",
+    "value": "le Roi-Soleil"
+   },
+   {
+    "language": "fr",
+    "value": "Louis le Grand"
+   }
+  ],
+  "en": [
+   {
+    "language": "en",
+    "value": "the Sun King"
+   },
+   {
+    "language": "en",
+    "value": "Louis le Grand Monarque"
+   },
+   {
+    "language": "en",
+    "value": "Louis XIV"
+   },
+   {
+    "language": "en",
+    "value": "Lewis the Fourteenth"
+   },
+   {
+    "language": "en",
+    "value": "Louis the Grand Monarch"
+   },
+   {
+    "language": "en",
+    "value": "Sun King"
+   },
+   {
+    "language": "en",
+    "value": "Lewis XIV"
+   },
+   {
+    "language": "en",
+    "value": "Louis le Grand"
+   },
+   {
+    "language": "en",
+    "value": "Louis the Great"
+   }
+  ]
+ },
+ "sitelinks": {
+  "enwiki": {
+   "site": "enwiki",
+   "title": "Louis XIV",
+   "badges": []
+  },
+  "frwiki": {
+   "site": "frwiki",
+   "title": "Louis XIV",
+   "badges": [
+    "Q17437798"
+   ]
+  }
+ },
+ "claims": {
+  "P39": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 3439798,
+       "id": "Q3439798"
+      }
+     }
+    },
+    "qualifiers": {
+     "P580": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+1643-05-14T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+        }
+       }
+      }
+     ],
+     "P582": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+1715-09-01T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+        }
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "P569": [
+   {
+    "rank": "preferred",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+1638-09-05T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+      }
+     }
+    },
+    "qualifiers": {}
+   },
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+1638-09-05T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+      }
+     }
+    }
+   }
+  ],
+  "P570": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+1715-09-01T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+      }
+     }
+    },
+    "qualifiers": {}
+   }
+  ],
+  "P53": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 3642350,
+       "id": "Q3642350"
+      }
+     }
+    }
+   },
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 58389,
+       "id": "Q58389"
+      }
+     }
+    }
+   }
+  ]
+ }
+}

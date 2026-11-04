@@ -1,0 +1,196 @@
+{
+ "id": "Q171136",
+ "labels": {
+  "fr": {
+   "language": "fr",
+   "value": "Jeanne Ire de Castille"
+  },
+  "en": {
+   "language": "en",
+   "value": "Juana I of Castile"
+  }
+ },
+ "aliases": {
+  "fr": [
+   {
+    "language": "fr",
+    "value": "Jeanne la Folle"
+   },
+   {
+    "language": "fr",
+    "value": "Jeanne Ire d'Espagne"
+   },
+   {
+    "language": "fr",
+    "value": "Juana La Loca"
+   }
+  ],
+  "en": [
+   {
+    "language": "en",
+    "value": "Juana of Castile"
+   },
+   {
+    "language": "en",
+    "value": "Juana la Loca"
+   },
+   {
+    "language": "en",
+    "value": "Juana I of Castile and Aragon"
+   },
+   {
+    "language": "en",
+    "value": "Juana I of Aragon"
+   },
+   {
+    "language": "en",
+    "value": "Joanna I of Castile and Aragon"
+   },
+   {
+    "language": "en",
+    "value": "Joanna I of Aragon"
+   },
+   {
+    "language": "en",
+    "value": "Joan the Mad"
+   },
+   {
+    "language": "en",
+    "value": "Joanna the Mad"
+   },
+   {
+    "language": "en",
+    "value": "Joanna of Castile"
+   }
+  ]
+ },
+ "sitelinks": {
+  "enwiki": {
+   "site": "enwiki",
+   "title": "Joanna of Castile",
+   "badges": []
+  },
+  "frwiki": {
+   "site": "frwiki",
+   "title": "Jeanne Ire de Castille",
+   "badges": []
+  }
+ },
+ "claims": {
+  "P39": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 58006791,
+       "id": "Q58006791"
+      }
+     }
+    },
+    "qualifiers": {
+     "P580": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+1516-01-23T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+        }
+       }
+      }
+     ],
+     "P582": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+1555-04-12T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+        }
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "P569": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+1479-11-06T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    }
+   }
+  ],
+  "P570": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+1555-04-12T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    }
+   },
+   {
+    "rank": "deprecated",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+1555-04-11T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    },
+    "qualifiers": {}
+   }
+  ],
+  "P53": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 269876,
+       "id": "Q269876"
+      }
+     }
+    }
+   }
+  ]
+ }
+}

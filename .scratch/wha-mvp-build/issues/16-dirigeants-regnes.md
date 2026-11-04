@@ -4,9 +4,11 @@
 
 **Blocked by:** 10 (Fiche Entité minimale), 11 (Extraction Wikidata des Entités)
 
-**Status:** ready-for-agent
+**Status:** done
 
-- [ ] Extraction Wikidata des Dirigeants et Règnes (P39 + qualificatifs), union des postes « roi de France »
-- [ ] Règne = Dirigeant + Entité + intervalle + titre (plusieurs Règnes possibles)
-- [ ] Fiche Dirigeant : noms, naissance, décès, Règnes, titre, Sources, lien Wikipédia
-- [ ] Dirigeant en place à la date dans la Fiche Entité
+- [x] Extraction Wikidata des Dirigeants et Règnes (P39 + qualificatifs), union des postes « roi de France »
+- [x] Règne = Dirigeant + Entité + intervalle + titre (plusieurs Règnes possibles)
+- [x] Fiche Dirigeant : noms, naissance, décès, Règnes, titre, Sources, lien Wikipédia
+- [x] Dirigeant en place à la date dans la Fiche Entité
+
+Notes : 397 Dirigeants publiés (postes curés dans data-src/curated/rulers.json). 71 Règnes ignorés (sans date de début dans Wikidata ou hors existence des Entités) : notamment les Capétiens avant Philippe Auguste ; à compléter par surcharges. Aucun poste trouvé pour le royaume des Francs et l'Empire carolingien.

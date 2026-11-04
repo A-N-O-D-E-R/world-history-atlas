@@ -1,0 +1,186 @@
+{
+ "id": "Q46762",
+ "labels": {
+  "fr": {
+   "language": "fr",
+   "value": "Claude II le Gothique"
+  },
+  "en": {
+   "language": "en",
+   "value": "Claudius Gothicus"
+  }
+ },
+ "aliases": {
+  "fr": [
+   {
+    "language": "fr",
+    "value": "Claude le Gothique"
+   },
+   {
+    "language": "fr",
+    "value": "Marcus Aurelius Claudius Gothicus"
+   },
+   {
+    "language": "fr",
+    "value": "Claudius Gothicus"
+   },
+   {
+    "language": "fr",
+    "value": "Claude II"
+   }
+  ],
+  "en": [
+   {
+    "language": "en",
+    "value": "Marcus Aurelius Valerius Claudius Augustus"
+   },
+   {
+    "language": "en",
+    "value": "Claudius II"
+   },
+   {
+    "language": "en",
+    "value": "Emperor Claudius II Gothicus of Rome"
+   },
+   {
+    "language": "en",
+    "value": "Emperor of Rome Claudius II Gothicus"
+   },
+   {
+    "language": "en",
+    "value": "Marcus Aurelius Claudius"
+   },
+   {
+    "language": "en",
+    "value": "Emperor of Rome Claudius II"
+   },
+   {
+    "language": "en",
+    "value": "Marcus Aurelius Claudius Gothicus"
+   },
+   {
+    "language": "en",
+    "value": "Claudius II Gothicus"
+   },
+   {
+    "language": "en",
+    "value": "Gothicus"
+   }
+  ]
+ },
+ "sitelinks": {
+  "enwiki": {
+   "site": "enwiki",
+   "title": "Claudius Gothicus",
+   "badges": []
+  },
+  "frwiki": {
+   "site": "frwiki",
+   "title": "Claude II le Gothique",
+   "badges": []
+  }
+ },
+ "claims": {
+  "P39": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "entity-type": "item",
+       "numeric-id": 842606,
+       "id": "Q842606"
+      }
+     }
+    },
+    "qualifiers": {
+     "P580": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+0268-09-01T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 10,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+        }
+       }
+      }
+     ],
+     "P582": [
+      {
+       "snaktype": "value",
+       "datavalue": {
+        "value": {
+         "time": "+0270-01-01T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 10,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+        }
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "P569": [
+   {
+    "rank": "preferred",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+0214-05-10T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 11,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    }
+   },
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+0214-01-01T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 9,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+      }
+     }
+    }
+   }
+  ],
+  "P570": [
+   {
+    "rank": "normal",
+    "mainsnak": {
+     "snaktype": "value",
+     "datavalue": {
+      "value": {
+       "time": "+0270-00-00T00:00:00Z",
+       "timezone": 0,
+       "before": 0,
+       "after": 0,
+       "precision": 9,
+       "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+      }
+     }
+    },
+    "qualifiers": {}
+   }
+  ],
+  "P53": []
+ }
+}
