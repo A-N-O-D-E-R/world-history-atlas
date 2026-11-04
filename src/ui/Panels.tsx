@@ -20,6 +20,9 @@ function ExplorePanel() {
           {t('explore.contribute')}
         </a>
       </p>
+      <p>
+        <a href="#sources">{t('sources.link')}</a>
+      </p>
     </section>
   )
 }

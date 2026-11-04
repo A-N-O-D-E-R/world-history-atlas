@@ -125,6 +125,9 @@ export default function EntityFiche({
               </li>
             ))}
           </ul>
+          <a className="small" href="#sources">
+            {t('sources.link')}
+          </a>
         </dd>
       </dl>
       {entity.corrections?.length ? (

@@ -1,5 +1,5 @@
 import type { FeatureCollection } from 'geojson'
-import type { EntityIndexEntry } from '../shared/schema.ts'
+import type { EntityIndexEntry, PublishedSource } from '../shared/schema.ts'
 import { fileOf } from '../shared/schema.ts'
 
 const url = (path: string) => new URL(`data/${path}`, document.baseURI).href
@@ -25,3 +25,7 @@ export function loadSnapshot(id: string) {
   }
   return p
 }
+
+let sourcesIndex: Promise<PublishedSource[]> | null = null
+export const loadSources = () =>
+  (sourcesIndex ??= getJson<PublishedSource[]>('index/sources.json'))

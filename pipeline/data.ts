@@ -344,6 +344,12 @@ export function buildData(srcDir: string, outDir: string): Report {
     snapshots: e.snapshots,
   }))
   write('index/entities.json', index)
+  write(
+    'index/sources.json',
+    sources
+      .map(({ data }) => data)
+      .sort((a, b) => a.name.localeCompare(b.name)),
+  )
   return report
 }
 

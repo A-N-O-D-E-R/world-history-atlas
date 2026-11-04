@@ -4,6 +4,7 @@ import { useResolved } from './query/useResolved.ts'
 import SnapshotBanner from './ui/SnapshotBanner.tsx'
 import LangSelect from './ui/LangSelect'
 import Panels from './ui/Panels'
+import SourcesPage from './ui/SourcesPage.tsx'
 import WorldButton from './ui/WorldButton.tsx'
 import TimelineDock from './ui/TimelineDock'
 
@@ -18,6 +19,7 @@ export default function App() {
       <LangSelect />
       <Panels resolved={resolved} />
       <WorldButton />
+      <SourcesPage />
       <TimelineDock />
     </main>
   )

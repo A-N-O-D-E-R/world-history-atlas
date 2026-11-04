@@ -4,8 +4,8 @@
 
 **Blocked by:** 14 (Cliopatria et trous de données)
 
-**Status:** ready-for-agent
+**Status:** done
 
-- [ ] Page générée au build depuis les métadonnées des Sources
-- [ ] Attribution compacte MapLibre à jour
-- [ ] Lien vers la page depuis chaque Fiche
+- [x] Page générée au build depuis les métadonnées des Sources
+- [x] Attribution compacte MapLibre à jour
+- [x] Lien vers la page depuis chaque Fiche

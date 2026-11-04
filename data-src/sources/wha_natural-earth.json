@@ -1,0 +1,11 @@
+{
+  "id": "wha:natural-earth",
+  "name": "Natural Earth",
+  "url": "https://www.naturalearthdata.com/about/terms-of-use/",
+  "licence": "public-domain",
+  "attribution": "Made with Natural Earth. Free vector and raster map data @ naturalearthdata.com",
+  "author": "Natural Earth (NACIS)",
+  "scale": "1:10 000 000",
+  "method": "Fond de carte actuel : terres, côtes, pays et frontières modernes",
+  "reliability": "high"
+}

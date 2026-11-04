@@ -36,6 +36,8 @@ export function addPolityLayers(map: MapLibre) {
     type: 'geojson',
     data: { type: 'FeatureCollection', features: [] },
     promoteId: 'entity', // feature-state keyed by Entité id
+    attribution:
+      '<a href="#sources">Sources</a> : OpenHistoricalMap, Cliopatria (Seshat, CC BY 4.0), CNIG, GURS, Wikidata',
   })
   map.addLayer(
     {

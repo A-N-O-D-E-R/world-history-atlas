@@ -391,3 +391,65 @@ body,
   margin: 0;
   padding-left: 16px;
 }
+.page-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: grid;
+  place-items: center;
+  background: rgba(43, 33, 24, 0.35);
+  animation: fade 0.25s;
+}
+.page {
+  position: relative;
+  width: min(720px, 94vw);
+  max-height: 86vh;
+  overflow: auto;
+  box-sizing: border-box;
+  padding: 20px 24px;
+  background: var(--parch);
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+.page h2 {
+  margin: 0 0 6px;
+  font:
+    700 26px 'Cormorant Garamond',
+    Georgia,
+    serif;
+}
+.page a {
+  color: #6b3d1a;
+}
+.source-list {
+  list-style: none;
+  padding: 0;
+}
+.source-list li {
+  padding: 10px 0;
+  border-top: 1px solid var(--line);
+}
+.source-list h3 {
+  margin: 0 0 4px;
+  font:
+    700 17px 'Cormorant Garamond',
+    Georgia,
+    serif;
+}
+.source-list p {
+  margin: 2px 0;
+}
+.source-list dt {
+  float: left;
+  clear: left;
+  width: 140px;
+  color: #6b5440;
+}
+.source-list dd {
+  margin: 0 0 2px 140px;
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+}
